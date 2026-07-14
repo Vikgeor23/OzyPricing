@@ -1,0 +1,524 @@
+{
+  "a360videos": [],
+  "availableForPickup": true,
+  "baseOptions": [],
+  "bfStockAndPrice": false,
+  "brand": "HAMA",
+  "breadcrumbDatas": [
+    {
+      "name": "TV, Аудио и Gaming",
+      "url": "TV--Audio-i-Gaming/c/P1109"
+    },
+    {
+      "name": "TV аксесоари",
+      "url": "TV--Audio-i-Gaming/TV-aksesoari/c/P110907"
+    },
+    {
+      "name": "TV стойки",
+      "url": "TV--Audio-i-Gaming/TV-aksesoari/TV-stojki/c/P11090702"
+    },
+    {
+      "name": "TV Стойка  HAMA 108726  ЧЕРЕН",
+      "url": "/TV-stojki/TV-Stojka--HAMA-108726/p/14251"
+    }
+  ],
+  "bundlePromotions": [],
+  "categories": [
+    {
+      "code": "P11090702",
+      "image": {
+        "url": "/medias/P11090702-logo.jpg?context=bWFzdGVyfGltYWdlc3w5NTkwfGltYWdlL2pwZWd8YVcxaFoyVnpMMmcwTUM5b01HTXZNVGMwTnprME5USTNPRFkzTVRndWFuQm58N2VkYmM4OWFjYTA1ZGJjY2YxMTNmYzQ4NjZmYjVjYjUwMGE0NjQ2ODliMTgzM2IwNzAyMTcwZmNmNTY4NjlmZQ"
+      },
+      "url": "TV--Audio-i-Gaming/TV-aksesoari/TV-stojki/c/P11090702"
+    }
+  ],
+  "classifications": [
+    {
+      "code": "110301",
+      "features": [
+        {
+          "code": "videoluxClassificationCatalog/1.0/110301.model",
+          "comparable": true,
+          "featureValues": [
+            {
+              "value": "108726"
+            }
+          ],
+          "listable": false,
+          "name": "МОДЕЛ",
+          "position": 1,
+          "range": false
+        },
+        {
+          "code": "videoluxClassificationCatalog/1.0/110301.type",
+          "comparable": true,
+          "featureValues": [
+            {
+              "value": "TV Стойка"
+            }
+          ],
+          "listable": false,
+          "name": "ТИП",
+          "position": 2,
+          "range": false
+        },
+        {
+          "code": "videoluxClassificationCatalog/1.0/110301.colour",
+          "comparable": true,
+          "featureValues": [
+            {
+              "value": "ЧЕРЕН"
+            }
+          ],
+          "listable": false,
+          "name": "ЦВЯТ",
+          "position": 3,
+          "range": false
+        },
+        {
+          "code": "videoluxClassificationCatalog/1.0/110301.maxweight",
+          "comparable": true,
+          "featureValues": [
+            {
+              "value": "ДО 25"
+            }
+          ],
+          "listable": true,
+          "name": "МАКСИМАЛНО НАТОВАРВАНЕ",
+          "position": 4,
+          "range": false
+        },
+        {
+          "code": "videoluxClassificationCatalog/1.0/110301.vesa-compatibility",
+          "comparable": true,
+          "featureValues": [
+            {
+              "value": "200 X 200"
+            }
+          ],
+          "listable": true,
+          "name": "СЪВМЕСТИМОСТ VESA",
+          "position": 5,
+          "range": false
+        },
+        {
+          "code": "videoluxClassificationCatalog/1.0/110301.dowels-included",
+          "comparable": true,
+          "featureValues": [
+            {
+              "value": "ДА"
+            }
+          ],
+          "listable": false,
+          "name": "ВКЛЮЧЕНИ ДЮБЕЛИ В КОМПЛ.",
+          "position": 6,
+          "range": false
+        },
+        {
+          "code": "videoluxClassificationCatalog/1.0/110301.functions-tvstand",
+          "comparable": true,
+          "featureValues": [
+            {
+              "value": "ПОДВИЖНИ"
+            }
+          ],
+          "listable": false,
+          "name": "ФУНКЦИОНАЛНОСТ ",
+          "position": 7,
+          "range": false
+        },
+        {
+          "code": "videoluxClassificationCatalog/1.0/110301.screensize-in-inches-upto",
+          "comparable": true,
+          "featureValues": [
+            {
+              "value": "46 \""
+            }
+          ],
+          "listable": true,
+          "name": "РАЗМЕР НА ЕКРАНА В INCH ДО",
+          "position": 8,
+          "range": false
+        },
+        {
+          "code": "videoluxClassificationCatalog/1.0/110301.colour-tvstand",
+          "comparable": true,
+          "featureValues": [
+            {
+              "value": "ЧЕРЕН"
+            }
+          ],
+          "listable": false,
+          "name": "ЦВЯТ",
+          "position": 9,
+          "range": false
+        },
+        {
+          "code": "videoluxClassificationCatalog/1.0/110301.guarantee",
+          "comparable": true,
+          "featureValues": [
+            {
+              "value": "24 МЕСЕЦА"
+            }
+          ],
+          "listable": false,
+          "name": "ГАРАНЦИЯ",
+          "position": 11,
+          "range": false
+        }
+      ],
+      "name": "ТВ СТОЙКИ"
+    }
+  ],
+  "code": "14251",
+  "configurable": false,
+  "deliveryCosts": {
+    "currencyIso": "EUR",
+    "currencySymbol": "€",
+    "formattedValueDecimal": "00",
+    "formattedValueWhole": "0",
+    "ratioToPrimaryUnit": 1.0,
+    "value": 0.0
+  },
+  "description": "<p><strong>Търсите напълно подвижна стойка за стена, за да се наслаждавате на филми и телевизия във всяка стая, независимо от какъв ъгъл гледате? Няма проблем с тази стенна стойка за телевизор FULLMOTION. Тя е ултра тънка и дискретно ще се слее с вашия дом.</strong></p><p><strong>&nbsp;</strong> <br />&bull;Изключително плосък профил позволява модерен и компактен дизайн на жилищното пространство<br />&bull;Система Easy-Fix за опростена и напълно регулируема ориентация на вашия телевизор <br />&bull;Ако скобата на телевизора е монтирана леко под ъгъл на стената, позицията на телевизора може да се коригира с няколко градуса хоризонтално<br />&bull;Кабелният мениджър осигурява организация и необходимо облекчаване на напрежението<br />&bull;Шаблонът за пробиване означава лесно маркиране на отворите за пробиване, без да се налага да държите скобата до стената</p><p>&nbsp;</p><p><img alt=\"Hama\" src=\"https://api.technopolis.bg/medias/pic1.jpg?context=bWFzdGVyfHJvb3R8MTE1NTUwfGltYWdlL2pwZWd8YURNd0wyaGtaQzh5TnpNd01EVTJNREF4TVRJNU5DNXFjR2N8ODY3NDY4Y2M2NTc5NzE1NGRkZDY3YmQ4ODRjNWY5ZWUyODhiYWU2NTNmYWY3MWIwZDFkZGVjN2Q4N2E3NDk5Nw\" /></p><p>&nbsp;</p><p>&nbsp;</p><div class=\"mceTmpl\"><section class=\"block-description\"> <figure><div class=\"mceTmpl\"><section class=\"block-description\"> <figure><img alt=\"Hama\" src=\"https://api.technopolis.bg/medias/pic2.jpg?context=bWFzdGVyfHJvb3R8NjM1MTJ8aW1hZ2UvanBlZ3xhRGt3TDJoaU5pOHlOek13TURVMk1qQTNOVFkzT0M1cWNHY3xkZTcwMWYwOWJhMzk4N2E5OGVlODk2NGNkOGUyYjIzM2Q5YzIyNzI3ZDkxOTVjYmVkYjcxM2IzYWFmZDUzYmM2\" /><br /></figure> <div class=\"text\"><h2><strong>Позволява оптимално позициониране на плосък екран във всяка стая</strong></h2>&nbsp;Качество: 5 Звезди<br />Размер на отворите за TV закрепване: до M8<br />Материал: Метал<br />Модел: TV<br />Брой връзки: 2<br />Завъртане:&nbsp; 3&deg;<br />Наклон:&nbsp; +/- 5 / 15 &deg;<br />Завъртане: 180 &deg;<br />Либела: Да<br />VESA стандарт (от-до):&nbsp;&nbsp; 75x75 - 200x200<br />Разстояние до стената: 5 - 23.1 см<br />Външния размер-височина:&nbsp; 24.6 cm<br />Външния размер-ширина:&nbsp; 24.6 cm<br />Монтажна плоча-дължина:&nbsp; 5.5 cm<br />Монтажна плоча-ширина:&nbsp; 21.9 cm<br />Максимално натоварване:&nbsp; 25 kg<br />Препоръчителни размери на екрана:&nbsp; 48 - 117 cm (19&ldquo; &ndash; 46&ldquo;)<br />Размер: L<br />Версия: Подвижна<br />Цвят: Черен</div> </section></div><br /></figure> <div class=\"text\"><h2></h2><p style=\"margin-bottom: .0001pt; line-height: normal;\" class=\"MsoNormal\"><span lang=\"BG\" style=\"font-size: 12.0pt;\"><br /></span></p> <h2><!--[if gte mso 9]><xml> <o:OfficeDocumentSettings> <o:AllowPNG /> </o:OfficeDocumentSettings> </xml><![endif]--><!--[if gte mso 9]><xml> <w:WordDocument> <w:View>Normal</w:View> <w:Zoom>0</w:Zoom> <w:TrackMoves /> <w:TrackFormatting /> <w:PunctuationKerning /> <w:ValidateAgainstSchemas /> <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid> <w:IgnoreMixedContent>false</w:IgnoreMixedContent> <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText> <w:DoNotPromoteQF /> <w:LidThemeOther>BG</w:LidThemeOther> <w:LidThemeAsian>X-NONE</w:LidThemeAsian> <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript> <w:Compatibility> <w:BreakWrappedTables /> <w:SnapToGridInCell /> <w:WrapTextWithPunct /> <w:UseAsianBreakRules /> <w:DontGrowAutofit /> <w:SplitPgBreakAndParaMark /> <w:EnableOpenTypeKerning /> <w:DontFlipMirrorIndents /> <w:OverrideTableStyleHps /> </w:Compatibility> <m:mathPr> <m:mathFont m:val=\"Cambria Math\" /> <m:brkBin m:val=\"before\" /> <m:brkBinSub m:val=\" \" /> <m:smallFrac m:val=\"off\" /> <m:dispDef /> <m:lMargin m:val=\"0\" /> <m:rMargin m:val=\"0\" /> <m:defJc m:val=\"centerGroup\" /> <m:wrapIndent m:val=\"1440\" /> <m:intLim m:val=\"subSup\" /> <m:naryLim m:val=\"undOvr\" /> </m:mathPr></w:WordDocument> </xml><![endif]--><!--[if gte mso 9]><xml> <w:LatentStyles DefLockedState=\"false\" DefUnhideWhenUsed=\"true\"   DefSemiHidden=\"true\" DefQFormat=\"false\" DefPriority=\"99\"   LatentStyleCount=\"267\"> <w:LsdException Locked=\"false\" Priority=\"0\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" QFormat=\"true\" Name=\"Normal\" /> <w:LsdException Locked=\"false\" Priority=\"9\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" QFormat=\"true\" Name=\"heading 1\" /> <w:LsdException Locked=\"false\" Priority=\"9\" QFormat=\"true\" Name=\"heading 2\" /> <w:LsdException Locked=\"false\" Priority=\"9\" QFormat=\"true\" Name=\"heading 3\" /> <w:LsdException Locked=\"false\" Priority=\"9\" QFormat=\"true\" Name=\"heading 4\" /> <w:LsdException Locked=\"false\" Priority=\"9\" QFormat=\"true\" Name=\"heading 5\" /> <w:LsdException Locked=\"false\" Priority=\"9\" QFormat=\"true\" Name=\"heading 6\" /> <w:LsdException Locked=\"false\" Priority=\"9\" QFormat=\"true\" Name=\"heading 7\" /> <w:LsdException Locked=\"false\" Priority=\"9\" QFormat=\"true\" Name=\"heading 8\" /> <w:LsdException Locked=\"false\" Priority=\"9\" QFormat=\"true\" Name=\"heading 9\" /> <w:LsdException Locked=\"false\" Priority=\"39\" Name=\"toc 1\" /> <w:LsdException Locked=\"false\" Priority=\"39\" Name=\"toc 2\" /> <w:LsdException Locked=\"false\" Priority=\"39\" Name=\"toc 3\" /> <w:LsdException Locked=\"false\" Priority=\"39\" Name=\"toc 4\" /> <w:LsdException Locked=\"false\" Priority=\"39\" Name=\"toc 5\" /> <w:LsdException Locked=\"false\" Priority=\"39\" Name=\"toc 6\" /> <w:LsdException Locked=\"false\" Priority=\"39\" Name=\"toc 7\" /> <w:LsdException Locked=\"false\" Priority=\"39\" Name=\"toc 8\" /> <w:LsdException Locked=\"false\" Priority=\"39\" Name=\"toc 9\" /> <w:LsdException Locked=\"false\" Priority=\"35\" QFormat=\"true\" Name=\"caption\" /> <w:LsdException Locked=\"false\" Priority=\"10\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" QFormat=\"true\" Name=\"Title\" /> <w:LsdException Locked=\"false\" Priority=\"1\" Name=\"Default Paragraph Font\" /> <w:LsdException Locked=\"false\" Priority=\"11\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" QFormat=\"true\" Name=\"Subtitle\" /> <w:LsdException Locked=\"false\" Priority=\"22\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" QFormat=\"true\" Name=\"Strong\" /> <w:LsdException Locked=\"false\" Priority=\"20\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" QFormat=\"true\" Name=\"Emphasis\" /> <w:LsdException Locked=\"false\" Priority=\"59\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Table Grid\" /> <w:LsdException Locked=\"false\" UnhideWhenUsed=\"false\" Name=\"Placeholder Text\" /> <w:LsdException Locked=\"false\" Priority=\"1\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" QFormat=\"true\" Name=\"No Spacing\" /> <w:LsdException Locked=\"false\" Priority=\"60\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Light Shading\" /> <w:LsdException Locked=\"false\" Priority=\"61\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Light List\" /> <w:LsdException Locked=\"false\" Priority=\"62\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Light Grid\" /> <w:LsdException Locked=\"false\" Priority=\"63\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Shading 1\" /> <w:LsdException Locked=\"false\" Priority=\"64\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Shading 2\" /> <w:LsdException Locked=\"false\" Priority=\"65\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium List 1\" /> <w:LsdException Locked=\"false\" Priority=\"66\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium List 2\" /> <w:LsdException Locked=\"false\" Priority=\"67\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Grid 1\" /> <w:LsdException Locked=\"false\" Priority=\"68\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Grid 2\" /> <w:LsdException Locked=\"false\" Priority=\"69\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Grid 3\" /> <w:LsdException Locked=\"false\" Priority=\"70\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Dark List\" /> <w:LsdException Locked=\"false\" Priority=\"71\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Colorful Shading\" /> <w:LsdException Locked=\"false\" Priority=\"72\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Colorful List\" /> <w:LsdException Locked=\"false\" Priority=\"73\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Colorful Grid\" /> <w:LsdException Locked=\"false\" Priority=\"60\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Light Shading Accent 1\" /> <w:LsdException Locked=\"false\" Priority=\"61\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Light List Accent 1\" /> <w:LsdException Locked=\"false\" Priority=\"62\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Light Grid Accent 1\" /> <w:LsdException Locked=\"false\" Priority=\"63\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Shading 1 Accent 1\" /> <w:LsdException Locked=\"false\" Priority=\"64\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Shading 2 Accent 1\" /> <w:LsdException Locked=\"false\" Priority=\"65\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium List 1 Accent 1\" /> <w:LsdException Locked=\"false\" UnhideWhenUsed=\"false\" Name=\"Revision\" /> <w:LsdException Locked=\"false\" Priority=\"34\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" QFormat=\"true\" Name=\"List Paragraph\" /> <w:LsdException Locked=\"false\" Priority=\"29\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" QFormat=\"true\" Name=\"Quote\" /> <w:LsdException Locked=\"false\" Priority=\"30\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" QFormat=\"true\" Name=\"Intense Quote\" /> <w:LsdException Locked=\"false\" Priority=\"66\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium List 2 Accent 1\" /> <w:LsdException Locked=\"false\" Priority=\"67\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Grid 1 Accent 1\" /> <w:LsdException Locked=\"false\" Priority=\"68\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Grid 2 Accent 1\" /> <w:LsdException Locked=\"false\" Priority=\"69\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Grid 3 Accent 1\" /> <w:LsdException Locked=\"false\" Priority=\"70\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Dark List Accent 1\" /> <w:LsdException Locked=\"false\" Priority=\"71\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Colorful Shading Accent 1\" /> <w:LsdException Locked=\"false\" Priority=\"72\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Colorful List Accent 1\" /> <w:LsdException Locked=\"false\" Priority=\"73\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Colorful Grid Accent 1\" /> <w:LsdException Locked=\"false\" Priority=\"60\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Light Shading Accent 2\" /> <w:LsdException Locked=\"false\" Priority=\"61\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Light List Accent 2\" /> <w:LsdException Locked=\"false\" Priority=\"62\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Light Grid Accent 2\" /> <w:LsdException Locked=\"false\" Priority=\"63\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Shading 1 Accent 2\" /> <w:LsdException Locked=\"false\" Priority=\"64\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Shading 2 Accent 2\" /> <w:LsdException Locked=\"false\" Priority=\"65\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium List 1 Accent 2\" /> <w:LsdException Locked=\"false\" Priority=\"66\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium List 2 Accent 2\" /> <w:LsdException Locked=\"false\" Priority=\"67\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Grid 1 Accent 2\" /> <w:LsdException Locked=\"false\" Priority=\"68\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Grid 2 Accent 2\" /> <w:LsdException Locked=\"false\" Priority=\"69\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Grid 3 Accent 2\" /> <w:LsdException Locked=\"false\" Priority=\"70\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Dark List Accent 2\" /> <w:LsdException Locked=\"false\" Priority=\"71\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Colorful Shading Accent 2\" /> <w:LsdException Locked=\"false\" Priority=\"72\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Colorful List Accent 2\" /> <w:LsdException Locked=\"false\" Priority=\"73\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Colorful Grid Accent 2\" /> <w:LsdException Locked=\"false\" Priority=\"60\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Light Shading Accent 3\" /> <w:LsdException Locked=\"false\" Priority=\"61\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Light List Accent 3\" /> <w:LsdException Locked=\"false\" Priority=\"62\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Light Grid Accent 3\" /> <w:LsdException Locked=\"false\" Priority=\"63\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Shading 1 Accent 3\" /> <w:LsdException Locked=\"false\" Priority=\"64\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Shading 2 Accent 3\" /> <w:LsdException Locked=\"false\" Priority=\"65\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium List 1 Accent 3\" /> <w:LsdException Locked=\"false\" Priority=\"66\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium List 2 Accent 3\" /> <w:LsdException Locked=\"false\" Priority=\"67\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Grid 1 Accent 3\" /> <w:LsdException Locked=\"false\" Priority=\"68\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Grid 2 Accent 3\" /> <w:LsdException Locked=\"false\" Priority=\"69\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Grid 3 Accent 3\" /> <w:LsdException Locked=\"false\" Priority=\"70\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Dark List Accent 3\" /> <w:LsdException Locked=\"false\" Priority=\"71\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Colorful Shading Accent 3\" /> <w:LsdException Locked=\"false\" Priority=\"72\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Colorful List Accent 3\" /> <w:LsdException Locked=\"false\" Priority=\"73\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Colorful Grid Accent 3\" /> <w:LsdException Locked=\"false\" Priority=\"60\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Light Shading Accent 4\" /> <w:LsdException Locked=\"false\" Priority=\"61\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Light List Accent 4\" /> <w:LsdException Locked=\"false\" Priority=\"62\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Light Grid Accent 4\" /> <w:LsdException Locked=\"false\" Priority=\"63\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Shading 1 Accent 4\" /> <w:LsdException Locked=\"false\" Priority=\"64\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Shading 2 Accent 4\" /> <w:LsdException Locked=\"false\" Priority=\"65\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium List 1 Accent 4\" /> <w:LsdException Locked=\"false\" Priority=\"66\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium List 2 Accent 4\" /> <w:LsdException Locked=\"false\" Priority=\"67\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Grid 1 Accent 4\" /> <w:LsdException Locked=\"false\" Priority=\"68\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Grid 2 Accent 4\" /> <w:LsdException Locked=\"false\" Priority=\"69\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Grid 3 Accent 4\" /> <w:LsdException Locked=\"false\" Priority=\"70\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Dark List Accent 4\" /> <w:LsdException Locked=\"false\" Priority=\"71\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Colorful Shading Accent 4\" /> <w:LsdException Locked=\"false\" Priority=\"72\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Colorful List Accent 4\" /> <w:LsdException Locked=\"false\" Priority=\"73\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Colorful Grid Accent 4\" /> <w:LsdException Locked=\"false\" Priority=\"60\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Light Shading Accent 5\" /> <w:LsdException Locked=\"false\" Priority=\"61\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Light List Accent 5\" /> <w:LsdException Locked=\"false\" Priority=\"62\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Light Grid Accent 5\" /> <w:LsdException Locked=\"false\" Priority=\"63\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Shading 1 Accent 5\" /> <w:LsdException Locked=\"false\" Priority=\"64\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Shading 2 Accent 5\" /> <w:LsdException Locked=\"false\" Priority=\"65\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium List 1 Accent 5\" /> <w:LsdException Locked=\"false\" Priority=\"66\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium List 2 Accent 5\" /> <w:LsdException Locked=\"false\" Priority=\"67\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Grid 1 Accent 5\" /> <w:LsdException Locked=\"false\" Priority=\"68\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Grid 2 Accent 5\" /> <w:LsdException Locked=\"false\" Priority=\"69\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Grid 3 Accent 5\" /> <w:LsdException Locked=\"false\" Priority=\"70\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Dark List Accent 5\" /> <w:LsdException Locked=\"false\" Priority=\"71\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Colorful Shading Accent 5\" /> <w:LsdException Locked=\"false\" Priority=\"72\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Colorful List Accent 5\" /> <w:LsdException Locked=\"false\" Priority=\"73\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Colorful Grid Accent 5\" /> <w:LsdException Locked=\"false\" Priority=\"60\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Light Shading Accent 6\" /> <w:LsdException Locked=\"false\" Priority=\"61\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Light List Accent 6\" /> <w:LsdException Locked=\"false\" Priority=\"62\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Light Grid Accent 6\" /> <w:LsdException Locked=\"false\" Priority=\"63\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Shading 1 Accent 6\" /> <w:LsdException Locked=\"false\" Priority=\"64\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Shading 2 Accent 6\" /> <w:LsdException Locked=\"false\" Priority=\"65\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium List 1 Accent 6\" /> <w:LsdException Locked=\"false\" Priority=\"66\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium List 2 Accent 6\" /> <w:LsdException Locked=\"false\" Priority=\"67\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Grid 1 Accent 6\" /> <w:LsdException Locked=\"false\" Priority=\"68\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Grid 2 Accent 6\" /> <w:LsdException Locked=\"false\" Priority=\"69\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Medium Grid 3 Accent 6\" /> <w:LsdException Locked=\"false\" Priority=\"70\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Dark List Accent 6\" /> <w:LsdException Locked=\"false\" Priority=\"71\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Colorful Shading Accent 6\" /> <w:LsdException Locked=\"false\" Priority=\"72\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Colorful List Accent 6\" /> <w:LsdException Locked=\"false\" Priority=\"73\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" Name=\"Colorful Grid Accent 6\" /> <w:LsdException Locked=\"false\" Priority=\"19\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" QFormat=\"true\" Name=\"Subtle Emphasis\" /> <w:LsdException Locked=\"false\" Priority=\"21\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" QFormat=\"true\" Name=\"Intense Emphasis\" /> <w:LsdException Locked=\"false\" Priority=\"31\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" QFormat=\"true\" Name=\"Subtle Reference\" /> <w:LsdException Locked=\"false\" Priority=\"32\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" QFormat=\"true\" Name=\"Intense Reference\" /> <w:LsdException Locked=\"false\" Priority=\"33\" SemiHidden=\"false\"    UnhideWhenUsed=\"false\" QFormat=\"true\" Name=\"Book Title\" /> <w:LsdException Locked=\"false\" Priority=\"37\" Name=\"Bibliography\" /> <w:LsdException Locked=\"false\" Priority=\"39\" QFormat=\"true\" Name=\"TOC Heading\" /> </w:LatentStyles> </xml><![endif]--><!--[if gte mso 10]> <mce:style><!   /* Style Definitions */  table.MsoNormalTable \t{mso-style-name:\"Table Normal\"; \tmso-tstyle-rowband-size:0; \tmso-tstyle-colband-size:0; \tmso-style-noshow:yes; \tmso-style-priority:99; \tmso-style-parent:\"\"; \tmso-padding-alt:0cm 5.4pt 0cm 5.4pt; \tmso-para-margin-top:0cm; \tmso-para-margin-right:0cm; \tmso-para-margin-bottom:8.0pt; \tmso-para-margin-left:0cm; \tline-height:107%; \tmso-pagination:widow-orphan; \tfont-size:11.0pt; \tfont-family:\"Calibri\",\"sans-serif\"; \tmso-ascii-font-family:Calibri; \tmso-ascii-theme-font:minor-latin; \tmso-hansi-font-family:Calibri; \tmso-hansi-theme-font:minor-latin; \tmso-bidi-font-family:\"Times New Roman\"; \tmso-bidi-theme-font:minor-bidi; \tmso-ansi-language:BG;} --> <!--[endif] --></h2></div> </section></div><br />",
+  "documents": [
+    {
+      "code": "document-trash-regulation",
+      "mime": "application/pdf",
+      "name": "Не изхвърляйте в общия поток битови отпадъци, а само на определените за целта места!",
+      "size": "80311",
+      "url": "/medias/regulation.pdf?context=bWFzdGVyfHJvb3R8ODAzMTF8YXBwbGljYXRpb24vcGRmfGFHWTNMMmczTnk4eE1UVXdORFF3TmprMU5EQXhOQzV3WkdZfGU4MDVlMmNjZWEwYzAxMWIyZDdmNTlkM2MwODk3OGNmMTQyOTMzYmMyMzY1ZGJmZjVkODUzYmZlZWNhYWIwYzk&attachment=true"
+    }
+  ],
+  "ean": "4047443136848",
+  "ecoImages": [],
+  "expressDelivery": false,
+  "hideSticker": true,
+  "imagePanelComponents": [],
+  "images": [
+    {
+      "altText": "TV СТЕНД HAMA 108726",
+      "format": "videoluxZoom",
+      "imageType": "PRIMARY",
+      "url": "/medias/14251.jpg-Product-zoom?context=bWFzdGVyfHJvb3R8NjEwNDN8aW1hZ2UvanBlZ3xhRGN3TDJnNU9TOHlOek13TmpJM01qVTROemd3Tmk1cWNHY3wzNjU0NDk2NTRjMjZlNGRkOGIxYTc1NWQ0ODU4NTU3MDQzNDFkNjFhOWJhODllZTQwZGM1NDk0NTMyOGZlOTA3"
+    },
+    {
+      "altText": "TV СТЕНД HAMA 108726",
+      "format": "videoluxProduct",
+      "imageType": "PRIMARY",
+      "url": "/medias/14251.jpg-Product-details-main?context=bWFzdGVyfHJvb3R8NTUxMTh8aW1hZ2UvanBlZ3xhREZrTDJnM09DOHlOek13TmpJM01qWXlNRFUzTkM1cWNHY3wwOGNmYzEzZWFjOTBiZTg1ZTk3ODQ0NjkzYjM0NjhmY2E0YjVmNTY5ZDIzZDkwZWIxNGMzMWQ4NzYwODYyNTcx"
+    },
+    {
+      "altText": "TV СТЕНД HAMA 108726",
+      "format": "videoluxGrid",
+      "imageType": "PRIMARY",
+      "url": "/medias/14251.jpg-Listing-grid?context=bWFzdGVyfHJvb3R8MTAwNzF8aW1hZ2UvanBlZ3xhR0kxTDJnNU1pOHlOek13TmpJM01qWTFNek0wTWk1cWNHY3xhNWEwMTQ3YjFlODBkNGI0NTBlOGY3ODU2NTUyNDI1MzFiZTdkNDhlMGFmZmE1YjhhZTQ1ZmY4NDEyNmVhMTMx"
+    },
+    {
+      "altText": "TV СТЕНД HAMA 108726",
+      "format": "videoluxList",
+      "imageType": "PRIMARY",
+      "url": "/medias/14251.jpg-Listing-list?context=bWFzdGVyfHJvb3R8MTAwNzF8aW1hZ2UvanBlZ3xhRGMyTDJnMk1pOHlOek13TmpJM01qWTROakV4TUM1cWNHY3w0M2FhN2I0YTMwYmQ4MGVlNDM1MjlmNjBmNzljODU2YmE3OTcyN2U0NDIyOGQ0NmIyODZlZjQ2OGJlY2UyODE4"
+    },
+    {
+      "altText": "TV СТЕНД HAMA 108726",
+      "format": "videoluxThumb-new-n-alike",
+      "imageType": "PRIMARY",
+      "url": "/medias/14251.jpg-Product-newest-alike?context=bWFzdGVyfHJvb3R8Nzg2NHxpbWFnZS9qcGVnfGFHUTFMMmd3TXk4eU56TXdOakkzTWpjeE9EZzNPQzVxY0djfDk0MWY5M2Y0Yzc2NjAzNTVkNjcxYzU5YjQwYzQ3ZDUyMmViNzA2NzYwNmNhZDg5MjY3YzZlODJlNjdlZTRhYWM"
+    },
+    {
+      "altText": "TV СТЕНД HAMA 108726",
+      "format": "videoluxBundle",
+      "imageType": "PRIMARY",
+      "url": "/medias/14251.jpg-Product-bundle?context=bWFzdGVyfHJvb3R8MjIzNTJ8aW1hZ2UvanBlZ3xhRGxoTDJneE9TOHlOek13TmpJM01qYzFNVFkwTmk1cWNHY3xmMmJkYTJhN2JkNmYxZWZjZTZiYzc3Yzg2MTMzODRmN2U2MzJjZjU1MjFjOTliZDNkMDlhNGI3MDk1NGZkZjg4"
+    },
+    {
+      "altText": "TV СТЕНД HAMA 108726",
+      "format": "videoluxBasket",
+      "imageType": "PRIMARY",
+      "url": "/medias/14251.jpg-Basket?context=bWFzdGVyfHJvb3R8NzQxMXxpbWFnZS9qcGVnfGFEa3lMMmhrWWk4eU56TXdOakkzTWpjNE5EUXhOQzVxY0djfDI0MGRkMDg2YzhjNTAzMGRlZmExY2M5MzY3ZjljOTdkNWU0YmI0MmU3Njg5YzU0Yjk0MWMyMGI1ODIwZjdjNDA"
+    },
+    {
+      "altText": "TV СТЕНД HAMA 108726",
+      "format": "videoluxThumbnail",
+      "imageType": "PRIMARY",
+      "url": "/medias/14251.jpg-Product-gallery?context=bWFzdGVyfHJvb3R8MjkyOXxpbWFnZS9qcGVnfGFHTm1MMmd6WVM4eU56TXdOakkzTWpneE56RTRNaTVxY0djfDRjODI5YzRjZjNlNjFhNGRjNmExMDA4ZWE3MDY0NWFmNWJjY2FmMjBhOGEwMDIxMmRhYjU2MDY3NzUyMmIwOTM"
+    },
+    {
+      "altText": "TV СТЕНД HAMA 108726",
+      "format": "videoluxFreeGift",
+      "imageType": "PRIMARY",
+      "url": "/medias/14251.jpg-FreeGift?context=bWFzdGVyfHJvb3R8MzY4OHxpbWFnZS9qcGVnfGFHUmpMMmc1Tnk4eU56TXdOakkzTWpnME9UazFNQzVxY0djfDg1ODI4MzFjNGZmMWUyZmE5ODI0N2Y3ZDZkZmJjODEwMjI1OGViMTg1OGJkMDBlMDIyZGI2NTcyYTMzMGFkMzQ"
+    },
+    {
+      "altText": "TV СТЕНД HAMA 108726",
+      "format": "videoluxMiniCart",
+      "imageType": "PRIMARY",
+      "url": "/medias/14251.jpg-Mini-cart?context=bWFzdGVyfHJvb3R8MjkxOHxpbWFnZS9qcGVnfGFEVXhMMmhoWWk4eU56TXdOakkzTWpnNE1qY3hPQzVxY0djfDEyN2U1N2NjYWIwNTk5MWVhMmM0Y2YwYjBmNjRkYjU4ZjJlNTlhZDU5ZTMxNDFkZGZhNTIzMGE0NGEzYjhiM2U"
+    },
+    {
+      "altText": "TV СТЕНД HAMA 108726",
+      "format": "videoluxVariantColour",
+      "imageType": "PRIMARY",
+      "url": "/medias/14251.jpg-Variant-colour?context=bWFzdGVyfHJvb3R8MjExOXxpbWFnZS9qcGVnfGFEUmpMMmd6WlM4eU56TXdOakkzTWpreE5UUTROaTVxY0djfDE2MTg4MDM5YzZjMzY4NDM2N2IxOTgxNzBjMDdkNDg0MmUxYTczYmVlNGQ2NTg2ZDAzMGJlZTY1MzIyYjdjNGI"
+    },
+    {
+      "altText": "TV СТЕНД HAMA 108726",
+      "format": "videoluxZoom",
+      "galleryIndex": 0,
+      "imageType": "GALLERY",
+      "url": "/medias/14251.jpg-Product-zoom?context=bWFzdGVyfHJvb3R8NjEwNDN8aW1hZ2UvanBlZ3xhRGN3TDJnNU9TOHlOek13TmpJM01qVTROemd3Tmk1cWNHY3wzNjU0NDk2NTRjMjZlNGRkOGIxYTc1NWQ0ODU4NTU3MDQzNDFkNjFhOWJhODllZTQwZGM1NDk0NTMyOGZlOTA3"
+    },
+    {
+      "altText": "TV СТЕНД HAMA 108726",
+      "format": "videoluxProduct",
+      "galleryIndex": 0,
+      "imageType": "GALLERY",
+      "url": "/medias/14251.jpg-Product-details-main?context=bWFzdGVyfHJvb3R8NTUxMTh8aW1hZ2UvanBlZ3xhREZrTDJnM09DOHlOek13TmpJM01qWXlNRFUzTkM1cWNHY3wwOGNmYzEzZWFjOTBiZTg1ZTk3ODQ0NjkzYjM0NjhmY2E0YjVmNTY5ZDIzZDkwZWIxNGMzMWQ4NzYwODYyNTcx"
+    },
+    {
+      "altText": "TV СТЕНД HAMA 108726",
+      "format": "videoluxThumbnail",
+      "galleryIndex": 0,
+      "imageType": "GALLERY",
+      "url": "/medias/14251.jpg-Product-gallery?context=bWFzdGVyfHJvb3R8MjkyOXxpbWFnZS9qcGVnfGFHTm1MMmd6WVM4eU56TXdOakkzTWpneE56RTRNaTVxY0djfDRjODI5YzRjZjNlNjFhNGRjNmExMDA4ZWE3MDY0NWFmNWJjY2FmMjBhOGEwMDIxMmRhYjU2MDY3NzUyMmIwOTM"
+    },
+    {
+      "altText": "TV СТЕНД HAMA 108726",
+      "format": "videoluxZoom",
+      "galleryIndex": 1,
+      "imageType": "GALLERY",
+      "url": "/medias/14251-1-big.jpg-Product-zoom?context=bWFzdGVyfHJvb3R8NjMwMTN8aW1hZ2UvanBlZ3xhRFUxTDJoa1lpOHlOek13TmpNd016STFPRFkxTkM1cWNHY3xjMTdlMDNjOWYyODA4ZmQyOTQ5NmQ0Njk5MDMwM2UwMjUwNzQxZjBjNzc1MzA5NGM3YTFlMjBiN2M0ZjVkZWQz"
+    },
+    {
+      "altText": "TV СТЕНД HAMA 108726",
+      "format": "videoluxProduct",
+      "galleryIndex": 1,
+      "imageType": "GALLERY",
+      "url": "/medias/14251-1-big.jpg-Product-details-main?context=bWFzdGVyfHJvb3R8NTUzMzN8aW1hZ2UvanBlZ3xhREZoTDJobU1TOHlOek13TmpNd016STVNVFF5TWk1cWNHY3wzMzg1NzQ3NDk4ZDE3MTc2YTVkYTgxZDVlNmQzY2EzYzE1MmVhZWNmYmYzZjc0MDNiYmVkOWE2MDlmMGQwNWNl"
+    },
+    {
+      "altText": "TV СТЕНД HAMA 108726",
+      "format": "videoluxThumbnail",
+      "galleryIndex": 1,
+      "imageType": "GALLERY",
+      "url": "/medias/14251-1-big.jpg-Product-gallery?context=bWFzdGVyfHJvb3R8MjQwMnxpbWFnZS9qcGVnfGFEZGpMMmd3Tnk4eU56TXdOak13TXpNeU5ERTVNQzVxY0djfDlkNGQxNmZmMWQ3OTVjODUwMWVlODMxZDI1MzkyM2NkYzEzNWYxYmI4MGFhNDVkNTU1YWQ5ODkwOTJlNDAyMGQ"
+    },
+    {
+      "altText": "TV СТЕНД HAMA 108726",
+      "format": "videoluxZoom",
+      "galleryIndex": 2,
+      "imageType": "GALLERY",
+      "url": "/medias/14251-2-big.jpg-Product-zoom?context=bWFzdGVyfHJvb3R8Mjk4ODN8aW1hZ2UvanBlZ3xhR0ZtTDJnNFl5OHlOek13TmpNek9URXpPVFl4TkM1cWNHY3w2NTU0NjA0MjVhNjNhODA5N2M5ZGNjMTI1NzAwYmFlMWYwMDk0M2EzZDQ3NDcwOGIyYTYyZDM3NzBmZGM0MTI5"
+    },
+    {
+      "altText": "TV СТЕНД HAMA 108726",
+      "format": "videoluxProduct",
+      "galleryIndex": 2,
+      "imageType": "GALLERY",
+      "url": "/medias/14251-2-big.jpg-Product-details-main?context=bWFzdGVyfHJvb3R8MjcxODJ8aW1hZ2UvanBlZ3xhREpoTDJnME55OHlOek13TmpNek9USXdOVEUxTUM1cWNHY3xlYzkxNzZiZWU4ZjUyNWRmMWE2MmNhOTViZjk3NGYxZTk4YWM2ZGQ0OTBjYTJmMzMyMDNjNjY5ZTg2YTNiZDhm"
+    },
+    {
+      "altText": "TV СТЕНД HAMA 108726",
+      "format": "videoluxThumbnail",
+      "galleryIndex": 2,
+      "imageType": "GALLERY",
+      "url": "/medias/14251-2-big.jpg-Product-gallery?context=bWFzdGVyfHJvb3R8MTk5NXxpbWFnZS9qcGVnfGFEVXpMMmd4WlM4eU56TXdOak16T1RJM01EWTROaTVxY0djfDE4OTg2N2RlNzVmYzJlN2EwNTk5ZjZiODhiYzM1MmFjNjFjZjQ1YzA0ZGEzOGIxYjIyOTY1OTk3YmRkYTAxYTE"
+    },
+    {
+      "altText": "TV СТЕНД HAMA 108726",
+      "format": "videoluxZoom",
+      "galleryIndex": 3,
+      "imageType": "GALLERY",
+      "url": "/medias/14251-3-big.jpg-Product-zoom?context=bWFzdGVyfHJvb3R8ODc4MDJ8aW1hZ2UvanBlZ3xhRGhrTDJnMFlTOHlOek13TmpNek9UTXpOakl5TWk1cWNHY3xhNWE5YjVhYTQ5M2Q5OWY4MTdlMjcwZTdkZWZlYTM3MDY5MzJiZTkwYWE4YWE1MzFkMzYyZmQ4NzIxNDlmMTlj"
+    },
+    {
+      "altText": "TV СТЕНД HAMA 108726",
+      "format": "videoluxProduct",
+      "galleryIndex": 3,
+      "imageType": "GALLERY",
+      "url": "/medias/14251-3-big.jpg-Product-details-main?context=bWFzdGVyfHJvb3R8NzY4ODh8aW1hZ2UvanBlZ3xhRGxsTDJoak5pOHlOek13TmpNek9UUXdNVGMxT0M1cWNHY3xiNzMwZDg5MjVhNGM1MGRiODAxODA0ZTMwNzk5ZTYzZWFjMGI2ZTU1ZWEwN2IzMDA1NzRlOGUxMDVlZTU4NmNj"
+    },
+    {
+      "altText": "TV СТЕНД HAMA 108726",
+      "format": "videoluxThumbnail",
+      "galleryIndex": 3,
+      "imageType": "GALLERY",
+      "url": "/medias/14251-3-big.jpg-Product-gallery?context=bWFzdGVyfHJvb3R8MjY4MnxpbWFnZS9qcGVnfGFEazVMMmc1TkM4eU56TXdOak16T1RRMk56STVOQzVxY0djfDQ3OTA0ZGFlODBjZmE0YjBkYjZiNGFlN2Y0NzZjYzM0Yzc2ZDQ4NzdiZDM3OTBkMzQ4ODg4MmE4YjRhNjVlOWM"
+    },
+    {
+      "altText": "TV СТЕНД HAMA 108726",
+      "format": "videoluxZoom",
+      "galleryIndex": 4,
+      "imageType": "GALLERY",
+      "url": "/medias/14251-4-big.jpg-Product-zoom?context=bWFzdGVyfHJvb3R8ODM0ODh8aW1hZ2UvanBlZ3xhRFZoTDJoaE5TOHlOek13TmpNek9UVXpNamd6TUM1cWNHY3wzMmZmY2FjZTU1OTQxNmZlZTcwYjhjZTllMGI4NjE0NzdjOGJkMDMyMDRlMjE2ZGFiMzVmMGQ5Nzc0YWUyNDY2"
+    },
+    {
+      "altText": "TV СТЕНД HAMA 108726",
+      "format": "videoluxProduct",
+      "galleryIndex": 4,
+      "imageType": "GALLERY",
+      "url": "/medias/14251-4-big.jpg-Product-details-main?context=bWFzdGVyfHJvb3R8NzM0MzB8aW1hZ2UvanBlZ3xhR0ZtTDJoa09TOHlOek13TmpNek9UVTVPRE0yTmk1cWNHY3wyOWUxZTAwNGY5YjRjMWY4ZTAyOGVlY2RhMWQzZmMxZjYzNjEyOGZhZmU3NjI2NjYwYmQ5Zjc1ZjFlMmE2ODNh"
+    },
+    {
+      "altText": "TV СТЕНД HAMA 108726",
+      "format": "videoluxThumbnail",
+      "galleryIndex": 4,
+      "imageType": "GALLERY",
+      "url": "/medias/14251-4-big.jpg-Product-gallery?context=bWFzdGVyfHJvb3R8MjcyNXxpbWFnZS9qcGVnfGFHRXlMMmd4TXk4eU56TXdOak16T1RZMk16a3dNaTVxY0djfGY1NWNmZjBiNDhiZDE4YWU3ZGQ1OGFhZjQ3NWY0NTczNzliZDVhZjhhYzI2YzE5ZDNiY2Y3NDlkM2Y1YWI2ZjU"
+    },
+    {
+      "altText": "TV СТЕНД HAMA 108726",
+      "format": "videoluxZoom",
+      "galleryIndex": 5,
+      "imageType": "GALLERY",
+      "url": "/medias/14251-5-big.jpg-Product-zoom?context=bWFzdGVyfHJvb3R8OTM1NTh8aW1hZ2UvanBlZ3xhRFF5TDJnd1lpOHlOek13TmpNek9UY3lPVFF6T0M1cWNHY3w1MzlmYzRlZjNhYzJlNTBlNjQ5ZGJjZGVjMjZiZTgxYzZhOGE1ZTNmMWM4ZmM4OTNhYzRkNTFmODE2ODFkM2U2"
+    },
+    {
+      "altText": "TV СТЕНД HAMA 108726",
+      "format": "videoluxProduct",
+      "galleryIndex": 5,
+      "imageType": "GALLERY",
+      "url": "/medias/14251-5-big.jpg-Product-details-main?context=bWFzdGVyfHJvb3R8ODA3NTZ8aW1hZ2UvanBlZ3xhRFk1TDJnek5pOHlOek13TmpNek9UYzVORGszTkM1cWNHY3wxZjk4YjU4NTUzNDYyZmY0YWUyMGRiYWNjYjVhOGM1MjJkOGQ2NzI1Y2I3M2Y0NzE2MGI5YTg1NWQ5YjkxMjcy"
+    },
+    {
+      "altText": "TV СТЕНД HAMA 108726",
+      "format": "videoluxThumbnail",
+      "galleryIndex": 5,
+      "imageType": "GALLERY",
+      "url": "/medias/14251-5-big.jpg-Product-gallery?context=bWFzdGVyfHJvb3R8MjY4NXxpbWFnZS9qcGVnfGFHTTBMMmcxTlM4eU56TXdOak16T1RnMk1EVXhNQzVxY0djfGU0ZTFkYmMyZTU4ZWFiMjc0ZmY1NzQ0ZjIyYjM5MGM0NWEwZWY2NTVjMmZlZTQwZDM1ZDE2MWUwZGVjNmYwMWU"
+    }
+  ],
+  "leasingPromotion": false,
+  "markNew": false,
+  "metaDescription": "Купи TV Стойка  HAMA 108726  ЧЕРЕН на изгодна цена и с възможност за изплащане. Доставка до цялата страна или вземане от магазина. ",
+  "metaKeywords": "TV Стойка  HAMA 108726  ЧЕРЕН",
+  "multidimensional": false,
+  "name": "TV Стойка  HAMA 108726  ЧЕРЕН",
+  "noInterestLeasingPeriod": -1,
+  "numberOfReviews": 0,
+  "onlineExclusive": false,
+  "onlineOnly": false,
+  "orderByPhone": true,
+  "pickUpFromCustomerStoreLabel": false,
+  "pickUpFromOnlineWarehouseLabel": false,
+  "pickUpTodayLabel": true,
+  "potentialPromotions": [],
+  "price": {
+    "channel": "offline",
+    "currencyIso": "EUR",
+    "currencySymbol": "€",
+    "endDate": "9999-12-31T21:59:59+0000",
+    "formattedValue": "30,10 €",
+    "formattedValueDecimal": "10",
+    "formattedValueWhole": "30",
+    "priceType": "BUY",
+    "promoType": "base",
+    "ratioToPrimaryUnit": 1.0,
+    "startDate": "2026-01-18T22:00:00+0000",
+    "value": 30.1
+  },
+  "priceRange": {},
+  "productReferences": [],
+  "purchasable": true,
+  "qualifiesForLeasing": false,
+  "reviewClassifications": {
+    "minuses": [
+      {
+        "code": "m_p11090702",
+        "features": [
+          {
+            "code": "TechnopolisReviewsClassification/1.0/m_p11090702.m_design",
+            "comparable": true,
+            "featureValues": [],
+            "listable": false,
+            "name": "Дизайн",
+            "position": 3,
+            "range": false
+          },
+          {
+            "code": "TechnopolisReviewsClassification/1.0/m_p11090702.m_functionality",
+            "comparable": true,
+            "featureValues": [],
+            "listable": false,
+            "name": "Функционалност",
+            "position": 4,
+            "range": false
+          }
+        ]
+      }
+    ],
+    "pluses": [
+      {
+        "code": "p_p11090702",
+        "features": [
+          {
+            "code": "TechnopolisReviewsClassification/1.0/p_p11090702.p_design",
+            "comparable": true,
+            "featureValues": [],
+            "listable": false,
+            "name": "Дизайн",
+            "position": 1,
+            "range": false
+          },
+          {
+            "code": "TechnopolisReviewsClassification/1.0/p_p11090702.p_functionality",
+            "comparable": true,
+            "featureValues": [],
+            "listable": false,
+            "name": "Функционалност",
+            "position": 2,
+            "range": false
+          }
+        ]
+      }
+    ]
+  },
+  "reviewSummary": {
+    "minuses": [],
+    "pluses": []
+  },
+  "reviews": [],
+  "showOldPrice": true,
+  "showPcd": false,
+  "showPromoPriceCounter": false,
+  "showReserveButton": false,
+  "soldIndividually": true,
+  "soldOut": false,
+  "stock": {
+    "isValueRounded": false,
+    "stockLevel": 0,
+    "stockLevelStatus": "reserved"
+  },
+  "summary": "HAMA 108726",
+  "title": "TV Стойка  HAMA 108726  ЧЕРЕН",
+  "url": "/TV-stojki/TV-Stojka--HAMA-108726/p/14251",
+  "variantsAllValuesMap": [],
+  "variantsValuesMap": [],
+  "videos": [],
+  "volumePrices": [
+    {
+      "currencyIso": "EUR",
+      "currencySymbol": "€",
+      "formattedValue": "30,10 €",
+      "formattedValueDecimal": "10",
+      "formattedValueWhole": "30",
+      "maxQuantity": 0,
+      "minQuantity": 1,
+      "priceType": "BUY",
+      "ratioToPrimaryUnit": 1.0,
+      "value": 30.1
+    },
+    {
+      "currencyIso": "EUR",
+      "currencySymbol": "€",
+      "formattedValue": "30,10 €",
+      "formattedValueDecimal": "10",
+      "formattedValueWhole": "30",
+      "minQuantity": 1,
+      "priceType": "BUY",
+      "ratioToPrimaryUnit": 1.0,
+      "value": 30.1
+    }
+  ]
+}

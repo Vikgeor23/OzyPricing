@@ -1,0 +1,363 @@
+{
+  "a360videos": [],
+  "availableForPickup": true,
+  "baseOptions": [],
+  "bfStockAndPrice": false,
+  "brand": "CONAX",
+  "breadcrumbDatas": [
+    {
+      "name": "TV, Аудио и Gaming",
+      "url": "TV--Audio-i-Gaming/c/P1109"
+    },
+    {
+      "name": "TV аксесоари",
+      "url": "TV--Audio-i-Gaming/TV-aksesoari/c/P110907"
+    },
+    {
+      "name": "ТВ аксесоари други",
+      "url": "TV--Audio-i-Gaming/TV-aksesoari/TV-aksesoari-drugi/c/P11090901"
+    },
+    {
+      "name": "PCMCI CARD CONAX CAM",
+      "url": "/TV-aksesoari-drugi/PCMCI-CARD-CONAX-CAM/p/16307"
+    }
+  ],
+  "bundlePromotions": [],
+  "categories": [
+    {
+      "code": "P11090901",
+      "image": {
+        "url": "/medias/P11090901-logo.jpg?context=bWFzdGVyfGltYWdlc3w4MjcyfGltYWdlL2pwZWd8YVcxaFoyVnpMMmcxWkM5b01tSXZNVGMwTnprME5UUTRNVGd6TXpRdWFuQm58YWI2N2I1NjE4NzU1MzZhYzJlODM3YWMyNmRhMDI4M2Q4ODJmY2JjOWZlYWZlZWFiOThlNTE1ZjY0NmJiOTEyYQ"
+      },
+      "url": "TV--Audio-i-Gaming/TV-aksesoari/TV-aksesoari-drugi/c/P11090901"
+    }
+  ],
+  "classifications": [
+    {
+      "code": "110303",
+      "features": [
+        {
+          "code": "videoluxClassificationCatalog/1.0/110303.model",
+          "comparable": true,
+          "featureValues": [
+            {
+              "value": "CONAX CAM"
+            }
+          ],
+          "listable": false,
+          "name": "МОДЕЛ",
+          "position": 1,
+          "range": false
+        },
+        {
+          "code": "videoluxClassificationCatalog/1.0/110303.type",
+          "comparable": true,
+          "featureValues": [
+            {
+              "value": "МОДУЛ ЗА ЦИФРОВА ТЕЛЕВИЗИЯ"
+            }
+          ],
+          "listable": true,
+          "name": "ТИП",
+          "position": 2,
+          "range": false
+        },
+        {
+          "code": "videoluxClassificationCatalog/1.0/110303.colour",
+          "comparable": true,
+          "featureValues": [
+            {
+              "value": "СРЕБРИСТ"
+            }
+          ],
+          "listable": false,
+          "name": "ЦВЯТ",
+          "position": 3,
+          "range": false
+        },
+        {
+          "code": "videoluxClassificationCatalog/1.0/110303.guarantee",
+          "comparable": true,
+          "featureValues": [
+            {
+              "value": "12 МЕСЕЦА"
+            }
+          ],
+          "listable": false,
+          "name": "ГАРАНЦИЯ",
+          "position": 8,
+          "range": false
+        }
+      ],
+      "name": "ТВ АКСЕСОАРИ ДР."
+    }
+  ],
+  "code": "16307",
+  "configurable": false,
+  "deliveryCosts": {
+    "currencyIso": "EUR",
+    "currencySymbol": "€",
+    "formattedValueDecimal": "00",
+    "formattedValueWhole": "0",
+    "ratioToPrimaryUnit": 1.0,
+    "value": 0.0
+  },
+  "description": "<span style=\"font-size: x-large;\">За да се използва e необходим телевизор с общ интерфейс (CI/CI+) и карта на съответния оператор.<br /><br /><img src=\"https://api.technopolis.bg/medias/pic1.jpg?context=bWFzdGVyfHJvb3R8NTA0Mzl8aW1hZ2UvanBlZ3xhR0k1TDJnNFpDOHlOamd6TlRrMk5UUTBOREV5Tmk1cWNHY3xhY2FkMjBjNTlhMDBlY2VlZTE2MDQ1Yjc2MDg2NjIxNTc5NzAwZmI0YjgzYmZhNTZlMjU1ODkzNDhhNGE4N2Yy\" /></span>",
+  "documents": [
+    {
+      "code": "document-trash-regulation",
+      "mime": "application/pdf",
+      "name": "Не изхвърляйте в общия поток битови отпадъци, а само на определените за целта места!",
+      "size": "80311",
+      "url": "/medias/regulation.pdf?context=bWFzdGVyfHJvb3R8ODAzMTF8YXBwbGljYXRpb24vcGRmfGFHWTNMMmczTnk4eE1UVXdORFF3TmprMU5EQXhOQzV3WkdZfGU4MDVlMmNjZWEwYzAxMWIyZDdmNTlkM2MwODk3OGNmMTQyOTMzYmMyMzY1ZGJmZjVkODUzYmZlZWNhYWIwYzk&attachment=true"
+    }
+  ],
+  "ecoImages": [],
+  "estimatedDeliveryTime": true,
+  "estimatedDeliveryTimeMessage": "Очаквано време за доставка от 1 до 4 дни.",
+  "expressDelivery": false,
+  "hideSticker": true,
+  "imagePanelComponents": [],
+  "images": [
+    {
+      "altText": "PCMCI CARD CONAX CAM",
+      "format": "videoluxZoom",
+      "imageType": "PRIMARY",
+      "url": "/medias/16307.jpg-Product-zoom?context=bWFzdGVyfHJvb3R8ODQyNTl8aW1hZ2UvanBlZ3xhREkyTDJnNE9TOHlOamd6TnpVNU1USXlPRFEwTmk1cWNHY3xiNzQ2NzlmODhkNWYzOWY2NDdiMGZkY2FhZGMxOTNiYmY2ZWE0MmFiMGFjNTg1NjNmOTQwYzUxYjlhYjViMjE0"
+    },
+    {
+      "altText": "PCMCI CARD CONAX CAM",
+      "format": "videoluxProduct",
+      "imageType": "PRIMARY",
+      "url": "/medias/16307.jpg-Product-details-main?context=bWFzdGVyfHJvb3R8Nzc3Mzl8aW1hZ2UvanBlZ3xhR1ZpTDJnNVpTOHlOamd6TnpVNU1USTJNVEl4TkM1cWNHY3xlMmVlNjcxNjE2NDUzMmU2ZTljNjM5M2U2ODFlNjBmNmU0YjNjNDk3ZDljYzRkOWYwOWI2ODg5YzE3YTEzNzli"
+    },
+    {
+      "altText": "PCMCI CARD CONAX CAM",
+      "format": "videoluxGrid",
+      "imageType": "PRIMARY",
+      "url": "/medias/16307.jpg-Listing-grid?context=bWFzdGVyfHJvb3R8MTE4Mzh8aW1hZ2UvanBlZ3xhRFJrTDJoaU5DOHlOamd6TnpVNU1USTVNems0TWk1cWNHY3xlOTY3OWE2MTZhMDVjYWQ2ZjM0ZjkxMmUyNWEyZWYxMDg4MWM2MjZkOTlmMDY3MDI0OTUxMTFkM2E3NDcxNDlj"
+    },
+    {
+      "altText": "PCMCI CARD CONAX CAM",
+      "format": "videoluxList",
+      "imageType": "PRIMARY",
+      "url": "/medias/16307.jpg-Listing-list?context=bWFzdGVyfHJvb3R8MTE4Mzh8aW1hZ2UvanBlZ3xhRFZpTDJneE1pOHlOamd6TnpVNU1UTXlOamMxTUM1cWNHY3w5NjdmNjIxNjUwNTkzZjY5NjczN2ZjNTE3YWY1YTMzZGI2OTBiYWY4Yzc2YzVhMTNhMjE2OTllZGNlMGE0MTlj"
+    },
+    {
+      "altText": "PCMCI CARD CONAX CAM",
+      "format": "videoluxThumb-new-n-alike",
+      "imageType": "PRIMARY",
+      "url": "/medias/16307.jpg-Product-newest-alike?context=bWFzdGVyfHJvb3R8ODU1OHxpbWFnZS9qcGVnfGFESXhMMmhsTlM4eU5qZ3pOelU1TVRNMU9UVXhPQzVxY0djfDBlMDM0ZTM4ODM5NzkzNTdmOTljMDQ3NmNhZTI5OWRmZjIyYTg4MjUyMTQ0MGJiMjdmZmYxODZlNTQyY2JlMzM"
+    },
+    {
+      "altText": "PCMCI CARD CONAX CAM",
+      "format": "videoluxBundle",
+      "imageType": "PRIMARY",
+      "url": "/medias/16307.jpg-Product-bundle?context=bWFzdGVyfHJvb3R8MjkyNjN8aW1hZ2UvanBlZ3xhR1kzTDJobE9DOHlOamd6TnpVNU1UTTVNakk0Tmk1cWNHY3wwNjMzMmVmZDE0MTk0ZGU3NDllYjgxMDE1OTI4MmU3YzgzYzMwYTIwOGUzNWM1MGUyYjQ2NWFiMDc3NjMzZDVj"
+    },
+    {
+      "altText": "PCMCI CARD CONAX CAM",
+      "format": "videoluxBasket",
+      "imageType": "PRIMARY",
+      "url": "/medias/16307.jpg-Basket?context=bWFzdGVyfHJvb3R8ODE0NXxpbWFnZS9qcGVnfGFEQTFMMmcwTnk4eU5qZ3pOelU1TVRReU5UQTFOQzVxY0djfDBmMjQzOWI3NDRlOGNmZTQ5MzQ4YTNhOWMyOTJjYzZmY2NiM2MxNmYzNjE4NjAwMzVjM2M3NjUzYTM0OTgxNDg"
+    },
+    {
+      "altText": "PCMCI CARD CONAX CAM",
+      "format": "videoluxThumbnail",
+      "imageType": "PRIMARY",
+      "url": "/medias/16307.jpg-Product-gallery?context=bWFzdGVyfHJvb3R8Mjk4NHxpbWFnZS9qcGVnfGFERXlMMmhoTkM4eU5qZ3pOelU1TVRRMU56Z3lNaTVxY0djfDdiOWJlM2RmNWU5NmU1MzBiZTQ3ODk1MGMwNDJkNzRiY2IwYzJiMDczM2RlOTY2ODlhODg3ZmFkZGI5OTk3M2U"
+    },
+    {
+      "altText": "PCMCI CARD CONAX CAM",
+      "format": "videoluxFreeGift",
+      "imageType": "PRIMARY",
+      "url": "/medias/16307.jpg-FreeGift?context=bWFzdGVyfHJvb3R8MzY5MXxpbWFnZS9qcGVnfGFESmlMMmczTWk4eU5qZ3pOelU1TVRRNU1EVTVNQzVxY0djfGNhNTE4NmU2MDk2ZDVhZGU4OWIyZjg3OTVjOWIwMzk5ODE1M2Y5NjZlMzJhZjUyNTM5M2I1NzJkM2IxMTFlZGQ"
+    },
+    {
+      "altText": "PCMCI CARD CONAX CAM",
+      "format": "videoluxMiniCart",
+      "imageType": "PRIMARY",
+      "url": "/medias/16307.jpg-Mini-cart?context=bWFzdGVyfHJvb3R8MjkwMXxpbWFnZS9qcGVnfGFERTJMMmd6TWk4eU5qZ3pOelU1TVRVeU16TTFPQzVxY0djfDI4NWRkODE4MmNjZDczYTI1NjE5NGI0ZTk3YjRlOWU0NWRhZjlmNDRhYmMxNjYwMTM2N2MxYTkzOGQzMTgwM2E"
+    },
+    {
+      "altText": "PCMCI CARD CONAX CAM",
+      "format": "videoluxVariantColour",
+      "imageType": "PRIMARY",
+      "url": "/medias/16307.jpg-Variant-colour?context=bWFzdGVyfHJvb3R8MjE1MXxpbWFnZS9qcGVnfGFHSmpMMmhrT0M4eU5qZ3pOelU1TVRVMU5qRXlOaTVxY0djfGJkODg4ODdmNDY5ZjNmOGUzMDNjODNiMmUzMThlMDA2MjY3OTM3ZmMxNjczZmY4ZTI3ODQwZDdhYmE0NWVmZjk"
+    },
+    {
+      "altText": "PCMCI CARD CONAX CAM",
+      "format": "videoluxZoom",
+      "galleryIndex": 0,
+      "imageType": "GALLERY",
+      "url": "/medias/16307.jpg-Product-zoom?context=bWFzdGVyfHJvb3R8ODQyNTl8aW1hZ2UvanBlZ3xhREkyTDJnNE9TOHlOamd6TnpVNU1USXlPRFEwTmk1cWNHY3xiNzQ2NzlmODhkNWYzOWY2NDdiMGZkY2FhZGMxOTNiYmY2ZWE0MmFiMGFjNTg1NjNmOTQwYzUxYjlhYjViMjE0"
+    },
+    {
+      "altText": "PCMCI CARD CONAX CAM",
+      "format": "videoluxProduct",
+      "galleryIndex": 0,
+      "imageType": "GALLERY",
+      "url": "/medias/16307.jpg-Product-details-main?context=bWFzdGVyfHJvb3R8Nzc3Mzl8aW1hZ2UvanBlZ3xhR1ZpTDJnNVpTOHlOamd6TnpVNU1USTJNVEl4TkM1cWNHY3xlMmVlNjcxNjE2NDUzMmU2ZTljNjM5M2U2ODFlNjBmNmU0YjNjNDk3ZDljYzRkOWYwOWI2ODg5YzE3YTEzNzli"
+    },
+    {
+      "altText": "PCMCI CARD CONAX CAM",
+      "format": "videoluxThumbnail",
+      "galleryIndex": 0,
+      "imageType": "GALLERY",
+      "url": "/medias/16307.jpg-Product-gallery?context=bWFzdGVyfHJvb3R8Mjk4NHxpbWFnZS9qcGVnfGFERXlMMmhoTkM4eU5qZ3pOelU1TVRRMU56Z3lNaTVxY0djfDdiOWJlM2RmNWU5NmU1MzBiZTQ3ODk1MGMwNDJkNzRiY2IwYzJiMDczM2RlOTY2ODlhODg3ZmFkZGI5OTk3M2U"
+    },
+    {
+      "altText": "PCMCI CARD CONAX CAM",
+      "format": "videoluxZoom",
+      "galleryIndex": 1,
+      "imageType": "GALLERY",
+      "url": "/medias/16307-1-big.jpg-Product-zoom?context=bWFzdGVyfHJvb3R8ODQxMTN8aW1hZ2UvanBlZ3xhR0U0TDJoa055OHlOamd6TnpZME5EYzNNVE0xT0M1cWNHY3wwY2YwODZmZjM4Njk2MjJkNDVlMDI3ODdjMGFkZjIzOGIwZDY1NTc4ODkwZGFjODY0ZWM3Njk2MzEzZTg3ZTYw"
+    },
+    {
+      "altText": "PCMCI CARD CONAX CAM",
+      "format": "videoluxProduct",
+      "galleryIndex": 1,
+      "imageType": "GALLERY",
+      "url": "/medias/16307-1-big.jpg-Product-details-main?context=bWFzdGVyfHJvb3R8NzQ2Mjd8aW1hZ2UvanBlZ3xhREU0TDJnMFlpOHlOamd6TnpZME5EZ3pOamc1TkM1cWNHY3xiZTk4NzA0Y2E5ZGNiYmJhNzEzZjU0YmQwZWZkM2MwNTFmYTQyZmU0YzIzYzgzZDI3ZTRhNDg4MTI0MTllOGRk"
+    },
+    {
+      "altText": "PCMCI CARD CONAX CAM",
+      "format": "videoluxThumbnail",
+      "galleryIndex": 1,
+      "imageType": "GALLERY",
+      "url": "/medias/16307-1-big.jpg-Product-gallery?context=bWFzdGVyfHJvb3R8MjQ2NnxpbWFnZS9qcGVnfGFERTFMMmcwTVM4eU5qZ3pOelkwTkRrd01qUXpNQzVxY0djfGMyZDhhYjQ3ZmJjNzIyZjBhNDhiYzcxNTIzZGFiNWVhM2Q4ZWIzMTZhOGE0NDdiNzcyOTRiZTk2NDA1N2UzYTM"
+    }
+  ],
+  "leasingPromotion": false,
+  "markNew": false,
+  "metaDescription": "Купи PCMCI CARD CONAX CAM на изгодна цена и с възможност за изплащане. Доставка до цялата страна или вземане от магазина. ",
+  "metaKeywords": "PCMCI CARD CONAX CAM",
+  "multidimensional": false,
+  "name": "PCMCI CARD CONAX CAM",
+  "noInterestLeasingPeriod": -1,
+  "numberOfReviews": 0,
+  "onlineExclusive": false,
+  "onlineOnly": false,
+  "orderByPhone": true,
+  "pickUpFromCustomerStoreLabel": true,
+  "pickUpFromOnlineWarehouseLabel": false,
+  "pickUpTodayLabel": false,
+  "potentialPromotions": [],
+  "price": {
+    "channel": "offline",
+    "currencyIso": "EUR",
+    "currencySymbol": "€",
+    "endDate": "9999-12-31T21:59:59+0000",
+    "formattedValue": "30,50 €",
+    "formattedValueDecimal": "50",
+    "formattedValueWhole": "30",
+    "priceType": "BUY",
+    "promoType": "base",
+    "ratioToPrimaryUnit": 1.0,
+    "startDate": "2026-05-11T21:00:00+0000",
+    "value": 30.5
+  },
+  "priceRange": {},
+  "productReferences": [],
+  "purchasable": true,
+  "qualifiesForLeasing": false,
+  "reviewClassifications": {
+    "minuses": [
+      {
+        "code": "m_p11090901",
+        "features": [
+          {
+            "code": "TechnopolisReviewsClassification/1.0/m_p11090901.m_design",
+            "comparable": true,
+            "featureValues": [],
+            "listable": false,
+            "name": "Дизайн",
+            "position": 1,
+            "range": false
+          },
+          {
+            "code": "TechnopolisReviewsClassification/1.0/m_p11090901.m_functionality",
+            "comparable": true,
+            "featureValues": [],
+            "listable": false,
+            "name": "Функционалност",
+            "position": 2,
+            "range": false
+          }
+        ]
+      }
+    ],
+    "pluses": [
+      {
+        "code": "p_p11090901",
+        "features": [
+          {
+            "code": "TechnopolisReviewsClassification/1.0/p_p11090901.p_design",
+            "comparable": true,
+            "featureValues": [],
+            "listable": false,
+            "name": "Дизайн",
+            "position": 1,
+            "range": false
+          },
+          {
+            "code": "TechnopolisReviewsClassification/1.0/p_p11090901.p_functionality",
+            "comparable": true,
+            "featureValues": [],
+            "listable": false,
+            "name": "Функционалност",
+            "position": 2,
+            "range": false
+          }
+        ]
+      }
+    ]
+  },
+  "reviewSummary": {
+    "minuses": [],
+    "pluses": []
+  },
+  "reviews": [],
+  "showOldPrice": true,
+  "showPcd": false,
+  "showPromoPriceCounter": false,
+  "showReserveButton": false,
+  "soldIndividually": true,
+  "soldOut": false,
+  "stock": {
+    "isValueRounded": false,
+    "stockLevel": 25,
+    "stockLevelStatus": "inStock"
+  },
+  "summary": "",
+  "title": "PCMCI CARD CONAX CAM",
+  "url": "/TV-aksesoari-drugi/PCMCI-CARD-CONAX-CAM/p/16307",
+  "variantsAllValuesMap": [],
+  "variantsValuesMap": [],
+  "videos": [],
+  "volumePrices": [
+    {
+      "currencyIso": "EUR",
+      "currencySymbol": "€",
+      "formattedValue": "30,50 €",
+      "formattedValueDecimal": "50",
+      "formattedValueWhole": "30",
+      "maxQuantity": 0,
+      "minQuantity": 1,
+      "priceType": "BUY",
+      "ratioToPrimaryUnit": 1.0,
+      "value": 30.5
+    },
+    {
+      "currencyIso": "EUR",
+      "currencySymbol": "€",
+      "formattedValue": "30,50 €",
+      "formattedValueDecimal": "50",
+      "formattedValueWhole": "30",
+      "minQuantity": 1,
+      "priceType": "BUY",
+      "ratioToPrimaryUnit": 1.0,
+      "value": 30.5
+    }
+  ]
+}

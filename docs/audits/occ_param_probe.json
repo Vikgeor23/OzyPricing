@@ -1,0 +1,38 @@
+[
+  {
+    "case": 0,
+    "params": {
+      "fields": "DEFAULT"
+    },
+    "status": 200,
+    "price": 30.1
+  },
+  {
+    "case": 1,
+    "params": {
+      "fields": "FULL",
+      "lang": "bg",
+      "curr": "EUR"
+    },
+    "status": 200,
+    "price": 30.1
+  },
+  {
+    "case": 2,
+    "params": {
+      "fields": "FULL",
+      "lang": "bg",
+      "curr": "EUR",
+      "servicingStore": "1302",
+      "postalCode": "1000"
+    },
+    "status": 200,
+    "price": 30.1
+  },
+  {
+    "case": 3,
+    "params": {},
+    "status": 200,
+    "price": 30.1
+  }
+]

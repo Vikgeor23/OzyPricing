@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Ozypricing">
+  <defs>
+    <linearGradient id="ring" x1="8" y1="56" x2="56" y2="8" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#EA580C"/>
+      <stop offset="0.55" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#14B8A6"/>
+    </linearGradient>
+    <linearGradient id="handle" x1="8" y1="56" x2="38" y2="26" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#C2410C"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="#F8FAFC"/>
+  <circle cx="32" cy="32" r="28" fill="none" stroke="#E0F2FE" stroke-width="3"/>
+  <path d="M13 51 25.5 38.5" stroke="url(#handle)" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="35" cy="29" r="17" fill="#FFFFFF" stroke="url(#ring)" stroke-width="7"/>
+  <path d="M35 15.5 38.8 25.2 48.5 29 38.8 32.8 35 42.5 31.2 32.8 21.5 29 31.2 25.2Z" fill="#18CFC1"/>
+  <path d="M49 9.5 50.9 14.1 55.5 16 50.9 17.9 49 22.5 47.1 17.9 42.5 16 47.1 14.1Z" fill="#EA580C"/>
+  <path d="M21 8.5 22.3 11.7 25.5 13 22.3 14.3 21 17.5 19.7 14.3 16.5 13 19.7 11.7Z" fill="#22D3EE"/>
+</svg>

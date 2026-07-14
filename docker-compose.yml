@@ -1,0 +1,156 @@
+# Development stack: bind-mounted source + hot reload.
+# Rebuild backend/celery images only when Python deps or Dockerfile change (`docker compose build backend`).
+
+name: ozypricing
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    command:
+      - "postgres"
+      - "-c"
+      - "shared_buffers=512MB"
+      - "-c"
+      - "effective_cache_size=4GB"
+      - "-c"
+      - "work_mem=16MB"
+      - "-c"
+      - "maintenance_work_mem=256MB"
+      - "-c"
+      - "random_page_cost=1.1"
+      - "-c"
+      - "checkpoint_timeout=15min"
+      - "-c"
+      - "checkpoint_completion_target=0.9"
+      - "-c"
+      - "max_wal_size=2GB"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: pricing_monitor
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d pricing_monitor"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+    environment:
+      DATABASE_URL: postgresql+psycopg2://postgres:postgres@postgres:5432/pricing_monitor
+      REDIS_URL: redis://redis:6379/0
+      CELERY_BROKER_URL: redis://redis:6379/0
+      CELERY_RESULT_BACKEND: redis://redis:6379/0
+      CORS_ORIGINS: https://pricing.skumancer.io,https://pricemancer.com,https://www.pricemancer.com,http://localhost:3000,http://127.0.0.1:3000,http://localhost:3001,http://127.0.0.1:3001
+      DEBUG: "true"
+      # Guardrails for interactive web queries (NOT set on celery_worker, whose
+      # batch jobs run for minutes). A runaway workspace search fails at 30s
+      # instead of pinning Postgres for every user.
+      DB_STATEMENT_TIMEOUT_MS: "30000"
+      DB_WORK_MEM: "128MB"
+      # /api/* routes are always registered in app/main.py (no env var required).
+      PRICE_HISTORY_ENABLED: "false"
+      SCRAPE_CONCURRENCY: "12"
+      SCRAPE_CONCURRENCY_MIN: "6"
+      SCRAPE_CONCURRENCY_MAX: "20"
+      SCRAPE_HTTP_ENABLED: "false"
+      SCRAPE_OCC_ENABLED: "true"
+      SCRAPE_OCC_TIMEOUT_SEC: "15"
+      SCRAPE_NAVIGATION_TIMEOUT_MS: "10000"
+      SCRAPE_RETRY_NAVIGATION_TIMEOUT_MS: "15000"
+      SCRAPE_TITLE_WAIT_MS: "2000"
+      SCRAPE_PRICE_SELECTOR_WAIT_MS: "3000"
+      SCRAPE_BATCH_COMMIT_SIZE: "20"
+      SCRAPE_PROGRESS_INTERVAL_SEC: "3"
+      SCRAPE_SKIP_RECENT_FAILURES: "true"
+      SCRAPE_RECENT_FAILURE_HOURS: "24"
+      SCRAPE_SKIP_DEAD_URLS: "true"
+      # Reliable file watches when the repo is bind-mounted (e.g. Docker Desktop on Windows).
+      WATCHFILES_FORCE_POLLING: "true"
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  celery_worker:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    command: ["celery", "-A", "app.celery_app", "worker", "--loglevel=info"]
+    environment:
+      DATABASE_URL: postgresql+psycopg2://postgres:postgres@postgres:5432/pricing_monitor
+      REDIS_URL: redis://redis:6379/0
+      CELERY_BROKER_URL: redis://redis:6379/0
+      CELERY_RESULT_BACKEND: redis://redis:6379/0
+      PRICE_HISTORY_ENABLED: "false"
+      SCRAPE_CONCURRENCY: "12"
+      SCRAPE_CONCURRENCY_MIN: "6"
+      SCRAPE_CONCURRENCY_MAX: "20"
+      SCRAPE_HTTP_ENABLED: "false"
+      SCRAPE_OCC_ENABLED: "true"
+      SCRAPE_OCC_TIMEOUT_SEC: "15"
+      SCRAPE_NAVIGATION_TIMEOUT_MS: "10000"
+      SCRAPE_RETRY_NAVIGATION_TIMEOUT_MS: "15000"
+      SCRAPE_TITLE_WAIT_MS: "2000"
+      SCRAPE_PRICE_SELECTOR_WAIT_MS: "3000"
+      SCRAPE_BATCH_COMMIT_SIZE: "20"
+      SCRAPE_PROGRESS_INTERVAL_SEC: "3"
+      SCRAPE_SKIP_RECENT_FAILURES: "true"
+      SCRAPE_RECENT_FAILURE_HOURS: "24"
+      SCRAPE_SKIP_DEAD_URLS: "true"
+      SCRAPE_GENERIC_CONCURRENCY: "32"
+      SCRAPE_GENERIC_CONCURRENCY_MAX: "64"
+      SCRAPE_GENERIC_BROWSER_POOL_SIZE: "32"
+      SCRAPE_ADAPTIVE_TIMEOUT_RATE_LOW: "0.15"
+    volumes:
+      - ./backend:/app
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  # The live frontend is NOT this container: pricemancer.com is served by the
+  # host-level `pricemancer.service` (next start on 127.0.0.1:3100, built from
+  # ./frontend with `npm run build`). This Docker service is retired to avoid
+  # confusion about which build is live; uncomment if a containerized frontend
+  # is ever needed again.
+  # frontend:
+  #   build:
+  #     context: ./frontend
+  #     dockerfile: Dockerfile
+  #     args:
+  #       NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8000}
+  #   environment:
+  #     NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8000}
+  #     NEXT_TELEMETRY_DISABLED: "1"
+  #     NODE_ENV: production
+  #   ports:
+  #     - "3000:3000"
+  #   depends_on:
+  #     - backend
+
+volumes:
+  pgdata:

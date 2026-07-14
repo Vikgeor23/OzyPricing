@@ -1,0 +1,86 @@
+# Environment (keep *.example templates)
+.env
+.env.*
+!.env.example
+!**/.env.example
+
+backend/.env
+backend/.env.*
+!backend/.env.example
+
+frontend/.env
+frontend/.env.*
+frontend/.env.local
+!frontend/.env.example
+
+# Node / Next.js
+node_modules/
+frontend/node_modules/
+.next/
+frontend/.next/
+out/
+frontend/out/
+
+# Python
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+*.egg-info/
+dist/
+build/
+
+# Logs and local runtime data
+logs/
+uploads/
+tmp/
+temp/
+storage/
+backend/storage/
+scrape_failures/
+backend/storage/scrape_failures/
+*.log
+
+# Docker / local volumes
+postgres_data/
+redis_data/
+docker-compose.override.yml
+
+# Databases and dumps
+*.db
+*.sqlite
+*.sqlite3
+*.bak
+*.dump
+*.sql
+
+# Keys and certificates
+*.pem
+*.key
+*.p12
+*.pfx
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
+# Investigation / temp git helpers
+_git_status.txt
+secret-scan-output.txt
+_investigation_log.txt
+import_ok.txt
+test_out.txt
+test_results.txt

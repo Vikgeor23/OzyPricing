@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang="bg" dir="ltr"><head><link rel="preconnect" href="https://api.technopolis.bg">
+    <script src="https://accounts.google.com/gsi/client" async="" defer=""></script>
+    <script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
+
+    <meta charset="utf-8">
+    <title>Не е Открита</title>
+    <base href="/">
+
+    <link rel="shortcut icon" type="image/x-icon" media="all" href="/assets/images/favicons/favicon.ico">
+    <link rel="icon" href="/assets/images/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicons/android-icon-192x192.png">
+
+    <link rel="manifest" href="/manifest.webmanifest">
+    <meta name="theme-color" content="#db232a">
+    <meta name="occ-backend-base-url" content="https://api.technopolis.bg">
+
+    <meta name="author" content="Technopolis">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="Petal-Search-site-verification" content="2b13780785">
+  <link rel="stylesheet" href="styles-VLJY454J.css"><style ng-app-id="ng">[_nghost-ng-c822592699]{display:block;width:100%}[_nghost-ng-c822592699]   .find-store__dropdown-inner[_ngcontent-ng-c822592699]   .button[_ngcontent-ng-c822592699]{min-width:200px}.orientative-label[_ngcontent-ng-c822592699]{white-space:normal;display:block;padding-left:20px;max-width:300px;text-align:right;font-size:13px;color:#db232a}.product-pdp__prices__mobile[_ngcontent-ng-c822592699]{display:block}</style><styl
+---
+0

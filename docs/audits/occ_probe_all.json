@@ -1,0 +1,77 @@
+[
+  {
+    "id": "14251",
+    "status": 200,
+    "name": "TV Стойка  HAMA 108726  ЧЕРЕН",
+    "price": 30.1,
+    "currency": "EUR",
+    "ean": "4047443136848",
+    "stock": {
+      "isValueRounded": false,
+      "stockLevel": 0,
+      "stockLevelStatus": "reserved"
+    },
+    "purchasable": true,
+    "variants": false
+  },
+  {
+    "id": "16307",
+    "status": 200,
+    "name": "PCMCI CARD CONAX CAM",
+    "price": 30.5,
+    "currency": "EUR",
+    "ean": null,
+    "stock": {
+      "isValueRounded": false,
+      "stockLevel": 25,
+      "stockLevelStatus": "inStock"
+    },
+    "purchasable": true,
+    "variants": false
+  },
+  {
+    "id": "33033",
+    "status": 200,
+    "name": "DVD ПЛЕЪР SONY DVP-SR760",
+    "price": 54.9,
+    "currency": "EUR",
+    "ean": "4905524842074",
+    "stock": {
+      "isValueRounded": false,
+      "stockLevel": 109,
+      "stockLevelStatus": "inStock"
+    },
+    "purchasable": true,
+    "variants": false
+  },
+  {
+    "id": "156468",
+    "status": 200,
+    "name": "КЛАСИЧЕСКА КИТАРА YAMAHA C30",
+    "price": 149.9,
+    "currency": "EUR",
+    "ean": "4957812496858",
+    "stock": {
+      "isValueRounded": false,
+      "stockLevel": 87,
+      "stockLevelStatus": "inStock"
+    },
+    "purchasable": true,
+    "variants": false
+  },
+  {
+    "id": "64200",
+    "status": 200,
+    "name": "Екран HAMA TRIPOD-SCREEN 125, WH",
+    "price": 66.4,
+    "currency": "EUR",
+    "ean": "4007249187901",
+    "stock": {
+      "isValueRounded": false,
+      "stockLevel": 1,
+      "stockLevelStatus": "inStock"
+    },
+    "purchasable": true,
+    "variants": false
+  }
+]

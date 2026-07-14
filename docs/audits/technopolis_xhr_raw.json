@@ -1,0 +1,2983 @@
+{
+  "product_urls": [
+    "https://www.technopolis.bg/bg/TV-stojki/TV-Stojka--HAMA-108726/p/14251",
+    "https://www.technopolis.bg/bg/TV-aksesoari-drugi/PCMCI-CARD-CONAX-CAM/p/16307",
+    "https://www.technopolis.bg/bg/Blu-Ray-i-DVD-pleari/DVD-PLEAR-SONY-DVP-SR760/p/33033",
+    "https://www.technopolis.bg/bg/Muzikalni-instrumenti/KLASIChESKA-KITARA-YAMAHA-C30/p/156468",
+    "https://www.technopolis.bg/bg/Ekrani/Ekran-HAMA-TRIPOD-SCREEN-125--WH/p/64200"
+  ],
+  "runs": [
+    {
+      "product_url": "https://www.technopolis.bg/bg/TV-stojki/TV-Stojka--HAMA-108726/p/14251",
+      "category_path": "TV-stojki/TV-Stojka--HAMA-108726",
+      "notes": [
+        "response_handler_error: 'utf-8' codec can't decode byte 0x8b in position 1: invalid start byte"
+      ],
+      "xhr_fetch_total": 31,
+      "candidate_count": 22,
+      "candidates": [
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/14251/references?fields=DEFAULT%2Creferences(target(code%2Cname%2Cprice%2Cimages(FULL)%2CshowPcd%2Cpcd%2CinfoPriceOffline%2CinfoPriceOld))&referenceType=ACCESSORIES&imageFormats=videoluxGrid&pageSize=14&lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": true,
+            "ean": true,
+            "product_code": false,
+            "stock": true,
+            "variants": false
+          },
+          "response_sample": "{\n   \"references\" : [ {\n      \"referenceType\" : \"ACCESSORIES\",\n      \"target\" : {\n         \"baseOptions\" : [ ],\n         \"brand\" : \"ETC\",\n         \"code\" : \"872031\",\n         \"configurable\" : false,\n         \"description\" : \"\",\n         \"ean\" : \"3800809740513\",\n         \"estimatedDeliveryTime\" : true,\n         \"estimatedDeliveryTimeMessage\" : \"Очаквано време за доставка от 1 до 4 дни.\",\n         \"expressDelivery\" : true,\n         \"hideSticker\" : true,\n         \"images\" : [ {\n            \"altText\" : \"Разкл. 4 гн. 5м ИМП бял ETC 74051\",\n            \"format\" : \"videoluxZoom\",\n            \"imageType\" : \"PRIMARY\",\n            \"url\" : \"/medias/872031.jpg-Product-zoom?context=bWFzdGVyfHJvb3R8ODk4ODJ8aW1hZ2UvanBlZ3xhR00zTDJoaU9DOHhNVFEwTXpVMU16WTJOVEExTkM1cWNHY3w1MGM2ZmQ3MGI5NGRmZTIxZjE5ODU0NjQwNGU5NWI3NTdiYTA4YmZkNzUyYTBlYzIyZjIxYmIzOWU4NDdhNzg3\"\n         }, {\n            \"altText\" : \"Разкл. 4 гн. 5м ИМП бял ETC 74051\",\n            \"format\" : \"videoluxProduct\",\n            \"imageType\" : \"PRIM",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/14251/references?fields=DEFAULT%2Creferences(target(code%2Cname%2Cprice%2Cimages(FULL)%2CshowPcd%2Cpcd%2CinfoPriceOffline%2CinfoPriceOld))&referenceType=NEW&imageFormats=videoluxGrid&pageSize=10&lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": true,
+            "ean": true,
+            "product_code": false,
+            "stock": true,
+            "variants": false
+          },
+          "response_sample": "{\n   \"references\" : [ {\n      \"description\" : \"\",\n      \"quantity\" : 1,\n      \"referenceType\" : \"NEW\",\n      \"target\" : {\n         \"baseOptions\" : [ ],\n         \"brand\" : \"HAMA\",\n         \"code\" : \"15071\",\n         \"configurable\" : false,\n         \"description\" : \"\",\n         \"ean\" : \"4047443547231\",\n         \"estimatedDeliveryTime\" : true,\n         \"estimatedDeliveryTimeMessage\" : \"Очаквано време за доставка от 1 до 4 дни.\",\n         \"expressDelivery\" : true,\n         \"hideSticker\" : true,\n         \"images\" : [ {\n            \"altText\" : \"TV СТЕНД HAMA-220898\",\n            \"format\" : \"videoluxZoom\",\n            \"imageType\" : \"PRIMARY\",\n            \"url\" : \"/medias/Product-zoom-15071.jpg?context=bWFzdGVyfHJvb3R8ODg1MTV8aW1hZ2UvanBlZ3xhRGczTDJnd05TODJNamN4TlRneE1qZzNNakl5TWk5UWNtOWtkV04wTFhwdmIyMWZNVFV3TnpFdWFuQm58ZmViMDY5MGE0YjBmNDI3ZjRhYjU1OGVlNjA4NzJmYTI2NjU0MjViZjMwOGJkMGYwZGNkMjM5NWJlMDA0NjMxNA\"\n         }, {\n            \"altText\" : \"TV СТЕНД HAMA-220898\",\n            \"format\" : \"vi",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/14251/references?fields=DEFAULT%2Creferences(target(code%2Cname%2Cprice%2Cimages(FULL)%2CshowPcd%2Cpcd%2CinfoPriceOffline%2CinfoPriceOld))&referenceType=SIMILAR&imageFormats=videoluxGrid&pageSize=10&lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": true,
+            "ean": true,
+            "product_code": false,
+            "stock": true,
+            "variants": false
+          },
+          "response_sample": "{\n   \"references\" : [ {\n      \"referenceType\" : \"SIMILAR\",\n      \"target\" : {\n         \"baseOptions\" : [ ],\n         \"brand\" : \"VOGELS\",\n         \"code\" : \"58041\",\n         \"configurable\" : false,\n         \"description\" : \"\",\n         \"ean\" : \"8712285315381\",\n         \"estimatedDeliveryTime\" : true,\n         \"estimatedDeliveryTimeMessage\" : \"Очаквано време за доставка от 1 до 4 дни.\",\n         \"expressDelivery\" : true,\n         \"hideSticker\" : true,\n         \"images\" : [ {\n            \"altText\" : \"TV СТОЙКА VOGELS PHA 700\",\n            \"format\" : \"videoluxZoom\",\n            \"imageType\" : \"PRIMARY\",\n            \"url\" : \"/medias/58041.jpg-Product-zoom?context=bWFzdGVyfHJvb3R8MjM0NDF8aW1hZ2UvanBlZ3xhRE00TDJneVppOHhNVFEwT0RBNU5ETTVNak0xTUM1cWNHY3xkNGEyNGI2NDFiNTA4ZTIwYzM5MjYyZTgyNmNjZWQ4ZTQzODkzMDhlNjY0MWY3ODJkMTU0MGM1N2Y1NWJhYzYw\"\n         }, {\n            \"altText\" : \"TV СТОЙКА VOGELS PHA 700\",\n            \"format\" : \"videoluxProduct\",\n            \"imageType\" : \"PRIMARY\",\n            \"ur",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://accounts.livechatinc.com/v2/customer/991aba2c-7604-43b0-bb45-18b519f8e379/6/token",
+          "method": "POST",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "xhr",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\"access_token\":\"us-south1:gehcpoZ9Rj6sbBLra-6j4Q\",\"entity_id\":\"eec8100b-578a-4a60-a01e-faf8bf962458\",\"expires_in\":14400,\"organization_id\":\"991aba2c-7604-43b0-bb45-18b519f8e379\",\"token_type\":\"Bearer\"}\n",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://secure.livechatinc.com/"
+          },
+          "set_cookie": "",
+          "post_data_preview": "{\"response_type\":\"token\",\"grant_type\":\"cookie\",\"client_id\":\"c5e4f61e1a6c3b1521b541bc5c5a2ac5\",\"organization_id\":\"991aba2c-7604-43b0-bb45-18b519f8e379\",\"redirect_uri\":\"https://secure.livechatinc.com/customer/action/open_chat\"}"
+        },
+        {
+          "url": "https://ams.creativecdn.com/tags/v2?type=json&tc=1",
+          "method": "POST",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "[{\"url\":\"https://ib.adnxs.com/setuid?entity=315&code=6vcRtqUrWRut2QM0nNYtUnJyQ3_6IgEt-YactX_9dJA&consent=1\",\"type\":\"IMG\"}]",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/bg/TV-stojki/TV-Stojka--HAMA-108726/p/14251"
+          },
+          "set_cookie": "",
+          "post_data_preview": "{\"v\":\"v0.2.1\",\"sr\":\"\",\"su\":\"https://www.technopolis.bg/bg/TV-stojki/TV-Stojka--HAMA-108726/p/14251\",\"th\":\"SaCE7v75HuLgk0GQNSC3\",\"tags\":[{\"eventType\":\"offer\",\"offerId\":\"14251\"},{\"eventType\":\"category\",\"categoryId\":\"Product Details\"},{\"eventType\":\"category\",\"categoryId\":\"Product Details\"},{\"eventType\""
+        },
+        {
+          "url": "https://analytics.tiktok.com/api/v2/pixel",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "ping",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": "{\"event\":\"Pageview\",\"event_id\":\"\",\"message_id\":\"messageId-1779371041986-1629530820379-CSMC6D3C77U7NCGBQG90\",\"is_onsite\":false,\"timestamp\":\"2026-05-21T13:44:01.986Z\",\"context\":{\"ad\":{\"sdk_env\":\"external\",\"jsb_status\":2},\"device\":{\"platform\":\"pc\"},\"user\":{\"anonymous_id\":\"01KS5CES5QT9T6H44YZDK57PSJ_.tt"
+        },
+        {
+          "url": "https://analytics.tiktok.com/api/v2/pixel/act",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "ping",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": "{\"event_id\":\"\",\"message_id\":\"messageId-1779371042222-3925556357752\",\"is_onsite\":false,\"timestamp\":\"2026-05-21T13:44:02.222Z\",\"context\":{\"ad\":{\"sdk_env\":\"external\",\"jsb_status\":2},\"device\":{\"platform\":\"pc\"},\"user\":{\"anonymous_id\":\"01KS5CES5QT9T6H44YZDK57PSJ_.tt.1\"},\"pixel\":{\"code\":\"CSMC6D3C77U7NCGBQG"
+        },
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/cms/components/topnavigation/topNavigationBarMenu?lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\n   \"uid\" : \"topNavigationBarMenu\",\n   \"typeCode\" : \"VLuxTopNavigationBarComponent\",\n   \"components\" : {\n      \"component\" : [ {\n         \"uid\" : \"PromoBarComponent\",\n         \"typeCode\" : \"NavigationBarComponent\",\n         \"link\" : {\n            \"uid\" : \"PromoCategoryLink\",\n            \"styleAttributes\" : \"i PromotionsLink\",\n            \"external\" : \"false\",\n            \"url\" : \"/c/Promotions\",\n            \"linkName\" : \"Оферти и брошура\",\n            \"typeCode\" : \"CMSMenuLinkComponent\",\n            \"target\" : \"false\"\n         },\n         \"navigationNode\" : {\n            \"uid\" : \"PromoNavNode\",\n            \"entries\" : [ ],\n            \"children\" : [ {\n               \"uid\" : \"OfflinePromoNavNode\",\n               \"entries\" : [ {\n                  \"link\" : {\n                     \"uid\" : \"OfflinePromoCategoryLink\",\n                     \"typeCode\" : \"CMSLinkComponent\",\n                     \"modifiedtime\" : \"2024-12-17T12:17:57.288+02:00\",\n                     \"external\" : \"false\",\n        ",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/cms/pages?pageType=ProductPage&code=14251&lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\n   \"uid\" : \"productDetails\",\n   \"uuid\" : \"eyJpdGVtSWQiOiJwcm9kdWN0RGV0YWlscyIsImNhdGFsb2dJZCI6InRlY2hub3BvbGlzQkdDb250ZW50Q2F0YWxvZyIsImNhdGFsb2dWZXJzaW9uIjoiT25saW5lIn0=\",\n   \"title\" : \"Технополис - прави живота по-хубав\",\n   \"template\" : \"ProductDetailsPageTemplate\",\n   \"typeCode\" : \"ProductPage\",\n   \"name\" : \"Product Details\",\n   \"description\" : \"Хипермаркети Технополис предлагат огромен избор от бяла, черна, офис техника и IT. Транспорт, покупки на изплащане, онлайн магазин, удължена гаранция и внимателно обслужване. Технополис - прави живота по-хубав.\",\n   \"contentSlots\" : {\n      \"contentSlot\" : [ {\n         \"slotId\" : \"RecentProductsSlot\",\n         \"slotUuid\" : \"eyJpdGVtSWQiOiJSZWNlbnRQcm9kdWN0c1Nsb3QiLCJjYXRhbG9nSWQiOiJ0ZWNobm9wb2xpc0JHQ29udGVudENhdGFsb2ciLCJjYXRhbG9nVmVyc2lvbiI6Ik9ubGluZSJ9\",\n         \"position\" : \"RecentProducts\",\n         \"name\" : \"Slot for the Recent products\",\n         \"slotShared\" : false,\n         \"components\" : {\n            \"component\" : [ {\n        ",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/14251/references?fields=DEFAULT%2Creferences(target(code%2Cname%2Cprice%2Cimages(FULL)%2CshowPcd%2Cpcd%2CinfoPriceOffline%2CinfoPriceOld))&referenceType=CROSSELLING&imageFormats=videoluxGrid&pageSize=5&lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\n   \"references\" : [ ]\n}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/14251?fields=DEFAULT,averageRating,images(FULL),manufacturer,numberOfReviews,categories(FULL),baseOptions,baseProduct,variantOptions,variantType,ecoImages(FULL),potentialPromotions(FULL),bundlePromotions(FULL),classifications,ean,brand&imageFormats=videoluxProduct,videoluxGrid,videoluxZoom,videoluxThumbnail&lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\n   \"a360videos\" : [ ],\n   \"allFromBrandButton\" : true,\n   \"allFromBrandUrl\" : \"/brand/HAMA\",\n   \"availableForPickup\" : true,\n   \"baseOptions\" : [ ],\n   \"bfStockAndPrice\" : false,\n   \"brand\" : \"HAMA\",\n   \"breadcrumbDatas\" : [ {\n      \"name\" : \"TV, Аудио и Gaming\",\n      \"url\" : \"TV--Audio-i-Gaming/c/P1109\"\n   }, {\n      \"name\" : \"TV аксесоари\",\n      \"url\" : \"TV--Audio-i-Gaming/TV-aksesoari/c/P110907\"\n   }, {\n      \"name\" : \"TV стойки\",\n      \"url\" : \"TV--Audio-i-Gaming/TV-aksesoari/TV-stojki/c/P11090702\"\n   }, {\n      \"name\" : \"TV Стойка  HAMA 108726  ЧЕРЕН\",\n      \"url\" : \"/TV-stojki/TV-Stojka--HAMA-108726/p/14251\"\n   } ],\n   \"bundlePromotions\" : [ ],\n   \"categories\" : [ {\n      \"code\" : \"P11090702\",\n      \"image\" : {\n         \"url\" : \"/medias/P11090702-logo.jpg?context=bWFzdGVyfGltYWdlc3w5NTkwfGltYWdlL2pwZWd8YVcxaFoyVnpMMmcwTUM5b01HTXZNVGMwTnprME5USTNPRFkzTVRndWFuQm58N2VkYmM4OWFjYTA1ZGJjY2YxMTNmYzQ4NjZmYjVjYjUwMGE0NjQ2ODliMTgzM2IwNzAyMTcwZmNmNTY4NjlmZQ\"\n      },\n      \"url\" : \"TV--",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://consentcdn.cookiebot.com/consentconfig/c679db95-c8cc-4245-b927-95013d55f47b/settings.json",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "xhr",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\"widget\":{\"enabled\":false,\"position\":{\"position\":\"bottom-left\",\"distanceVerticalPx\":10,\"distanceHorizontalPx\":10},\"theme\":{\"closed\":{\"backgroundColor\":\"#141414\",\"foregroundColor\":\"#FFFFFF\"},\"opened\":{\"backgroundColor\":\"#FFFFFF\",\"foregroundColor\":\"#141414\",\"highlightColor\":\"#1032CF\",\"shadeColor\":\"#D6D6D6\",\"changeBackgroundColor\":\"#1032CF\",\"changeTextColor\":\"#FFFFFF\",\"changeBorderColor\":\"#1032CF\",\"withdrawBackgroundColor\":\"#FFFFFF\",\"withdrawTextColor\":\"#141414\",\"withdrawBorderColor\":\"#1032CF\",\"detailsBackgroundColor\":\"#F2F2F2\"}},\"content\":{\"cultures\":[\"en\",\"bg\"],\"default\":\"bg\",\"autodetectLanguage\":false}}}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://gum.criteo.com/sid/json?origin=onetag&domain=technopolis.bg&sn=ChromeSyncframe&so=undefined&topUrl=www.technopolis.bg",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\"sid\":null,\"removeSid\":false,\"bundle\":\"A1SHpl92Qm81dXZDNzB6YWs2RUUlMkJocDgwV0dxZnBaTEY2bFhDT2ticnFmNEx5VFZ6RXkwU3laRnd2eTJnU3JQN3RieXdmNnVTa3clMkY3bEx1bHBMT3pLUnJnWGNKcUhFOGx0cHVXU1FxZXRUSFdsJTJGcExuSFFpdmVJOFBnT0lIenFQQ05ESUMzampCeHFvUGhlMHAycTZUZklJelElM0QlM0Q\",\"info\":\"jTE9b192Qm81dXZDNzB6YWs2RUUlMkJocDgwV0dxZnBaTEY2bFhDT2ticnFmNEx5VFZ6RXkwU3laRnd2eTJnU3JQN3RieXdVTkh4VjR5Q1F2a1JZOE5vU0U1TlVRJTNEJTNE\",\"optout\":false}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://gum.criteo.com/syncframe?topUrl=www.technopolis.bg&origin=onetag&us_privacy=1YNY"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://pagead2.googlesyndication.com/ccm/collect?rcb=18&frm=0&en=page_view&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FTV-stojki%2FTV-Stojka--HAMA-108726%2Fp%2F14251&scrsrc=www.googletagmanager.com&rnd=421382956.1779371043&navt=n&npa=1&us_privacy=1---&gdid=dMWZhNz&ep.user_data_mode=a&_tu=KA&gtm=45fe65j1v9242889690z89227895777za20gzb9227895777zd9227895777xec&gcs=G100&gcd=13p3p3p2p5l1&dma_cps=-&dma=1&tag_exp=0~115616986~115938465~115938468&apve=1&apvf=f&apvc=0&tids=DC-16420168&tid=DC-16420168&tft=1779371042865&tfd=8038",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "<unreadable: Response.text: Protocol error (Network.getResponseBody): No data found for resource with given identifier>",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://pagead2.googlesyndication.com/ccm/collect?rcb=19&frm=0&ae=g&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FTV-stojki%2FTV-Stojka--HAMA-108726%2Fp%2F14251&scrsrc=www.googletagmanager.com&rnd=421382956.1779371043&navt=n&npa=1&us_privacy=1---&did=dMWZhNz&gdid=dMWZhNz&_tu=KA&gtm=45be65j1v9179906331z89227895777za20gzb9227895777zd9227895777xea&gcs=G100&gcd=13p3pPp2p5l1&dma_cps=-&dma=1&tag_exp=0~115616985~115938465~115938468&apve=1&apvf=f&apvc=0&tids=AW-1000710043~AW-17703379485&tid=AW-1000710043&tft=1779371042870&tfd=8043",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "<unreadable: Response.text: Protocol error (Network.getResponseBody): No data found for resource with given identifier>",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://pagead2.googlesyndication.com/ccm/collect?rcb=19&frm=0&ae=g&en=view_item&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FTV-stojki%2FTV-Stojka--HAMA-108726%2Fp%2F14251&scrsrc=www.googletagmanager.com&rnd=421382956.1779371043&navt=n&npa=1&us_privacy=1---&ep.ads_data_redaction=1&epn.value=30.1&did=dMWZhNz&gdid=dMWZhNz&_tu=KA&gtm=45be65j1v9179906331z89227895777za20gzb9227895777zd9227895777xea&gcs=G100&gcd=13p3pPp2p5l1&dma_cps=-&dma=1&tag_exp=0~115616985~115938465~115938468&apve=1&apvf=f&apvc=0&tids=AW-1000710043~AW-17703379485&tid=AW-1000710043&tft=1779371042870&tfd=8043",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "<unreadable: Response.text: Protocol error (Network.getResponseBody): No data found for resource with given identifier>",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://pagead2.googlesyndication.com/ccm/collect?rcb=19&frm=0&en=page_view&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FTV-stojki%2FTV-Stojka--HAMA-108726%2Fp%2F14251&scrsrc=www.googletagmanager.com&rnd=421382956.1779371043&navt=n&npa=1&us_privacy=1---&did=dMWZhNz&gdid=dMWZhNz&_tu=KA&gtm=45be65j1v9179906331z89227895777za20gzb9227895777zd9227895777xec&gcs=G100&gcd=13p3pPp2p5l1&dma_cps=-&dma=1&tag_exp=0~115616985~115938465~115938468&apve=1&apvf=f&apvc=0&tids=AW-1000710043~AW-17703379485&tid=AW-1000710043&tft=1779371042868&tfd=8041",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "<unreadable: Response.text: Protocol error (Network.getResponseBody): No data found for resource with given identifier>",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://pagead2.googlesyndication.com/ccm/collect?rcb=4&frm=0&ae=g&en=page_view&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FTV-stojki%2FTV-Stojka--HAMA-108726%2Fp%2F14251&scrsrc=www.googletagmanager.com&rnd=421382956.1779371043&navt=n&npa=1&us_privacy=1---&ep.ads_data_redaction=1&gdid=dMWZhNz&_tu=CA&gtm=45He65j1v9227895777za200zd9227895777xea&gcs=G100&gcd=13p3p3p2p5l1&dma_cps=-&dma=1&tag_exp=0~115938465~115938469&apve=1&apvf=f&apvc=1&tft=1779371042862&tfd=8035",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "<unreadable: Response.text: Protocol error (Network.getResponseBody): No data found for resource with given identifier>",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://recommender.scarabresearch.com/merchants/1F6B4510E2D371EB/?pv=2085466883&xp=1&v=i%3A14251&cv=1&ca=&cp=1&az=technopolis",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "xhr",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\"cohort\":\"AAAA\",\"visitor\":\"594C3D61C6103360\",\"session\":\"311C827745A4743F\",\"profile\":\"14251|1779371043\",\"features\":{}}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://sgtm.technopolis.bg/g/collect?v=2&tid=G-F9NVFX3XWL&gtm=45je65j1v892675621z89227895777za20gzb9227895777zd9227895777&_p=1779371039272&gcs=G100&gcd=13p3pPp2p5l1&npa=1&dma_cps=-&dma=1&gdid=dMWZhNz&ecid=1111994110&_eu=IA&_fplc=0&are=1&cid=1236116996.1779371043&frm=0&pscdl=denied&rcb=3&sr=1365x900&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=bg-bg&ur=BG-22&sst.rnd=421382956.1779371043&sst.etld=google.bg&sst.gcsub=region1&sst.adr=1&sst.us_privacy=1---&sst.tft=1779371039272&sst.lpc=230801562&sst.navt=n&sst.ude=0&_s=2&tag_exp=0~115938465~115938469&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FTV-stojki%2FTV-Stojka--HAMA-108726%2Fp%2F14251&dt=TV%20%D0%A1%D1%82%D0%BE%D0%B9%D0%BA%D0%B0%20%20HAMA%20108726%20%20%D0%A7%D0%95%D0%A0%D0%95%D0%9D&cu=EUR&sid=1779371041&sct=1&seg=0&_tu=DA&en=view_item&pr1=id14251~nmTV%20%D0%A1%D1%82%D0%BE%D0%B9%D0%BA%D0%B0%20%20HAMA%20108726%20%20%D0%A7%D0%95%D0%A0%D0%95%D0%9D~brHAMA~pr30.1~qt1~k0item_category0~v0TV%2C%20%D0%90%D1%83%D0%B4%D0%B8%D0%BE%20%D0%B8%20Gaming~caTV%20%D0%B0%D0%BA%D1%81%D0%B5%D1%81%D0%BE%D0%B0%D1%80%D0%B8~c2TV%20%D1%81%D1%82%D0%BE%D0%B9%D0%BA%D0%B8&epn.value=30.1&evnid=1779371770123_177937126889913&ep.x-fb-cd-content_type=product&ep.x-fb-cd-contents=%5B%7B%22id%22%3A%2214251%22%2C%22quantity%22%3A1%7D%5D&ep.x-fb-cd-content_name=TV%20%D0%A1%D1%82%D0%BE%D0%B9%D0%BA%D0%B0%20%20HAMA%20108726%20%20%D0%A7%D0%95%D0%A0%D0%95%D0%9D&ep.x-fb-cd-content_ids=14251&ep.product_id=14251&_et=9&tfd=8703&richsstsse",
+          "method": "GET",
+          "status": 200,
+          "content_type": "text/plain",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "event: message\ndata: {\"response\":{\"status_code\":200,\"body\":\"\"}}\n\n",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://sgtm.technopolis.bg/g/collect?v=2&tid=G-F9NVFX3XWL&gtm=45je65j1v892675621z89227895777za20gzb9227895777zd9227895777&_p=1779371039272&gcs=G100&gcd=13p3pPp2p5l1&npa=1&dma_cps=-&dma=1&gdid=dMWZhNz&ecid=1111994110&_fplc=0&are=1&cid=1236116996.1779371043&frm=0&pscdl=denied&rcb=3&sr=1365x900&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=bg-bg&ur=BG-22&sst.rnd=421382956.1779371043&sst.etld=google.bg&sst.gcsub=region1&sst.adr=1&sst.us_privacy=1---&sst.tft=1779371039272&sst.lpc=230801562&sst.navt=n&sst.ude=0&_s=1&tag_exp=0~115938465~115938469&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FTV-stojki%2FTV-Stojka--HAMA-108726%2Fp%2F14251&dt=TV%20%D0%A1%D1%82%D0%BE%D0%B9%D0%BA%D0%B0%20%20HAMA%20108726%20%20%D0%A7%D0%95%D0%A0%D0%95%D0%9D&sid=1779371041&sct=1&seg=0&_tu=LA&en=page_view&_fv=1&_ss=1&evnid=1779371770123_177937126889947&tfd=8190&richsstsse",
+          "method": "GET",
+          "status": 200,
+          "content_type": "text/plain",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "event: message\ndata: {\"response\":{\"status_code\":200,\"body\":\"\"}}\n\n",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://webchannel-content.eservice.emarsys.net/customer/881886836/campaigns?url=https:%2F%2Fwww.technopolis.bg%2Fbg%2FTV-stojki%2FTV-Stojka--HAMA-108726%2Fp%2F14251&prev_url=&lang=bg&ca=&v=i:14251&uli=false",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "xhr",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\"ads\":[]}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        }
+      ]
+    },
+    {
+      "product_url": "https://www.technopolis.bg/bg/TV-aksesoari-drugi/PCMCI-CARD-CONAX-CAM/p/16307",
+      "category_path": "TV-aksesoari-drugi/PCMCI-CARD-CONAX-CAM",
+      "notes": [
+        "response_handler_error: 'utf-8' codec can't decode byte 0x8b in position 1: invalid start byte"
+      ],
+      "xhr_fetch_total": 30,
+      "candidate_count": 22,
+      "candidates": [
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/16307/references?fields=DEFAULT%2Creferences(target(code%2Cname%2Cprice%2Cimages(FULL)%2CshowPcd%2Cpcd%2CinfoPriceOffline%2CinfoPriceOld))&referenceType=SIMILAR&imageFormats=videoluxGrid&pageSize=10&lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": true,
+            "ean": true,
+            "product_code": false,
+            "stock": true,
+            "variants": false
+          },
+          "response_sample": "{\n   \"references\" : [ {\n      \"referenceType\" : \"SIMILAR\",\n      \"target\" : {\n         \"baseOptions\" : [ ],\n         \"brand\" : \"DIVA\",\n         \"code\" : \"314624\",\n         \"configurable\" : false,\n         \"description\" : \"\",\n         \"ean\" : \"3146248\",\n         \"estimatedDeliveryTime\" : true,\n         \"estimatedDeliveryTimeMessage\" : \"Очаквано време за доставка от 1 до 4 дни.\",\n         \"expressDelivery\" : false,\n         \"hideSticker\" : true,\n         \"images\" : [ {\n            \"altText\" : \"ЦИФРОВ DVB-T ДЕКОДЕР DIVA HD/RF 1306-B\",\n            \"format\" : \"videoluxZoom\",\n            \"imageType\" : \"PRIMARY\",\n            \"url\" : \"/medias/314624.jpg-Product-zoom?context=bWFzdGVyfHJvb3R8Mzc0ODB8aW1hZ2UvanBlZ3xhRFk0TDJneU55OHhNVFExTmpVd05ERTJPRFEzT0M1cWNHY3xiZDViYzdkMTlhMzljNTQ0NGFjOTEyY2IzZTQ0NDQ3ZmJmNDE1ZjNlNGQ3NGJiNzBjNjliZGIzZDNhMDYzM2I1\"\n         }, {\n            \"altText\" : \"ЦИФРОВ DVB-T ДЕКОДЕР DIVA HD/RF 1306-B\",\n            \"format\" : \"videoluxProduct\",\n            \"imageType\" : \"PR",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://accounts.livechatinc.com/v2/customer/991aba2c-7604-43b0-bb45-18b519f8e379/6/token",
+          "method": "POST",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "xhr",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\"access_token\":\"us-south1:8zmfC88AS1GoNMbU5-jO3w\",\"entity_id\":\"8e77894a-3b9e-42c0-bd88-9a27ca448801\",\"expires_in\":14400,\"organization_id\":\"991aba2c-7604-43b0-bb45-18b519f8e379\",\"token_type\":\"Bearer\"}\n",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://secure.livechatinc.com/"
+          },
+          "set_cookie": "",
+          "post_data_preview": "{\"response_type\":\"token\",\"grant_type\":\"cookie\",\"client_id\":\"c5e4f61e1a6c3b1521b541bc5c5a2ac5\",\"organization_id\":\"991aba2c-7604-43b0-bb45-18b519f8e379\",\"redirect_uri\":\"https://secure.livechatinc.com/customer/action/open_chat\"}"
+        },
+        {
+          "url": "https://ams.creativecdn.com/tags/v2?type=json&tc=1",
+          "method": "POST",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "[{\"url\":\"https://ib.adnxs.com/setuid?entity=315&code=Z7V3kh3hZdideSelNJh3ckzZRY3NJiHAXSHqiCnwRzY&consent=1\",\"type\":\"IMG\"}]",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/bg/TV-aksesoari-drugi/PCMCI-CARD-CONAX-CAM/p/16307"
+          },
+          "set_cookie": "",
+          "post_data_preview": "{\"v\":\"v0.2.1\",\"sr\":\"\",\"su\":\"https://www.technopolis.bg/bg/TV-aksesoari-drugi/PCMCI-CARD-CONAX-CAM/p/16307\",\"th\":\"SaCE7v75HuLgk0GQNSC3\",\"tags\":[{\"eventType\":\"offer\",\"offerId\":\"16307\"},{\"eventType\":\"category\",\"categoryId\":\"Product Details\"},{\"eventType\":\"lid\",\"id\":\"Mqr80uTjiyAbtCPLWK0e\",\"expiryDate\":\""
+        },
+        {
+          "url": "https://analytics.tiktok.com/api/v2/pixel",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "ping",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": "{\"event\":\"Pageview\",\"event_id\":\"\",\"message_id\":\"messageId-1779371061710-7793557132283-CSMC6D3C77U7NCGBQG90\",\"is_onsite\":false,\"timestamp\":\"2026-05-21T13:44:21.710Z\",\"context\":{\"ad\":{\"sdk_env\":\"external\",\"jsb_status\":2},\"device\":{\"platform\":\"pc\"},\"user\":{\"anonymous_id\":\"01KS5CFCDRQAJBKY237BCH9HGV_.tt"
+        },
+        {
+          "url": "https://analytics.tiktok.com/api/v2/pixel/act",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "ping",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": "{\"event_id\":\"\",\"message_id\":\"messageId-1779371062063-6950587970840\",\"is_onsite\":false,\"timestamp\":\"2026-05-21T13:44:22.063Z\",\"context\":{\"ad\":{\"sdk_env\":\"external\",\"jsb_status\":2},\"device\":{\"platform\":\"pc\"},\"user\":{\"anonymous_id\":\"01KS5CFCDRQAJBKY237BCH9HGV_.tt.1\"},\"pixel\":{\"code\":\"CSMC6D3C77U7NCGBQG"
+        },
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/cms/components/topnavigation/topNavigationBarMenu?lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\n   \"uid\" : \"topNavigationBarMenu\",\n   \"typeCode\" : \"VLuxTopNavigationBarComponent\",\n   \"components\" : {\n      \"component\" : [ {\n         \"uid\" : \"PromoBarComponent\",\n         \"typeCode\" : \"NavigationBarComponent\",\n         \"link\" : {\n            \"uid\" : \"PromoCategoryLink\",\n            \"styleAttributes\" : \"i PromotionsLink\",\n            \"external\" : \"false\",\n            \"url\" : \"/c/Promotions\",\n            \"linkName\" : \"Оферти и брошура\",\n            \"typeCode\" : \"CMSMenuLinkComponent\",\n            \"target\" : \"false\"\n         },\n         \"navigationNode\" : {\n            \"uid\" : \"PromoNavNode\",\n            \"entries\" : [ ],\n            \"children\" : [ {\n               \"uid\" : \"OfflinePromoNavNode\",\n               \"entries\" : [ {\n                  \"link\" : {\n                     \"uid\" : \"OfflinePromoCategoryLink\",\n                     \"typeCode\" : \"CMSLinkComponent\",\n                     \"modifiedtime\" : \"2024-12-17T12:17:57.288+02:00\",\n                     \"external\" : \"false\",\n        ",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/cms/pages?pageType=ProductPage&code=16307&lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\n   \"uid\" : \"productDetails\",\n   \"uuid\" : \"eyJpdGVtSWQiOiJwcm9kdWN0RGV0YWlscyIsImNhdGFsb2dJZCI6InRlY2hub3BvbGlzQkdDb250ZW50Q2F0YWxvZyIsImNhdGFsb2dWZXJzaW9uIjoiT25saW5lIn0=\",\n   \"title\" : \"Технополис - прави живота по-хубав\",\n   \"template\" : \"ProductDetailsPageTemplate\",\n   \"typeCode\" : \"ProductPage\",\n   \"name\" : \"Product Details\",\n   \"description\" : \"Хипермаркети Технополис предлагат огромен избор от бяла, черна, офис техника и IT. Транспорт, покупки на изплащане, онлайн магазин, удължена гаранция и внимателно обслужване. Технополис - прави живота по-хубав.\",\n   \"contentSlots\" : {\n      \"contentSlot\" : [ {\n         \"slotId\" : \"RecentProductsSlot\",\n         \"slotUuid\" : \"eyJpdGVtSWQiOiJSZWNlbnRQcm9kdWN0c1Nsb3QiLCJjYXRhbG9nSWQiOiJ0ZWNobm9wb2xpc0JHQ29udGVudENhdGFsb2ciLCJjYXRhbG9nVmVyc2lvbiI6Ik9ubGluZSJ9\",\n         \"position\" : \"RecentProducts\",\n         \"name\" : \"Slot for the Recent products\",\n         \"slotShared\" : false,\n         \"components\" : {\n            \"component\" : [ {\n        ",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/16307/references?fields=DEFAULT%2Creferences(target(code%2Cname%2Cprice%2Cimages(FULL)%2CshowPcd%2Cpcd%2CinfoPriceOffline%2CinfoPriceOld))&referenceType=ACCESSORIES&imageFormats=videoluxGrid&pageSize=14&lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\n   \"references\" : [ ]\n}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/16307/references?fields=DEFAULT%2Creferences(target(code%2Cname%2Cprice%2Cimages(FULL)%2CshowPcd%2Cpcd%2CinfoPriceOffline%2CinfoPriceOld))&referenceType=CROSSELLING&imageFormats=videoluxGrid&pageSize=5&lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\n   \"references\" : [ ]\n}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/16307/references?fields=DEFAULT%2Creferences(target(code%2Cname%2Cprice%2Cimages(FULL)%2CshowPcd%2Cpcd%2CinfoPriceOffline%2CinfoPriceOld))&referenceType=NEW&imageFormats=videoluxGrid&pageSize=10&lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\n   \"references\" : [ ]\n}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/16307?fields=DEFAULT,averageRating,images(FULL),manufacturer,numberOfReviews,categories(FULL),baseOptions,baseProduct,variantOptions,variantType,ecoImages(FULL),potentialPromotions(FULL),bundlePromotions(FULL),classifications,ean,brand&imageFormats=videoluxProduct,videoluxGrid,videoluxZoom,videoluxThumbnail&lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\n   \"a360videos\" : [ ],\n   \"allFromBrandButton\" : true,\n   \"allFromBrandUrl\" : \"/brand/CONAX\",\n   \"availableForPickup\" : true,\n   \"baseOptions\" : [ ],\n   \"bfStockAndPrice\" : false,\n   \"brand\" : \"CONAX\",\n   \"breadcrumbDatas\" : [ {\n      \"name\" : \"TV, Аудио и Gaming\",\n      \"url\" : \"TV--Audio-i-Gaming/c/P1109\"\n   }, {\n      \"name\" : \"TV аксесоари\",\n      \"url\" : \"TV--Audio-i-Gaming/TV-aksesoari/c/P110907\"\n   }, {\n      \"name\" : \"ТВ аксесоари други\",\n      \"url\" : \"TV--Audio-i-Gaming/TV-aksesoari/TV-aksesoari-drugi/c/P11090901\"\n   }, {\n      \"name\" : \"PCMCI CARD CONAX CAM\",\n      \"url\" : \"/TV-aksesoari-drugi/PCMCI-CARD-CONAX-CAM/p/16307\"\n   } ],\n   \"bundlePromotions\" : [ ],\n   \"categories\" : [ {\n      \"code\" : \"P11090901\",\n      \"image\" : {\n         \"url\" : \"/medias/P11090901-logo.jpg?context=bWFzdGVyfGltYWdlc3w4MjcyfGltYWdlL2pwZWd8YVcxaFoyVnpMMmcxWkM5b01tSXZNVGMwTnprME5UUTRNVGd6TXpRdWFuQm58YWI2N2I1NjE4NzU1MzZhYzJlODM3YWMyNmRhMDI4M2Q4ODJmY2JjOWZlYWZlZWFiOThlNTE1ZjY0NmJiOTEyYQ\"\n      },\n ",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://consentcdn.cookiebot.com/consentconfig/c679db95-c8cc-4245-b927-95013d55f47b/settings.json",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "xhr",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\"widget\":{\"enabled\":false,\"position\":{\"position\":\"bottom-left\",\"distanceVerticalPx\":10,\"distanceHorizontalPx\":10},\"theme\":{\"closed\":{\"backgroundColor\":\"#141414\",\"foregroundColor\":\"#FFFFFF\"},\"opened\":{\"backgroundColor\":\"#FFFFFF\",\"foregroundColor\":\"#141414\",\"highlightColor\":\"#1032CF\",\"shadeColor\":\"#D6D6D6\",\"changeBackgroundColor\":\"#1032CF\",\"changeTextColor\":\"#FFFFFF\",\"changeBorderColor\":\"#1032CF\",\"withdrawBackgroundColor\":\"#FFFFFF\",\"withdrawTextColor\":\"#141414\",\"withdrawBorderColor\":\"#1032CF\",\"detailsBackgroundColor\":\"#F2F2F2\"}},\"content\":{\"cultures\":[\"en\",\"bg\"],\"default\":\"bg\",\"autodetectLanguage\":false}}}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://gum.criteo.com/sid/json?origin=onetag&domain=technopolis.bg&sn=ChromeSyncframe&so=undefined&topUrl=www.technopolis.bg",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\"sid\":null,\"removeSid\":false,\"bundle\":\"0Mt3519lUmx4R0xxQzJVUUJCR1J5dURZSTBxcVRLWG0wNkY4WDdzV3ZrN1RsMUY4M29NbFAydzE0N3ZWcEdEcnB1UkxJd2FRdWxRQndZWnhaNmJIaWdLQ2RTNGZsNzNBVXBIWmdNRFoyTWlKbjBkUU9BZG93cjJ4UyUyQnpFZDUzZDdpVFJOQWdNb21FWDF5NDhKWUdGVTg4VVJHQSUzRCUzRA\",\"info\":\"JJ48WV9lUmx4R0xxQzJVUUJCR1J5dURZSTBxcVRLWG0wNkY4WDdzV3ZrN1RsMUY4M29NbFAydzE0N3ZWcEdEcnB1UkxJRDFPcCUyRlROOWF6cU1lbENBdnlNYllBJTNEJTNE\",\"optout\":false}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://gum.criteo.com/syncframe?topUrl=www.technopolis.bg&origin=onetag"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://pagead2.googlesyndication.com/ccm/collect?rcb=0&frm=0&ae=g&en=page_view&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FTV-aksesoari-drugi%2FPCMCI-CARD-CONAX-CAM%2Fp%2F16307&scrsrc=www.googletagmanager.com&rnd=698876210.1779371062&navt=n&npa=1&us_privacy=1---&ep.ads_data_redaction=1&gdid=dMWZhNz&_tu=CA&gtm=45He65j1h1v9227895777za200zd9227895777xea&gcs=G100&gcd=13p3p3p2p5l1&dma_cps=-&dma=1&tag_exp=0~115938466~115938468&apve=1&apvf=f&apvc=1&tft=1779371062376&tfd=4586",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "<unreadable: Response.text: Protocol error (Network.getResponseBody): No data found for resource with given identifier>",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://pagead2.googlesyndication.com/ccm/collect?rcb=15&frm=0&ae=g&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FTV-aksesoari-drugi%2FPCMCI-CARD-CONAX-CAM%2Fp%2F16307&scrsrc=www.googletagmanager.com&rnd=698876210.1779371062&navt=n&npa=1&us_privacy=1---&did=dMWZhNz&gdid=dMWZhNz&_tu=KA&gtm=45be65j1h1v9179906331z89227895777za20gzb9227895777zd9227895777xea&gcs=G100&gcd=13p3pPp2p5l1&dma_cps=-&dma=1&tag_exp=0~115938466~115938468&apve=1&apvf=f&apvc=0&tids=AW-1000710043~AW-17703379485&tid=AW-1000710043&tft=1779371062379&tfd=4589",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "<unreadable: Response.text: Protocol error (Network.getResponseBody): No data found for resource with given identifier>",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://pagead2.googlesyndication.com/ccm/collect?rcb=15&frm=0&ae=g&en=view_item&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FTV-aksesoari-drugi%2FPCMCI-CARD-CONAX-CAM%2Fp%2F16307&scrsrc=www.googletagmanager.com&rnd=698876210.1779371062&navt=n&npa=1&us_privacy=1---&ep.ads_data_redaction=1&epn.value=30.5&did=dMWZhNz&gdid=dMWZhNz&_tu=KA&gtm=45be65j1h1v9179906331z89227895777za20gzb9227895777zd9227895777xea&gcs=G100&gcd=13p3pPp2p5l1&dma_cps=-&dma=1&tag_exp=0~115938466~115938468&apve=1&apvf=f&apvc=0&tids=AW-1000710043~AW-17703379485&tid=AW-1000710043&tft=1779371062379&tfd=4590",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "<unreadable: Response.text: Protocol error (Network.getResponseBody): No data found for resource with given identifier>",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://pagead2.googlesyndication.com/ccm/collect?rcb=15&frm=0&en=page_view&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FTV-aksesoari-drugi%2FPCMCI-CARD-CONAX-CAM%2Fp%2F16307&scrsrc=www.googletagmanager.com&rnd=698876210.1779371062&navt=n&npa=1&us_privacy=1---&did=dMWZhNz&gdid=dMWZhNz&_tu=KA&gtm=45be65j1h1v9179906331z89227895777za20gzb9227895777zd9227895777xec&gcs=G100&gcd=13p3pPp2p5l1&dma_cps=-&dma=1&tag_exp=0~115938466~115938468&apve=1&apvf=f&apvc=0&tids=AW-1000710043~AW-17703379485&tid=AW-1000710043&tft=1779371062377&tfd=4588",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "<unreadable: Response.text: Protocol error (Network.getResponseBody): No data found for resource with given identifier>",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://pagead2.googlesyndication.com/ccm/collect?rcb=8&frm=0&en=page_view&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FTV-aksesoari-drugi%2FPCMCI-CARD-CONAX-CAM%2Fp%2F16307&scrsrc=www.googletagmanager.com&rnd=698876210.1779371062&navt=n&npa=1&us_privacy=1---&gdid=dMWZhNz&ep.user_data_mode=a&_tu=KA&gtm=45fe65j1h1v9242889690z89227895777za20gzb9227895777zd9227895777xec&gcs=G100&gcd=13p3p3p2p5l1&dma_cps=-&dma=1&tag_exp=0~115938466~115938468&apve=1&apvf=f&apvc=0&tids=DC-16420168&tid=DC-16420168&tft=1779371062380&tfd=4590",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "<unreadable: Response.text: Protocol error (Network.getResponseBody): No data found for resource with given identifier>",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://recommender.scarabresearch.com/merchants/1F6B4510E2D371EB/?pv=255482281&xp=1&v=i%3A16307&cv=1&ca=&cp=1&az=technopolis",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "xhr",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\"cohort\":\"AAAA\",\"visitor\":\"2EDFFC35F8D3C20C\",\"session\":\"3A917E59762DA62E\",\"profile\":\"16307|1779371063\",\"features\":{}}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://sgtm.technopolis.bg/g/collect?v=2&tid=G-F9NVFX3XWL&gtm=45je65j1h1v892675621z89227895777za20gzb9227895777zd9227895777&_p=1779371059333&gcs=G100&gcd=13p3pPp2p5l1&npa=1&dma_cps=-&dma=1&gdid=dMWZhNz&ecid=1704642728&_eu=IA&_fplc=0&are=1&cid=763886362.1779371062&frm=0&pscdl=denied&rcb=3&sr=1365x900&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=bg-bg&ur=BG-22&sst.rnd=698876210.1779371062&sst.etld=google.bg&sst.gcsub=region1&sst.adr=1&sst.us_privacy=1---&sst.tft=1779371059333&sst.lpc=227749016&sst.navt=n&sst.ude=0&_s=2&tag_exp=0~115616986~115938466~115938468&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FTV-aksesoari-drugi%2FPCMCI-CARD-CONAX-CAM%2Fp%2F16307&dt=PCMCI%20CARD%20CONAX%20CAM&cu=EUR&sid=1779371061&sct=1&seg=0&_tu=DA&en=view_item&pr1=id16307~nmPCMCI%20CARD%20CONAX%20CAM~brCONAX~pr30.5~qt1~k0item_category0~v0TV%2C%20%D0%90%D1%83%D0%B4%D0%B8%D0%BE%20%D0%B8%20Gaming~caTV%20%D0%B0%D0%BA%D1%81%D0%B5%D1%81%D0%BE%D0%B0%D1%80%D0%B8~c2%D0%A2%D0%92%20%D0%B0%D0%BA%D1%81%D0%B5%D1%81%D0%BE%D0%B0%D1%80%D0%B8%20%D0%B4%D1%80%D1%83%D0%B3%D0%B8&epn.value=30.5&evnid=1779371905597_177937165558613&ep.x-fb-cd-content_type=product&ep.x-fb-cd-contents=%5B%7B%22id%22%3A%2216307%22%2C%22quantity%22%3A1%7D%5D&ep.x-fb-cd-content_name=PCMCI%20CARD%20CONAX%20CAM&ep.x-fb-cd-content_ids=16307&ep.product_id=16307&_et=10&tfd=5214&richsstsse",
+          "method": "GET",
+          "status": 200,
+          "content_type": "text/plain",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "event: message\ndata: {\"response\":{\"status_code\":200,\"body\":\"\"}}\n\n",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://sgtm.technopolis.bg/g/collect?v=2&tid=G-F9NVFX3XWL&gtm=45je65j1h1v892675621z89227895777za20gzb9227895777zd9227895777&_p=1779371059333&gcs=G100&gcd=13p3pPp2p5l1&npa=1&dma_cps=-&dma=1&gdid=dMWZhNz&ecid=1704642728&_fplc=0&are=1&cid=763886362.1779371062&frm=0&pscdl=denied&rcb=3&sr=1365x900&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=bg-bg&ur=BG-22&sst.rnd=698876210.1779371062&sst.etld=google.bg&sst.gcsub=region1&sst.adr=1&sst.us_privacy=1---&sst.tft=1779371059333&sst.lpc=227749016&sst.navt=n&sst.ude=0&_s=1&tag_exp=0~115616986~115938466~115938468&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FTV-aksesoari-drugi%2FPCMCI-CARD-CONAX-CAM%2Fp%2F16307&dt=PCMCI%20CARD%20CONAX%20CAM&sid=1779371061&sct=1&seg=0&_tu=LA&en=page_view&_fv=1&_ss=1&evnid=1779371905597_177937165558630&tfd=4693&richsstsse",
+          "method": "GET",
+          "status": 200,
+          "content_type": "text/plain",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "event: message\ndata: {\"response\":{\"status_code\":200,\"body\":\"\"}}\n\n",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://webchannel-content.eservice.emarsys.net/customer/881886836/campaigns?url=https:%2F%2Fwww.technopolis.bg%2Fbg%2FTV-aksesoari-drugi%2FPCMCI-CARD-CONAX-CAM%2Fp%2F16307&prev_url=&lang=bg&ca=&v=i:16307&uli=false",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "xhr",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\"ads\":[]}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        }
+      ]
+    },
+    {
+      "product_url": "https://www.technopolis.bg/bg/Blu-Ray-i-DVD-pleari/DVD-PLEAR-SONY-DVP-SR760/p/33033",
+      "category_path": "Blu-Ray-i-DVD-pleari/DVD-PLEAR-SONY-DVP-SR760",
+      "notes": [
+        "response_handler_error: 'utf-8' codec can't decode byte 0x8b in position 1: invalid start byte"
+      ],
+      "xhr_fetch_total": 32,
+      "candidate_count": 24,
+      "candidates": [
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/33033?fields=DEFAULT,averageRating,images(FULL),manufacturer,numberOfReviews,categories(FULL),baseOptions,baseProduct,variantOptions,variantType,ecoImages(FULL),potentialPromotions(FULL),bundlePromotions(FULL),classifications,ean,brand&imageFormats=videoluxProduct,videoluxGrid,videoluxZoom,videoluxThumbnail&lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": true,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\n   \"a360videos\" : [ ],\n   \"allFromBrandButton\" : true,\n   \"allFromBrandUrl\" : \"/brand-sony-shop-in-shop\",\n   \"availableForPickup\" : true,\n   \"baseOptions\" : [ ],\n   \"bfStockAndPrice\" : false,\n   \"brand\" : \"SONY\",\n   \"breadcrumbDatas\" : [ {\n      \"name\" : \"TV, Аудио и Gaming\",\n      \"url\" : \"TV--Audio-i-Gaming/c/P1109\"\n   }, {\n      \"name\" : \"Blu-Ray и DVD плеъри\",\n      \"url\" : \"TV--Audio-i-Gaming/Blu-Ray-i-DVD-pleari/c/P11090301\"\n   }, {\n      \"name\" : \"DVD ПЛЕЪР SONY DVP-SR760\",\n      \"url\" : \"/Blu-Ray-i-DVD-pleari/DVD-PLEAR-SONY-DVP-SR760/p/33033\"\n   } ],\n   \"bundlePromotions\" : [ ],\n   \"categories\" : [ {\n      \"code\" : \"P11090301\",\n      \"image\" : {\n         \"url\" : \"/medias/?context=bWFzdGVyfGltYWdlc3wyNTQ3NXxpbWFnZS9qcGVnfGFXMWhaMlZ6TDJnNE1DOW9OamN2T0RnMU5EZzVOakkzT1RVNE1pNXFjR2N8ZTUxNzc3ODI2YzI3NzUxYTYzMTA1Y2RmOTM1MGQyZGJiYWMwMTA4NzhiMzMxZTExYWJhNjhhYzZlMjMwMWRiZQ\"\n      },\n      \"url\" : \"TV--Audio-i-Gaming/Blu-Ray-i-DVD-pleari/c/P11090301\"\n   } ],\n   \"classifications\" : [ {\n ",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://accounts.livechatinc.com/v2/customer/991aba2c-7604-43b0-bb45-18b519f8e379/6/token",
+          "method": "POST",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "xhr",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\"access_token\":\"us-south1:tuEgN0-5RC2Q-RbJy8nIYg\",\"entity_id\":\"810c8282-df3f-4cf9-a3a0-0894bf27e21f\",\"expires_in\":14400,\"organization_id\":\"991aba2c-7604-43b0-bb45-18b519f8e379\",\"token_type\":\"Bearer\"}\n",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://secure.livechatinc.com/"
+          },
+          "set_cookie": "",
+          "post_data_preview": "{\"response_type\":\"token\",\"grant_type\":\"cookie\",\"client_id\":\"c5e4f61e1a6c3b1521b541bc5c5a2ac5\",\"organization_id\":\"991aba2c-7604-43b0-bb45-18b519f8e379\",\"redirect_uri\":\"https://secure.livechatinc.com/customer/action/open_chat\"}"
+        },
+        {
+          "url": "https://ams.creativecdn.com/tags/v2?type=json&tc=1",
+          "method": "POST",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "[{\"url\":\"https://ib.adnxs.com/setuid?entity=315&code=RyoD7NVKnR-2Q3hrYVm9F51NrTulR4kI1DFgcNWYoUY&consent=1\",\"type\":\"IMG\"}]",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/bg/Blu-Ray-i-DVD-pleari/DVD-PLEAR-SONY-DVP-SR760/p/33033"
+          },
+          "set_cookie": "",
+          "post_data_preview": "{\"v\":\"v0.2.1\",\"sr\":\"\",\"su\":\"https://www.technopolis.bg/bg/Blu-Ray-i-DVD-pleari/DVD-PLEAR-SONY-DVP-SR760/p/33033\",\"th\":\"SaCE7v75HuLgk0GQNSC3\",\"tags\":[{\"eventType\":\"offer\",\"offerId\":\"33033\"},{\"eventType\":\"lid\",\"id\":\"IZ8Q24hw1kLwdQI7vSjb\",\"expiryDate\":\"2027-05-21T13:44:38.445Z\"}]}"
+        },
+        {
+          "url": "https://analytics.tiktok.com/api/v2/pixel",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "ping",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": "{\"event\":\"LandingPageView\",\"event_id\":\"\",\"message_id\":\"messageId-1779371079152-3845817387001-CSMC6D3C77U7NCGBQG90\",\"is_onsite\":false,\"timestamp\":\"2026-05-21T13:44:39.152Z\",\"context\":{\"ad\":{\"sdk_env\":\"external\",\"jsb_status\":2},\"device\":{\"platform\":\"pc\"},\"user\":{\"anonymous_id\":\"01KS5CFXF03GGRSJWRMV82N"
+        },
+        {
+          "url": "https://analytics.tiktok.com/api/v2/pixel/act",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "ping",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": "{\"event_id\":\"\",\"message_id\":\"messageId-1779371079394-4047843869341\",\"is_onsite\":false,\"timestamp\":\"2026-05-21T13:44:39.394Z\",\"context\":{\"ad\":{\"sdk_env\":\"external\",\"jsb_status\":2},\"device\":{\"platform\":\"pc\"},\"user\":{\"anonymous_id\":\"01KS5CFXF03GGRSJWRMV82N9ZR_.tt.1\"},\"pixel\":{\"code\":\"CSMC6D3C77U7NCGBQG"
+        },
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/cms/components/topnavigation/topNavigationBarMenu?lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\n   \"uid\" : \"topNavigationBarMenu\",\n   \"typeCode\" : \"VLuxTopNavigationBarComponent\",\n   \"components\" : {\n      \"component\" : [ {\n         \"uid\" : \"PromoBarComponent\",\n         \"typeCode\" : \"NavigationBarComponent\",\n         \"link\" : {\n            \"uid\" : \"PromoCategoryLink\",\n            \"styleAttributes\" : \"i PromotionsLink\",\n            \"external\" : \"false\",\n            \"url\" : \"/c/Promotions\",\n            \"linkName\" : \"Оферти и брошура\",\n            \"typeCode\" : \"CMSMenuLinkComponent\",\n            \"target\" : \"false\"\n         },\n         \"navigationNode\" : {\n            \"uid\" : \"PromoNavNode\",\n            \"entries\" : [ ],\n            \"children\" : [ {\n               \"uid\" : \"OfflinePromoNavNode\",\n               \"entries\" : [ {\n                  \"link\" : {\n                     \"uid\" : \"OfflinePromoCategoryLink\",\n                     \"typeCode\" : \"CMSLinkComponent\",\n                     \"modifiedtime\" : \"2024-12-17T12:17:57.288+02:00\",\n                     \"external\" : \"false\",\n        ",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/cms/pages?pageType=ProductPage&code=33033&lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\n   \"uid\" : \"productDetails\",\n   \"uuid\" : \"eyJpdGVtSWQiOiJwcm9kdWN0RGV0YWlscyIsImNhdGFsb2dJZCI6InRlY2hub3BvbGlzQkdDb250ZW50Q2F0YWxvZyIsImNhdGFsb2dWZXJzaW9uIjoiT25saW5lIn0=\",\n   \"title\" : \"Технополис - прави живота по-хубав\",\n   \"template\" : \"ProductDetailsPageTemplate\",\n   \"typeCode\" : \"ProductPage\",\n   \"name\" : \"Product Details\",\n   \"description\" : \"Хипермаркети Технополис предлагат огромен избор от бяла, черна, офис техника и IT. Транспорт, покупки на изплащане, онлайн магазин, удължена гаранция и внимателно обслужване. Технополис - прави живота по-хубав.\",\n   \"contentSlots\" : {\n      \"contentSlot\" : [ {\n         \"slotId\" : \"RecentProductsSlot\",\n         \"slotUuid\" : \"eyJpdGVtSWQiOiJSZWNlbnRQcm9kdWN0c1Nsb3QiLCJjYXRhbG9nSWQiOiJ0ZWNobm9wb2xpc0JHQ29udGVudENhdGFsb2ciLCJjYXRhbG9nVmVyc2lvbiI6Ik9ubGluZSJ9\",\n         \"position\" : \"RecentProducts\",\n         \"name\" : \"Slot for the Recent products\",\n         \"slotShared\" : false,\n         \"components\" : {\n            \"component\" : [ {\n        ",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/33033/references?fields=DEFAULT%2Creferences(target(code%2Cname%2Cprice%2Cimages(FULL)%2CshowPcd%2Cpcd%2CinfoPriceOffline%2CinfoPriceOld))&referenceType=ACCESSORIES&imageFormats=videoluxGrid&pageSize=14&lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\n   \"references\" : [ ]\n}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/33033/references?fields=DEFAULT%2Creferences(target(code%2Cname%2Cprice%2Cimages(FULL)%2CshowPcd%2Cpcd%2CinfoPriceOffline%2CinfoPriceOld))&referenceType=CROSSELLING&imageFormats=videoluxGrid&pageSize=5&lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\n   \"references\" : [ ]\n}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/33033/references?fields=DEFAULT%2Creferences(target(code%2Cname%2Cprice%2Cimages(FULL)%2CshowPcd%2Cpcd%2CinfoPriceOffline%2CinfoPriceOld))&referenceType=NEW&imageFormats=videoluxGrid&pageSize=10&lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\n   \"references\" : [ ]\n}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/33033/references?fields=DEFAULT%2Creferences(target(code%2Cname%2Cprice%2Cimages(FULL)%2CshowPcd%2Cpcd%2CinfoPriceOffline%2CinfoPriceOld))&referenceType=SIMILAR&imageFormats=videoluxGrid&pageSize=10&lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\n   \"references\" : [ ]\n}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://consentcdn.cookiebot.com/consentconfig/c679db95-c8cc-4245-b927-95013d55f47b/settings.json",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "xhr",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\"widget\":{\"enabled\":false,\"position\":{\"position\":\"bottom-left\",\"distanceVerticalPx\":10,\"distanceHorizontalPx\":10},\"theme\":{\"closed\":{\"backgroundColor\":\"#141414\",\"foregroundColor\":\"#FFFFFF\"},\"opened\":{\"backgroundColor\":\"#FFFFFF\",\"foregroundColor\":\"#141414\",\"highlightColor\":\"#1032CF\",\"shadeColor\":\"#D6D6D6\",\"changeBackgroundColor\":\"#1032CF\",\"changeTextColor\":\"#FFFFFF\",\"changeBorderColor\":\"#1032CF\",\"withdrawBackgroundColor\":\"#FFFFFF\",\"withdrawTextColor\":\"#141414\",\"withdrawBorderColor\":\"#1032CF\",\"detailsBackgroundColor\":\"#F2F2F2\"}},\"content\":{\"cultures\":[\"en\",\"bg\"],\"default\":\"bg\",\"autodetectLanguage\":false}}}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://gum.criteo.com/sid/json?origin=onetag&domain=technopolis.bg&sn=ChromeSyncframe&so=undefined&topUrl=www.technopolis.bg",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\"sid\":null,\"removeSid\":false,\"bundle\":\"7xUmil9UdEpCUXlWTEFOSmt2TjBiTW1FWWZWSTclMkZCMXhlcDZPTUxqY2NIb29uUlRQSXE4bGp3RjFZRWVENkM5QUtYZFVZTHhQRmdhUzBrWm82MHlwTmg3Y1JPMHRCb2lPaFhGSWdOYlhhY1k1ZHpwYU5nNVR5S1hvalpPc1d1WjQwMXFVeVB1cTBPNkd4R05aN2NCT1E5dVlwZyUzRCUzRA\",\"info\":\"4wpn7l9UdEpCUXlWTEFOSmt2TjBiTW1FWWZWSTclMkZCMXhlcDZPTUxqY2NIb29uUlRQSXE4bGp3RjFZRWVENkM5QUtYZFVjWEFkbEJHR082bmdsTFJEdzBLWEFRJTNEJTNE\",\"optout\":false}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://gum.criteo.com/syncframe?topUrl=www.technopolis.bg&origin=onetag"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://media.flixcar.com/log/gvid",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "script",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "flixgvid({\"gvid\":\"flixce33c16866306372c68b3f2c.99dcb6a9\"});",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://media.flixcar.com/modular/web-api/bg/6579/4905524842074d3d3LnRlY2hub3BvbGlzLmJn/t.json?mpn=&ean=4905524842074&distId=6579&iso=bg&flIso=",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "[{\"product_meta\": {\"product_id\": \"772226\", \"product_title\": \"DVD \\u043f\\u043b\\u0435\\u0439\\u044a\\u0440 \\u0441 \\u0442\\u0435\\u0445\\u043d\\u043e\\u043b\\u043e\\u0433\\u0438\\u044f \\u0437\\u0430 \\u043f\\u043e\\u0434\\u043e\\u0431\\u0440\\u044f\\u0432\\u0430\\u043d\\u0435 \\u043d\\u0430 \\u043a\\u0430\\u0440\\u0442\\u0438\\u043d\\u0430\\u0442\\u0430 \\u0427\\u0435\\u0440\\u0435\\u043d\", \"product_heading\": \"\\u0413\\u043b\\u0435\\u0434\\u0430\\u0442\\u0435 \\u0441\\u0432\\u043e\\u0438\\u0442\\u0435 DVD \\u0434\\u0438\\u0441\\u043a\\u043e\\u0432\\u0435 \\u0441 \\u043a\\u0430\\u0447\\u0435\\u0441\\u0442\\u0432\\u043e, \\u0431\\u043b\\u0438\\u0437\\u043a\\u043e \\u0434\\u043e \\u0442\\u043e\\u0432\\u0430 \\u043d\\u0430 HD \\u043a\\u0430\\u0440\\u0442\\u0438\\u043d\\u0430\\u0442\\u0430.\", \"product_description\": 0, \"created_date\": 0, \"update_date\": \"2025-08-03 13:40:11\", \"product_mpn\": \"350156\", \"product_ean\": \"4905524842074\", \"product_sku\": \"350156\", \"inpage\": {\"inpage_id\": \"1357268\", \"language_id\": \"36\", \"product_id\": \"772226\", \"inpage\": \"\", \"create_date\": \"2016-06-15 14:01:56\",",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://pagead2.googlesyndication.com/ccm/collect?rcb=10&frm=0&en=page_view&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FBlu-Ray-i-DVD-pleari%2FDVD-PLEAR-SONY-DVP-SR760%2Fp%2F33033&scrsrc=www.googletagmanager.com&rnd=146793089.1779371080&navt=n&npa=1&us_privacy=1---&gdid=dMWZhNz&ep.user_data_mode=a&_tu=KA&gtm=45fe65k0h2v9242889690z89227895777za20gzb9227895777zd9227895777xec&gcs=G100&gcd=13p3p3p2p5l1&dma_cps=-&dma=1&tag_exp=0~115616985~115938466~115938469&apve=1&apvf=f&apvc=0&tids=DC-16420168&tid=DC-16420168&tft=1779371079914&tfd=3450",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "<unreadable: Response.text: Protocol error (Network.getResponseBody): No data found for resource with given identifier>",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://pagead2.googlesyndication.com/ccm/collect?rcb=12&frm=0&ae=g&en=page_view&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FBlu-Ray-i-DVD-pleari%2FDVD-PLEAR-SONY-DVP-SR760%2Fp%2F33033&scrsrc=www.googletagmanager.com&rnd=146793089.1779371080&navt=n&npa=1&us_privacy=1---&ep.ads_data_redaction=1&gdid=dMWZhNz&_tu=CA&gtm=45He65k0h2v9227895777za200zd9227895777xea&gcs=G100&gcd=13p3p3p2p5l1&dma_cps=-&dma=1&tag_exp=0~115938466~115938468&apve=1&apvf=f&apvc=1&tft=1779371079910&tfd=3446",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "<unreadable: Response.text: Protocol error (Network.getResponseBody): No data found for resource with given identifier>",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://pagead2.googlesyndication.com/ccm/collect?rcb=15&frm=0&ae=g&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FBlu-Ray-i-DVD-pleari%2FDVD-PLEAR-SONY-DVP-SR760%2Fp%2F33033&scrsrc=www.googletagmanager.com&rnd=146793089.1779371080&navt=n&npa=1&us_privacy=1---&did=dMWZhNz&gdid=dMWZhNz&_tu=KA&gtm=45be65k0h2v9179906331z89227895777za20gzb9227895777zd9227895777xea&gcs=G100&gcd=13p3pPp2p5l1&dma_cps=-&dma=1&tag_exp=0~115616986~115938466~115938468&apve=1&apvf=f&apvc=0&tids=AW-1000710043~AW-17703379485&tid=AW-1000710043&tft=1779371079913&tfd=3449",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "<unreadable: Response.text: Protocol error (Network.getResponseBody): No data found for resource with given identifier>",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://pagead2.googlesyndication.com/ccm/collect?rcb=15&frm=0&ae=g&en=view_item&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FBlu-Ray-i-DVD-pleari%2FDVD-PLEAR-SONY-DVP-SR760%2Fp%2F33033&scrsrc=www.googletagmanager.com&rnd=146793089.1779371080&navt=n&npa=1&us_privacy=1---&ep.ads_data_redaction=1&epn.value=54.9&did=dMWZhNz&gdid=dMWZhNz&_tu=KA&gtm=45be65k0h2v9179906331z89227895777za20gzb9227895777zd9227895777xea&gcs=G100&gcd=13p3pPp2p5l1&dma_cps=-&dma=1&tag_exp=0~115616986~115938466~115938468&apve=1&apvf=f&apvc=0&tids=AW-1000710043~AW-17703379485&tid=AW-1000710043&tft=1779371079914&tfd=3450",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "<unreadable: Response.text: Protocol error (Network.getResponseBody): No data found for resource with given identifier>",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://pagead2.googlesyndication.com/ccm/collect?rcb=15&frm=0&en=page_view&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FBlu-Ray-i-DVD-pleari%2FDVD-PLEAR-SONY-DVP-SR760%2Fp%2F33033&scrsrc=www.googletagmanager.com&rnd=146793089.1779371080&navt=n&npa=1&us_privacy=1---&did=dMWZhNz&gdid=dMWZhNz&_tu=KA&gtm=45be65k0h2v9179906331z89227895777za20gzb9227895777zd9227895777xec&gcs=G100&gcd=13p3pPp2p5l1&dma_cps=-&dma=1&tag_exp=0~115616986~115938466~115938468&apve=1&apvf=f&apvc=0&tids=AW-1000710043~AW-17703379485&tid=AW-1000710043&tft=1779371079912&tfd=3448",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "<unreadable: Response.text: Protocol error (Network.getResponseBody): No data found for resource with given identifier>",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://recommender.scarabresearch.com/merchants/1F6B4510E2D371EB/?pv=2015667044&xp=1&v=i%3A33033&cv=1&ca=&cp=1&az=technopolis",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "xhr",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\"cohort\":\"AAAA\",\"visitor\":\"2D79A33E58E06AAA\",\"session\":\"55DC059E6879A24E\",\"profile\":\"33033|1779371081\",\"features\":{}}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://sgtm.technopolis.bg/g/collect?v=2&tid=G-F9NVFX3XWL&gtm=45je65k0h2v892675621z89227895777za20gzb9227895777zd9227895777&_p=1779371077552&gcs=G100&gcd=13p3pPp2p5l1&npa=1&dma_cps=-&dma=1&gdid=dMWZhNz&ecid=511742797&_eu=IA&_fplc=0&are=1&cid=447682647.1779371080&frm=0&pscdl=denied&rcb=14&sr=1365x900&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=bg-bg&ur=BG-22&sst.rnd=146793089.1779371080&sst.etld=google.bg&sst.gcsub=region1&sst.adr=1&sst.us_privacy=1---&sst.tft=1779371077552&sst.lpc=71426966&sst.navt=n&sst.ude=0&_s=2&tag_exp=0~115616986~115938466~115938469~118128923&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FBlu-Ray-i-DVD-pleari%2FDVD-PLEAR-SONY-DVP-SR760%2Fp%2F33033&dt=DVD%20%D0%9F%D0%9B%D0%95%D0%AA%D0%A0%20SONY%20DVP-SR760&cu=EUR&sid=1779371078&sct=1&seg=0&_tu=DA&en=view_item&pr1=id33033~nmDVD%20%D0%9F%D0%9B%D0%95%D0%AA%D0%A0%20SONY%20DVP-SR760~brSONY~pr54.9~qt1~k0item_category0~v0TV%2C%20%D0%90%D1%83%D0%B4%D0%B8%D0%BE%20%D0%B8%20Gaming~caBlu-Ray%20%D0%B8%20DVD%20%D0%BF%D0%BB%D0%B5%D1%8A%D1%80%D0%B8&epn.value=54.9&evnid=1779371395712_177937158443813&ep.x-fb-cd-content_type=product&ep.x-fb-cd-contents=%5B%7B%22id%22%3A%2233033%22%2C%22quantity%22%3A1%7D%5D&ep.x-fb-cd-content_name=DVD%20%D0%9F%D0%9B%D0%95%D0%AA%D0%A0%20SONY%20DVP-SR760&ep.x-fb-cd-content_ids=33033&ep.product_id=33033&_et=7&tfd=4030&richsstsse",
+          "method": "GET",
+          "status": 200,
+          "content_type": "text/plain",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "event: message\ndata: {\"response\":{\"status_code\":200,\"body\":\"\"}}\n\n",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://sgtm.technopolis.bg/g/collect?v=2&tid=G-F9NVFX3XWL&gtm=45je65k0h2v892675621z89227895777za20gzb9227895777zd9227895777&_p=1779371077552&gcs=G100&gcd=13p3pPp2p5l1&npa=1&dma_cps=-&dma=1&gdid=dMWZhNz&ecid=511742797&_fplc=0&are=1&cid=447682647.1779371080&frm=0&pscdl=denied&rcb=14&sr=1365x900&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=bg-bg&ur=BG-22&sst.rnd=146793089.1779371080&sst.etld=google.bg&sst.gcsub=region1&sst.adr=1&sst.us_privacy=1---&sst.tft=1779371077552&sst.lpc=71426966&sst.navt=n&sst.ude=0&_s=1&tag_exp=0~115616986~115938466~115938469~118128923&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FBlu-Ray-i-DVD-pleari%2FDVD-PLEAR-SONY-DVP-SR760%2Fp%2F33033&dt=DVD%20%D0%9F%D0%9B%D0%95%D0%AA%D0%A0%20SONY%20DVP-SR760&sid=1779371078&sct=1&seg=0&_tu=LA&en=page_view&_fv=1&_ss=1&evnid=1779371395712_177937158443828&tfd=3520&richsstsse",
+          "method": "GET",
+          "status": 200,
+          "content_type": "text/plain",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "event: message\ndata: {\"response\":{\"status_code\":200,\"body\":\"\"}}\n\n",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://webchannel-content.eservice.emarsys.net/customer/881886836/campaigns?url=https:%2F%2Fwww.technopolis.bg%2Fbg%2FBlu-Ray-i-DVD-pleari%2FDVD-PLEAR-SONY-DVP-SR760%2Fp%2F33033&prev_url=&lang=bg&ca=&v=i:33033&uli=false",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "xhr",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\"ads\":[]}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        }
+      ]
+    },
+    {
+      "product_url": "https://www.technopolis.bg/bg/Muzikalni-instrumenti/KLASIChESKA-KITARA-YAMAHA-C30/p/156468",
+      "category_path": "Muzikalni-instrumenti/KLASIChESKA-KITARA-YAMAHA-C30",
+      "notes": [
+        "response_handler_error: 'utf-8' codec can't decode byte 0x8b in position 1: invalid start byte"
+      ],
+      "xhr_fetch_total": 30,
+      "candidate_count": 22,
+      "candidates": [
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/156468?fields=DEFAULT,averageRating,images(FULL),manufacturer,numberOfReviews,categories(FULL),baseOptions,baseProduct,variantOptions,variantType,ecoImages(FULL),potentialPromotions(FULL),bundlePromotions(FULL),classifications,ean,brand&imageFormats=videoluxProduct,videoluxGrid,videoluxZoom,videoluxThumbnail&lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": true,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\n   \"a360videos\" : [ ],\n   \"allFromBrandButton\" : true,\n   \"allFromBrandUrl\" : \"/brand/YAMAHA\",\n   \"availableForPickup\" : true,\n   \"averageRating\" : 5.0,\n   \"baseOptions\" : [ ],\n   \"bfStockAndPrice\" : false,\n   \"brand\" : \"YAMAHA\",\n   \"breadcrumbDatas\" : [ {\n      \"name\" : \"TV, Аудио и Gaming\",\n      \"url\" : \"TV--Audio-i-Gaming/c/P1109\"\n   }, {\n      \"name\" : \"Музикални инструменти\",\n      \"url\" : \"TV--Audio-i-Gaming/Muzikalni-instrumenti/c/P11070901\"\n   }, {\n      \"name\" : \"КЛАСИЧЕСКА КИТАРА YAMAHA C30\",\n      \"url\" : \"/Muzikalni-instrumenti/KLASIChESKA-KITARA-YAMAHA-C30/p/156468\"\n   } ],\n   \"bundlePromotions\" : [ ],\n   \"categories\" : [ {\n      \"code\" : \"P11070901\",\n      \"image\" : {\n         \"url\" : \"/medias/?context=bWFzdGVyfGltYWdlc3wxMjgyMHxpbWFnZS9qcGVnfGFXMWhaMlZ6TDJnNU9DOW9Oamt2T0RnMU5EZzVPREkwTlRZMk1pNXFjR2N8NmZjZTc4YTYzNWJmOGNkY2MyNmFlMDBiMWI0MzU0ZDFiMDVhYTljNWExZTA4MTA3Zjk2ZjBiOGVjYTFkYzJmNw\"\n      },\n      \"url\" : \"TV--Audio-i-Gaming/Muzikalni-instrumenti/c/P11070901\"\n   },",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://accounts.livechatinc.com/v2/customer/991aba2c-7604-43b0-bb45-18b519f8e379/6/token",
+          "method": "POST",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "xhr",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\"access_token\":\"us-south1:CUv41bXzTKmriekFXLz9zQ\",\"entity_id\":\"d086545f-a071-4b8a-bdce-0c6b0f5d1a1b\",\"expires_in\":14400,\"organization_id\":\"991aba2c-7604-43b0-bb45-18b519f8e379\",\"token_type\":\"Bearer\"}\n",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://secure.livechatinc.com/"
+          },
+          "set_cookie": "",
+          "post_data_preview": "{\"response_type\":\"token\",\"grant_type\":\"cookie\",\"client_id\":\"c5e4f61e1a6c3b1521b541bc5c5a2ac5\",\"organization_id\":\"991aba2c-7604-43b0-bb45-18b519f8e379\",\"redirect_uri\":\"https://secure.livechatinc.com/customer/action/open_chat\"}"
+        },
+        {
+          "url": "https://ams.creativecdn.com/tags/v2?type=json&tc=1",
+          "method": "POST",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "[{\"url\":\"https://ib.adnxs.com/setuid?entity=315&code=eIG_wtQ-a3jCmE89OdekuHTZycJ73coOKixU1MtQkfI&consent=1\",\"type\":\"IMG\"}]",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/bg/Muzikalni-instrumenti/KLASIChESKA-KITARA-YAMAHA-C30/p/156468"
+          },
+          "set_cookie": "",
+          "post_data_preview": "{\"v\":\"v0.2.1\",\"sr\":\"\",\"su\":\"https://www.technopolis.bg/bg/Muzikalni-instrumenti/KLASIChESKA-KITARA-YAMAHA-C30/p/156468\",\"th\":\"SaCE7v75HuLgk0GQNSC3\",\"tags\":[{\"eventType\":\"offer\",\"offerId\":\"156468\"},{\"eventType\":\"lid\",\"id\":\"0GJuAwPtkL3X8RqF65yg\",\"expiryDate\":\"2027-05-21T13:44:57.304Z\"}]}"
+        },
+        {
+          "url": "https://analytics.tiktok.com/api/v2/pixel",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "ping",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": "{\"event\":\"LandingPageView\",\"event_id\":\"\",\"message_id\":\"messageId-1779371098357-9891674238792-CSMC6D3C77U7NCGBQG90\",\"is_onsite\":false,\"timestamp\":\"2026-05-21T13:44:58.357Z\",\"context\":{\"ad\":{\"sdk_env\":\"external\",\"jsb_status\":2},\"device\":{\"platform\":\"pc\"},\"user\":{\"anonymous_id\":\"01KS5CGG72281G8BH0B1GES"
+        },
+        {
+          "url": "https://analytics.tiktok.com/api/v2/pixel/act",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "ping",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": "{\"event_id\":\"\",\"message_id\":\"messageId-1779371098596-1008169580632\",\"is_onsite\":false,\"timestamp\":\"2026-05-21T13:44:58.596Z\",\"context\":{\"ad\":{\"sdk_env\":\"external\",\"jsb_status\":2},\"device\":{\"platform\":\"pc\"},\"user\":{\"anonymous_id\":\"01KS5CGG72281G8BH0B1GESM6Y_.tt.1\"},\"pixel\":{\"code\":\"CSMC6D3C77U7NCGBQG"
+        },
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/cms/components/topnavigation/topNavigationBarMenu?lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\n   \"uid\" : \"topNavigationBarMenu\",\n   \"typeCode\" : \"VLuxTopNavigationBarComponent\",\n   \"components\" : {\n      \"component\" : [ {\n         \"uid\" : \"PromoBarComponent\",\n         \"typeCode\" : \"NavigationBarComponent\",\n         \"link\" : {\n            \"uid\" : \"PromoCategoryLink\",\n            \"styleAttributes\" : \"i PromotionsLink\",\n            \"external\" : \"false\",\n            \"url\" : \"/c/Promotions\",\n            \"linkName\" : \"Оферти и брошура\",\n            \"typeCode\" : \"CMSMenuLinkComponent\",\n            \"target\" : \"false\"\n         },\n         \"navigationNode\" : {\n            \"uid\" : \"PromoNavNode\",\n            \"entries\" : [ ],\n            \"children\" : [ {\n               \"uid\" : \"OfflinePromoNavNode\",\n               \"entries\" : [ {\n                  \"link\" : {\n                     \"uid\" : \"OfflinePromoCategoryLink\",\n                     \"typeCode\" : \"CMSLinkComponent\",\n                     \"modifiedtime\" : \"2024-12-17T12:17:57.288+02:00\",\n                     \"external\" : \"false\",\n        ",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/cms/pages?pageType=ProductPage&code=156468&lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\n   \"uid\" : \"productDetails\",\n   \"uuid\" : \"eyJpdGVtSWQiOiJwcm9kdWN0RGV0YWlscyIsImNhdGFsb2dJZCI6InRlY2hub3BvbGlzQkdDb250ZW50Q2F0YWxvZyIsImNhdGFsb2dWZXJzaW9uIjoiT25saW5lIn0=\",\n   \"title\" : \"Технополис - прави живота по-хубав\",\n   \"template\" : \"ProductDetailsPageTemplate\",\n   \"typeCode\" : \"ProductPage\",\n   \"name\" : \"Product Details\",\n   \"description\" : \"Хипермаркети Технополис предлагат огромен избор от бяла, черна, офис техника и IT. Транспорт, покупки на изплащане, онлайн магазин, удължена гаранция и внимателно обслужване. Технополис - прави живота по-хубав.\",\n   \"contentSlots\" : {\n      \"contentSlot\" : [ {\n         \"slotId\" : \"RecentProductsSlot\",\n         \"slotUuid\" : \"eyJpdGVtSWQiOiJSZWNlbnRQcm9kdWN0c1Nsb3QiLCJjYXRhbG9nSWQiOiJ0ZWNobm9wb2xpc0JHQ29udGVudENhdGFsb2ciLCJjYXRhbG9nVmVyc2lvbiI6Ik9ubGluZSJ9\",\n         \"position\" : \"RecentProducts\",\n         \"name\" : \"Slot for the Recent products\",\n         \"slotShared\" : false,\n         \"components\" : {\n            \"component\" : [ {\n        ",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/156468/references?fields=DEFAULT%2Creferences(target(code%2Cname%2Cprice%2Cimages(FULL)%2CshowPcd%2Cpcd%2CinfoPriceOffline%2CinfoPriceOld))&referenceType=ACCESSORIES&imageFormats=videoluxGrid&pageSize=14&lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\n   \"references\" : [ ]\n}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/156468/references?fields=DEFAULT%2Creferences(target(code%2Cname%2Cprice%2Cimages(FULL)%2CshowPcd%2Cpcd%2CinfoPriceOffline%2CinfoPriceOld))&referenceType=CROSSELLING&imageFormats=videoluxGrid&pageSize=5&lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\n   \"references\" : [ ]\n}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/156468/references?fields=DEFAULT%2Creferences(target(code%2Cname%2Cprice%2Cimages(FULL)%2CshowPcd%2Cpcd%2CinfoPriceOffline%2CinfoPriceOld))&referenceType=NEW&imageFormats=videoluxGrid&pageSize=10&lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\n   \"references\" : [ ]\n}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/156468/references?fields=DEFAULT%2Creferences(target(code%2Cname%2Cprice%2Cimages(FULL)%2CshowPcd%2Cpcd%2CinfoPriceOffline%2CinfoPriceOld))&referenceType=SIMILAR&imageFormats=videoluxGrid&pageSize=10&lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\n   \"references\" : [ ]\n}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://consentcdn.cookiebot.com/consentconfig/c679db95-c8cc-4245-b927-95013d55f47b/settings.json",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "xhr",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\"widget\":{\"enabled\":false,\"position\":{\"position\":\"bottom-left\",\"distanceVerticalPx\":10,\"distanceHorizontalPx\":10},\"theme\":{\"closed\":{\"backgroundColor\":\"#141414\",\"foregroundColor\":\"#FFFFFF\"},\"opened\":{\"backgroundColor\":\"#FFFFFF\",\"foregroundColor\":\"#141414\",\"highlightColor\":\"#1032CF\",\"shadeColor\":\"#D6D6D6\",\"changeBackgroundColor\":\"#1032CF\",\"changeTextColor\":\"#FFFFFF\",\"changeBorderColor\":\"#1032CF\",\"withdrawBackgroundColor\":\"#FFFFFF\",\"withdrawTextColor\":\"#141414\",\"withdrawBorderColor\":\"#1032CF\",\"detailsBackgroundColor\":\"#F2F2F2\"}},\"content\":{\"cultures\":[\"en\",\"bg\"],\"default\":\"bg\",\"autodetectLanguage\":false}}}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://gum.criteo.com/sid/json?origin=onetag&domain=technopolis.bg&sn=ChromeSyncframe&so=undefined&topUrl=www.technopolis.bg",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\"sid\":null,\"removeSid\":false,\"bundle\":\"X3AQDl9FM3Y3JTJCS3llWDdEVUxhNEM2QlRIQkdLVjNpWno1cGJUaHpyNHdNY3Jkbk85JTJGbVRrV2tkUDFpelZnMiUyRkJPVDJpUWg2VGRacnp5ZlNDOWY3ZWdDSDVBWFBva280eXJidDZRZXJxRlk3ekxheiUyRnNaJTJGYWNwbkptNGlSZENId25UOXRXQXFwaW5kelY4dnUweHN1V1B0YWJRJTNEJTNE\",\"info\":\"jnCV2V9FM3Y3JTJCS3llWDdEVUxhNEM2QlRIQkdLVjNpWno1cGJUaHpyNHdNY3Jkbk85JTJGbVRrV2tkUDFpelZnMiUyRkJPVDJpbU4wZmdnSjlaMUFhcWFhcGpqWXlnZyUzRCUzRA\",\"optout\":false}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://gum.criteo.com/syncframe?topUrl=www.technopolis.bg&origin=onetag"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://pagead2.googlesyndication.com/ccm/collect?rcb=18&frm=0&ae=g&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FMuzikalni-instrumenti%2FKLASIChESKA-KITARA-YAMAHA-C30%2Fp%2F156468&scrsrc=www.googletagmanager.com&rnd=757378938.1779371099&navt=n&npa=1&us_privacy=1---&did=dMWZhNz&gdid=dMWZhNz&_tu=KA&gtm=45be65j1v9179906331z89227895777za20gzb9227895777zd9227895777xea&gcs=G100&gcd=13p3pPp2p5l1&dma_cps=-&dma=1&tag_exp=0~115938465~115938469&apve=1&apvf=f&apvc=0&tids=AW-1000710043~AW-17703379485&tid=AW-1000710043&tft=1779371099041&tfd=4317",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "<unreadable: Response.text: Protocol error (Network.getResponseBody): No data found for resource with given identifier>",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://pagead2.googlesyndication.com/ccm/collect?rcb=18&frm=0&ae=g&en=view_item&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FMuzikalni-instrumenti%2FKLASIChESKA-KITARA-YAMAHA-C30%2Fp%2F156468&scrsrc=www.googletagmanager.com&rnd=757378938.1779371099&navt=n&npa=1&us_privacy=1---&ep.ads_data_redaction=1&epn.value=149.9&did=dMWZhNz&gdid=dMWZhNz&_tu=KA&gtm=45be65j1v9179906331z89227895777za20gzb9227895777zd9227895777xea&gcs=G100&gcd=13p3pPp2p5l1&dma_cps=-&dma=1&tag_exp=0~115938465~115938469&apve=1&apvf=f&apvc=0&tids=AW-1000710043~AW-17703379485&tid=AW-1000710043&tft=1779371099041&tfd=4317",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "<unreadable: Response.text: Protocol error (Network.getResponseBody): No data found for resource with given identifier>",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://pagead2.googlesyndication.com/ccm/collect?rcb=18&frm=0&en=page_view&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FMuzikalni-instrumenti%2FKLASIChESKA-KITARA-YAMAHA-C30%2Fp%2F156468&scrsrc=www.googletagmanager.com&rnd=757378938.1779371099&navt=n&npa=1&us_privacy=1---&did=dMWZhNz&gdid=dMWZhNz&_tu=KA&gtm=45be65j1v9179906331z89227895777za20gzb9227895777zd9227895777xec&gcs=G100&gcd=13p3pPp2p5l1&dma_cps=-&dma=1&tag_exp=0~115938465~115938469&apve=1&apvf=f&apvc=0&tids=AW-1000710043~AW-17703379485&tid=AW-1000710043&tft=1779371099040&tfd=4316",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "<unreadable: Response.text: Protocol error (Network.getResponseBody): No data found for resource with given identifier>",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://pagead2.googlesyndication.com/ccm/collect?rcb=8&frm=0&en=page_view&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FMuzikalni-instrumenti%2FKLASIChESKA-KITARA-YAMAHA-C30%2Fp%2F156468&scrsrc=www.googletagmanager.com&rnd=757378938.1779371099&navt=n&npa=1&us_privacy=1---&gdid=dMWZhNz&ep.user_data_mode=a&_tu=KA&gtm=45fe65j1v9242889690z89227895777za20gzb9227895777zd9227895777xec&gcs=G100&gcd=13p3p3p2p5l1&dma_cps=-&dma=1&tag_exp=0~115938465~115938468&apve=1&apvf=f&apvc=0&tids=DC-16420168&tid=DC-16420168&tft=1779371099038&tfd=4314",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "<unreadable: Response.text: Protocol error (Network.getResponseBody): No data found for resource with given identifier>",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://pagead2.googlesyndication.com/ccm/collect?rcb=9&frm=0&ae=g&en=page_view&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FMuzikalni-instrumenti%2FKLASIChESKA-KITARA-YAMAHA-C30%2Fp%2F156468&scrsrc=www.googletagmanager.com&rnd=757378938.1779371099&navt=n&npa=1&us_privacy=1---&ep.ads_data_redaction=1&gdid=dMWZhNz&_tu=CA&gtm=45He65j1v9227895777za200zd9227895777xea&gcs=G100&gcd=13p3p3p2p5l1&dma_cps=-&dma=1&tag_exp=0~115616985~115938465~115938468&apve=1&apvf=f&apvc=1&tft=1779371099037&tfd=4313",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "<unreadable: Response.text: Protocol error (Network.getResponseBody): No data found for resource with given identifier>",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://recommender.scarabresearch.com/merchants/1F6B4510E2D371EB/?pv=1193290451&xp=1&v=i%3A156468&cv=1&ca=&cp=1&az=technopolis",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "xhr",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\"cohort\":\"AAAA\",\"visitor\":\"2FEBAD9D7591879\",\"session\":\"626F690E87DCE884\",\"profile\":\"156468|1779371100\",\"features\":{}}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://sgtm.technopolis.bg/g/collect?v=2&tid=G-F9NVFX3XWL&gtm=45je65j1v892675621z89227895777za20gzb9227895777zd9227895777&_p=1779371096398&gcs=G100&gcd=13p3pPp2p5l1&npa=1&dma_cps=-&dma=1&gdid=dMWZhNz&ecid=1017527461&_eu=IA&_fplc=0&are=1&cid=872647148.1779371099&frm=0&pscdl=denied&rcb=15&sr=1365x900&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=bg-bg&ur=BG-22&sst.rnd=757378938.1779371099&sst.etld=google.bg&sst.gcsub=region1&sst.adr=1&sst.us_privacy=1---&sst.tft=1779371096398&sst.lpc=226561432&sst.navt=n&sst.ude=0&_s=2&tag_exp=0~115938465~115938469~119168154&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FMuzikalni-instrumenti%2FKLASIChESKA-KITARA-YAMAHA-C30%2Fp%2F156468&dt=%D0%9A%D0%9B%D0%90%D0%A1%D0%98%D0%A7%D0%95%D0%A1%D0%9A%D0%90%20%D0%9A%D0%98%D0%A2%D0%90%D0%A0%D0%90%20YAMAHA%20C30&cu=EUR&sid=1779371097&sct=1&seg=0&_tu=DA&en=view_item&pr1=id156468~nm%D0%9A%D0%9B%D0%90%D0%A1%D0%98%D0%A7%D0%95%D0%A1%D0%9A%D0%90%20%D0%9A%D0%98%D0%A2%D0%90%D0%A0%D0%90%20YAMAHA%20C30~brYAMAHA~pr149.9~qt1~k0item_category0~v0TV%2C%20%D0%90%D1%83%D0%B4%D0%B8%D0%BE%20%D0%B8%20Gaming~ca%D0%9C%D1%83%D0%B7%D0%B8%D0%BA%D0%B0%D0%BB%D0%BD%D0%B8%20%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8&epn.value=149.9&evnid=1779371954736_177937168432713&ep.x-fb-cd-content_type=product&ep.x-fb-cd-contents=%5B%7B%22id%22%3A%22156468%22%2C%22quantity%22%3A1%7D%5D&ep.x-fb-cd-content_name=%D0%9A%D0%9B%D0%90%D0%A1%D0%98%D0%A7%D0%95%D0%A1%D0%9A%D0%90%20%D0%9A%D0%98%D0%A2%D0%90%D0%A0%D0%90%20YAMAHA%20C30&ep.x-fb-cd-content_ids=156468&ep.product_id=156468&_et=6&tfd=4926&richsstsse",
+          "method": "GET",
+          "status": 200,
+          "content_type": "text/plain",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "event: message\ndata: {\"response\":{\"status_code\":200,\"body\":\"\"}}\n\n",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://sgtm.technopolis.bg/g/collect?v=2&tid=G-F9NVFX3XWL&gtm=45je65j1v892675621z89227895777za20gzb9227895777zd9227895777&_p=1779371096398&gcs=G100&gcd=13p3pPp2p5l1&npa=1&dma_cps=-&dma=1&gdid=dMWZhNz&ecid=1017527461&_fplc=0&are=1&cid=872647148.1779371099&frm=0&pscdl=denied&rcb=15&sr=1365x900&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=bg-bg&ur=BG-22&sst.rnd=757378938.1779371099&sst.etld=google.bg&sst.gcsub=region1&sst.adr=1&sst.us_privacy=1---&sst.tft=1779371096398&sst.lpc=226561432&sst.navt=n&sst.ude=0&_s=1&tag_exp=0~115938465~115938469~119168154&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FMuzikalni-instrumenti%2FKLASIChESKA-KITARA-YAMAHA-C30%2Fp%2F156468&dt=%D0%9A%D0%9B%D0%90%D0%A1%D0%98%D0%A7%D0%95%D0%A1%D0%9A%D0%90%20%D0%9A%D0%98%D0%A2%D0%90%D0%A0%D0%90%20YAMAHA%20C30&sid=1779371097&sct=1&seg=0&_tu=LA&en=page_view&_fv=1&_ss=1&evnid=1779371954736_177937168432729&tfd=4378&richsstsse",
+          "method": "GET",
+          "status": 200,
+          "content_type": "text/plain",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "event: message\ndata: {\"response\":{\"status_code\":200,\"body\":\"\"}}\n\n",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://webchannel-content.eservice.emarsys.net/customer/881886836/campaigns?url=https:%2F%2Fwww.technopolis.bg%2Fbg%2FMuzikalni-instrumenti%2FKLASIChESKA-KITARA-YAMAHA-C30%2Fp%2F156468&prev_url=&lang=bg&ca=&v=i:156468&uli=false",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "xhr",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\"ads\":[]}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        }
+      ]
+    },
+    {
+      "product_url": "https://www.technopolis.bg/bg/Ekrani/Ekran-HAMA-TRIPOD-SCREEN-125--WH/p/64200",
+      "category_path": "Ekrani/Ekran-HAMA-TRIPOD-SCREEN-125--WH",
+      "notes": [
+        "response_handler_error: 'utf-8' codec can't decode byte 0x8b in position 1: invalid start byte"
+      ],
+      "xhr_fetch_total": 29,
+      "candidate_count": 22,
+      "candidates": [
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/64200/references?fields=DEFAULT%2Creferences(target(code%2Cname%2Cprice%2Cimages(FULL)%2CshowPcd%2Cpcd%2CinfoPriceOffline%2CinfoPriceOld))&referenceType=SIMILAR&imageFormats=videoluxGrid&pageSize=10&lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": true,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\n   \"references\" : [ {\n      \"referenceType\" : \"SIMILAR\",\n      \"target\" : {\n         \"baseOptions\" : [ ],\n         \"brand\" : \"HAMA\",\n         \"code\" : \"11030\",\n         \"configurable\" : false,\n         \"description\" : \"\",\n         \"ean\" : \"4007249215758\",\n         \"estimatedDeliveryTime\" : true,\n         \"estimatedDeliveryTimeMessage\" : \"Очаквано време за доставка от 1 до 4 дни.\",\n         \"expressDelivery\" : true,\n         \"hideSticker\" : true,\n         \"images\" : [ {\n            \"altText\" : \"ЕКРАН HAMA 21575 125X125\",\n            \"format\" : \"videoluxZoom\",\n            \"imageType\" : \"PRIMARY\",\n            \"url\" : \"/medias/Product-zoom-11030.jpg?context=bWFzdGVyfHJvb3R8NTI1ODB8aW1hZ2UvanBlZ3xhRGN6TDJoaE55OHpNell3TXpFM01ERXdOelF5TWk5UWNtOWtkV04wTFhwdmIyMWZNVEV3TXpBdWFuQm58ZTUwMTMxODM0YTRhNDI4YmI2M2ViMzlmNDcwNmI0OTlhYTUwMzQ0OWYyOGFhN2U4OGQ0YjViMzE5MmM1MmY3MA\"\n         }, {\n            \"altText\" : \"ЕКРАН HAMA 21575 125X125\",\n            \"format\" : \"videoluxProduct\",\n            \"imageTy",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/64200?fields=DEFAULT,averageRating,images(FULL),manufacturer,numberOfReviews,categories(FULL),baseOptions,baseProduct,variantOptions,variantType,ecoImages(FULL),potentialPromotions(FULL),bundlePromotions(FULL),classifications,ean,brand&imageFormats=videoluxProduct,videoluxGrid,videoluxZoom,videoluxThumbnail&lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": true,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\n   \"a360videos\" : [ ],\n   \"allFromBrandButton\" : true,\n   \"allFromBrandUrl\" : \"/brand/HAMA\",\n   \"availableForPickup\" : true,\n   \"baseOptions\" : [ ],\n   \"bfStockAndPrice\" : false,\n   \"brand\" : \"HAMA\",\n   \"breadcrumbDatas\" : [ {\n      \"name\" : \"TV, Аудио и Gaming\",\n      \"url\" : \"TV--Audio-i-Gaming/c/P1109\"\n   }, {\n      \"name\" : \"Мултимедийни проектори и екрани\",\n      \"url\" : \"TV--Audio-i-Gaming/Multimedijni-proektori-i-ekrani/c/P110906\"\n   }, {\n      \"name\" : \"Екрани\",\n      \"url\" : \"TV--Audio-i-Gaming/Multimedijni-proektori-i-ekrani/Ekrani/c/P11090602\"\n   }, {\n      \"name\" : \"Екран HAMA TRIPOD-SCREEN 125, WH\",\n      \"url\" : \"/Ekrani/Ekran-HAMA-TRIPOD-SCREEN-125--WH/p/64200\"\n   } ],\n   \"bundlePromotions\" : [ ],\n   \"categories\" : [ {\n      \"code\" : \"P11090602\",\n      \"image\" : {\n         \"url\" : \"/medias/?context=bWFzdGVyfGltYWdlc3wzNjg4fGltYWdlL2pwZWd8YVcxaFoyVnpMMmcwWmk5b00ySXZPRGcxTkRnNU5qWXdOekkyTWk1cWNHY3wzMDU0NGI1YTBiM2UwZjYyMmFlY2MwZjdhZGU5ZGExMWE0NjBjMWQ5ODJlOGI5ZDgwODBiZGQwY",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://accounts.livechatinc.com/v2/customer/991aba2c-7604-43b0-bb45-18b519f8e379/6/token",
+          "method": "POST",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "xhr",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\"access_token\":\"us-south1:T_G3TfSiSMSy1Q3AS6kGaw\",\"entity_id\":\"ad9f81af-3c37-4a47-8103-31c11413d3d5\",\"expires_in\":14400,\"organization_id\":\"991aba2c-7604-43b0-bb45-18b519f8e379\",\"token_type\":\"Bearer\"}\n",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://secure.livechatinc.com/"
+          },
+          "set_cookie": "",
+          "post_data_preview": "{\"response_type\":\"token\",\"grant_type\":\"cookie\",\"client_id\":\"c5e4f61e1a6c3b1521b541bc5c5a2ac5\",\"organization_id\":\"991aba2c-7604-43b0-bb45-18b519f8e379\",\"redirect_uri\":\"https://secure.livechatinc.com/customer/action/open_chat\"}"
+        },
+        {
+          "url": "https://ams.creativecdn.com/tags/v2?type=json&tc=1",
+          "method": "POST",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "[{\"url\":\"https://ib.adnxs.com/setuid?entity=315&code=SWBThQopl9tM-_QrVljXzAR8JajecPzD0AGiuKCy9C0&consent=1\",\"type\":\"IMG\"}]",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/bg/Ekrani/Ekran-HAMA-TRIPOD-SCREEN-125--WH/p/64200"
+          },
+          "set_cookie": "",
+          "post_data_preview": "{\"v\":\"v0.2.1\",\"sr\":\"\",\"su\":\"https://www.technopolis.bg/bg/Ekrani/Ekran-HAMA-TRIPOD-SCREEN-125--WH/p/64200\",\"th\":\"SaCE7v75HuLgk0GQNSC3\",\"tags\":[{\"eventType\":\"offer\",\"offerId\":\"64200\"},{\"eventType\":\"category\",\"categoryId\":\"Product Details\"},{\"eventType\":\"lid\",\"id\":\"K1RjgvKG3hBVlFCnCuYs\",\"expiryDate\":\""
+        },
+        {
+          "url": "https://analytics.tiktok.com/api/v2/pixel",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "ping",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": "{\"event\":\"LandingPageView\",\"event_id\":\"\",\"message_id\":\"messageId-1779371118074-1938430603920-CSMC6D3C77U7NCGBQG90\",\"is_onsite\":false,\"timestamp\":\"2026-05-21T13:45:18.074Z\",\"context\":{\"ad\":{\"sdk_env\":\"external\",\"jsb_status\":2},\"device\":{\"platform\":\"pc\"},\"user\":{\"anonymous_id\":\"01KS5CH3EYKRA17053HEA92"
+        },
+        {
+          "url": "https://analytics.tiktok.com/api/v2/pixel/act",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "ping",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": "{\"event_id\":\"\",\"message_id\":\"messageId-1779371118340-8234640023462\",\"is_onsite\":false,\"timestamp\":\"2026-05-21T13:45:18.340Z\",\"context\":{\"ad\":{\"sdk_env\":\"external\",\"jsb_status\":2},\"device\":{\"platform\":\"pc\"},\"user\":{\"anonymous_id\":\"01KS5CH3EYKRA17053HEA925J1_.tt.1\"},\"pixel\":{\"code\":\"CSMC6D3C77U7NCGBQG"
+        },
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/cms/components/topnavigation/topNavigationBarMenu?lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\n   \"uid\" : \"topNavigationBarMenu\",\n   \"typeCode\" : \"VLuxTopNavigationBarComponent\",\n   \"components\" : {\n      \"component\" : [ {\n         \"uid\" : \"PromoBarComponent\",\n         \"typeCode\" : \"NavigationBarComponent\",\n         \"link\" : {\n            \"uid\" : \"PromoCategoryLink\",\n            \"styleAttributes\" : \"i PromotionsLink\",\n            \"external\" : \"false\",\n            \"url\" : \"/c/Promotions\",\n            \"linkName\" : \"Оферти и брошура\",\n            \"typeCode\" : \"CMSMenuLinkComponent\",\n            \"target\" : \"false\"\n         },\n         \"navigationNode\" : {\n            \"uid\" : \"PromoNavNode\",\n            \"entries\" : [ ],\n            \"children\" : [ {\n               \"uid\" : \"OfflinePromoNavNode\",\n               \"entries\" : [ {\n                  \"link\" : {\n                     \"uid\" : \"OfflinePromoCategoryLink\",\n                     \"typeCode\" : \"CMSLinkComponent\",\n                     \"modifiedtime\" : \"2024-12-17T12:17:57.288+02:00\",\n                     \"external\" : \"false\",\n        ",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/cms/pages?pageType=ProductPage&code=64200&lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\n   \"uid\" : \"productDetails\",\n   \"uuid\" : \"eyJpdGVtSWQiOiJwcm9kdWN0RGV0YWlscyIsImNhdGFsb2dJZCI6InRlY2hub3BvbGlzQkdDb250ZW50Q2F0YWxvZyIsImNhdGFsb2dWZXJzaW9uIjoiT25saW5lIn0=\",\n   \"title\" : \"Технополис - прави живота по-хубав\",\n   \"template\" : \"ProductDetailsPageTemplate\",\n   \"typeCode\" : \"ProductPage\",\n   \"name\" : \"Product Details\",\n   \"description\" : \"Хипермаркети Технополис предлагат огромен избор от бяла, черна, офис техника и IT. Транспорт, покупки на изплащане, онлайн магазин, удължена гаранция и внимателно обслужване. Технополис - прави живота по-хубав.\",\n   \"contentSlots\" : {\n      \"contentSlot\" : [ {\n         \"slotId\" : \"RecentProductsSlot\",\n         \"slotUuid\" : \"eyJpdGVtSWQiOiJSZWNlbnRQcm9kdWN0c1Nsb3QiLCJjYXRhbG9nSWQiOiJ0ZWNobm9wb2xpc0JHQ29udGVudENhdGFsb2ciLCJjYXRhbG9nVmVyc2lvbiI6Ik9ubGluZSJ9\",\n         \"position\" : \"RecentProducts\",\n         \"name\" : \"Slot for the Recent products\",\n         \"slotShared\" : false,\n         \"components\" : {\n            \"component\" : [ {\n        ",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/64200/references?fields=DEFAULT%2Creferences(target(code%2Cname%2Cprice%2Cimages(FULL)%2CshowPcd%2Cpcd%2CinfoPriceOffline%2CinfoPriceOld))&referenceType=ACCESSORIES&imageFormats=videoluxGrid&pageSize=14&lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\n   \"references\" : [ ]\n}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/64200/references?fields=DEFAULT%2Creferences(target(code%2Cname%2Cprice%2Cimages(FULL)%2CshowPcd%2Cpcd%2CinfoPriceOffline%2CinfoPriceOld))&referenceType=CROSSELLING&imageFormats=videoluxGrid&pageSize=5&lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\n   \"references\" : [ ]\n}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/64200/references?fields=DEFAULT%2Creferences(target(code%2Cname%2Cprice%2Cimages(FULL)%2CshowPcd%2Cpcd%2CinfoPriceOffline%2CinfoPriceOld))&referenceType=NEW&imageFormats=videoluxGrid&pageSize=10&lang=bg&curr=EUR&servicingStore=1302&postalCode=1000",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\n   \"references\" : [ ]\n}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://consentcdn.cookiebot.com/consentconfig/c679db95-c8cc-4245-b927-95013d55f47b/settings.json",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "xhr",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\"widget\":{\"enabled\":false,\"position\":{\"position\":\"bottom-left\",\"distanceVerticalPx\":10,\"distanceHorizontalPx\":10},\"theme\":{\"closed\":{\"backgroundColor\":\"#141414\",\"foregroundColor\":\"#FFFFFF\"},\"opened\":{\"backgroundColor\":\"#FFFFFF\",\"foregroundColor\":\"#141414\",\"highlightColor\":\"#1032CF\",\"shadeColor\":\"#D6D6D6\",\"changeBackgroundColor\":\"#1032CF\",\"changeTextColor\":\"#FFFFFF\",\"changeBorderColor\":\"#1032CF\",\"withdrawBackgroundColor\":\"#FFFFFF\",\"withdrawTextColor\":\"#141414\",\"withdrawBorderColor\":\"#1032CF\",\"detailsBackgroundColor\":\"#F2F2F2\"}},\"content\":{\"cultures\":[\"en\",\"bg\"],\"default\":\"bg\",\"autodetectLanguage\":false}}}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://gum.criteo.com/sid/json?origin=onetag&domain=technopolis.bg&sn=ChromeSyncframe&so=undefined&topUrl=www.technopolis.bg",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\"sid\":null,\"removeSid\":false,\"bundle\":\"aRCI1F9jWDdwMkdRM2pKdjRnZEFjSjB6b1c4cHglMkJjRkNVVHo0QzQ3VU5lOWp5allSNXJvT2J6VldRJTJCSWtNUDhVZDVTVEdqNUdvM1BDSEhLVkh3YnVIc2d3T0hHcDZOVm5LalZBcCUyQjVIWTRQNHFOa1YzbW9lRE5sdGxMSk5YOUV2NUxLZGFVa2lKN3F0V0tXc2xqSktyUFdXbUElM0QlM0Q\",\"info\":\"EDhvL19jWDdwMkdRM2pKdjRnZEFjSjB6b1c4cHglMkJjRkNVVHo0QzQ3VU5lOWp5allSNXJvT2J6VldRJTJCSWtNUDhVZDVTVHVLZkp5YkFqWmhHJTJCYVJlNTVZRURqZyUzRCUzRA\",\"optout\":false}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://gum.criteo.com/syncframe?topUrl=www.technopolis.bg&origin=onetag"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://pagead2.googlesyndication.com/ccm/collect?rcb=5&frm=0&en=page_view&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FEkrani%2FEkran-HAMA-TRIPOD-SCREEN-125--WH%2Fp%2F64200&scrsrc=www.googletagmanager.com&rnd=1598099674.1779371119&navt=n&npa=1&us_privacy=1---&gdid=dMWZhNz&ep.user_data_mode=a&_tu=KA&gtm=45fe65j1v9242889690z89227895777za20gzb9227895777zd9227895777xec&gcs=G100&gcd=13p3p3p2p5l1&dma_cps=-&dma=1&tag_exp=0~115616986~115938465~115938468&apve=1&apvf=f&apvc=0&tids=DC-16420168&tid=DC-16420168&tft=1779371118676&tfd=4751",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "<unreadable: Response.text: Protocol error (Network.getResponseBody): No data found for resource with given identifier>",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://pagead2.googlesyndication.com/ccm/collect?rcb=7&frm=0&ae=g&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FEkrani%2FEkran-HAMA-TRIPOD-SCREEN-125--WH%2Fp%2F64200&scrsrc=www.googletagmanager.com&rnd=1598099674.1779371119&navt=n&npa=1&us_privacy=1---&did=dMWZhNz&gdid=dMWZhNz&_tu=KA&gtm=45be65j1v9179906331z89227895777za20gzb9227895777zd9227895777xea&gcs=G100&gcd=13p3pPp2p5l1&dma_cps=-&dma=1&tag_exp=0~115938465~115938469&apve=1&apvf=f&apvc=0&tids=AW-1000710043~AW-17703379485&tid=AW-1000710043&tft=1779371118675&tfd=4750",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "<unreadable: Response.text: Protocol error (Network.getResponseBody): No data found for resource with given identifier>",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://pagead2.googlesyndication.com/ccm/collect?rcb=7&frm=0&ae=g&en=view_item&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FEkrani%2FEkran-HAMA-TRIPOD-SCREEN-125--WH%2Fp%2F64200&scrsrc=www.googletagmanager.com&rnd=1598099674.1779371119&navt=n&npa=1&us_privacy=1---&ep.ads_data_redaction=1&epn.value=66.4&did=dMWZhNz&gdid=dMWZhNz&_tu=KA&gtm=45be65j1v9179906331z89227895777za20gzb9227895777zd9227895777xea&gcs=G100&gcd=13p3pPp2p5l1&dma_cps=-&dma=1&tag_exp=0~115938465~115938469&apve=1&apvf=f&apvc=0&tids=AW-1000710043~AW-17703379485&tid=AW-1000710043&tft=1779371118675&tfd=4751",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "<unreadable: Response.text: Protocol error (Network.getResponseBody): No data found for resource with given identifier>",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://pagead2.googlesyndication.com/ccm/collect?rcb=7&frm=0&en=page_view&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FEkrani%2FEkran-HAMA-TRIPOD-SCREEN-125--WH%2Fp%2F64200&scrsrc=www.googletagmanager.com&rnd=1598099674.1779371119&navt=n&npa=1&us_privacy=1---&did=dMWZhNz&gdid=dMWZhNz&_tu=KA&gtm=45be65j1v9179906331z89227895777za20gzb9227895777zd9227895777xec&gcs=G100&gcd=13p3pPp2p5l1&dma_cps=-&dma=1&tag_exp=0~115938465~115938469&apve=1&apvf=f&apvc=0&tids=AW-1000710043~AW-17703379485&tid=AW-1000710043&tft=1779371118674&tfd=4750",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "<unreadable: Response.text: Protocol error (Network.getResponseBody): No data found for resource with given identifier>",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://pagead2.googlesyndication.com/ccm/collect?rcb=8&frm=0&ae=g&en=page_view&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FEkrani%2FEkran-HAMA-TRIPOD-SCREEN-125--WH%2Fp%2F64200&scrsrc=www.googletagmanager.com&rnd=1598099674.1779371119&navt=n&npa=1&us_privacy=1---&ep.ads_data_redaction=1&gdid=dMWZhNz&_tu=CA&gtm=45He65j1v9227895777za200zd9227895777xea&gcs=G100&gcd=13p3p3p2p5l1&dma_cps=-&dma=1&tag_exp=0~115938465~115938469&apve=1&apvf=f&apvc=1&tft=1779371118673&tfd=4748",
+          "method": "POST",
+          "status": 200,
+          "content_type": "",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "<unreadable: Response.text: Protocol error (Network.getResponseBody): No data found for resource with given identifier>",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://recommender.scarabresearch.com/merchants/1F6B4510E2D371EB/?pv=1432894077&xp=1&v=i%3A64200&cv=1&ca=&cp=1&az=technopolis",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "xhr",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\"cohort\":\"AAAA\",\"visitor\":\"4185831827D6AC85\",\"session\":\"98C2143A445DEB6\",\"profile\":\"64200|1779371119\",\"features\":{}}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://sgtm.technopolis.bg/g/collect?v=2&tid=G-F9NVFX3XWL&gtm=45je65j1v892675621z89227895777za20gzb9227895777zd9227895777&_p=1779371115739&gcs=G100&gcd=13p3pPp2p5l1&npa=1&dma_cps=-&dma=1&gdid=dMWZhNz&ecid=1971041166&_eu=IA&_fplc=0&are=1&cid=1759078257.1779371119&frm=0&pscdl=denied&rcb=11&sr=1365x900&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=bg-bg&ur=BG-22&sst.rnd=1598099674.1779371119&sst.etld=google.bg&sst.gcsub=region1&sst.adr=1&sst.us_privacy=1---&sst.tft=1779371115739&sst.lpc=264880138&sst.navt=n&sst.ude=0&_s=2&tag_exp=0~115938465~115938468~118128923&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FEkrani%2FEkran-HAMA-TRIPOD-SCREEN-125--WH%2Fp%2F64200&dt=%D0%95%D0%BA%D1%80%D0%B0%D0%BD%20HAMA%20TRIPOD-SCREEN%20125%2C%20WH&cu=EUR&sid=1779371117&sct=1&seg=0&_tu=DA&en=view_item&pr1=id64200~nm%D0%95%D0%BA%D1%80%D0%B0%D0%BD%20HAMA%20TRIPOD-SCREEN%20125%2C%20WH~brHAMA~pr66.4~qt1~k0item_category0~v0TV%2C%20%D0%90%D1%83%D0%B4%D0%B8%D0%BE%20%D0%B8%20Gaming~ca%D0%9C%D1%83%D0%BB%D1%82%D0%B8%D0%BC%D0%B5%D0%B4%D0%B8%D0%B9%D0%BD%D0%B8%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D0%B8%20%D0%B8%20%D0%B5%D0%BA%D1%80%D0%B0%D0%BD%D0%B8~c2%D0%95%D0%BA%D1%80%D0%B0%D0%BD%D0%B8&epn.value=66.4&evnid=1779372035742_177937177930413&ep.x-fb-cd-content_type=product&ep.x-fb-cd-contents=%5B%7B%22id%22%3A%2264200%22%2C%22quantity%22%3A1%7D%5D&ep.x-fb-cd-content_name=%D0%95%D0%BA%D1%80%D0%B0%D0%BD%20HAMA%20TRIPOD-SCREEN%20125%2C%20WH&ep.x-fb-cd-content_ids=64200&ep.product_id=64200&_et=6&tfd=5342&richsstsse",
+          "method": "GET",
+          "status": 200,
+          "content_type": "text/plain",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "event: message\ndata: {\"response\":{\"status_code\":200,\"body\":\"\"}}\n\n",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://sgtm.technopolis.bg/g/collect?v=2&tid=G-F9NVFX3XWL&gtm=45je65j1v892675621z89227895777za20gzb9227895777zd9227895777&_p=1779371115739&gcs=G100&gcd=13p3pPp2p5l1&npa=1&dma_cps=-&dma=1&gdid=dMWZhNz&ecid=1971041166&_fplc=0&are=1&cid=1759078257.1779371119&frm=0&pscdl=denied&rcb=11&sr=1365x900&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=bg-bg&ur=BG-22&sst.rnd=1598099674.1779371119&sst.etld=google.bg&sst.gcsub=region1&sst.adr=1&sst.us_privacy=1---&sst.tft=1779371115739&sst.lpc=264880138&sst.navt=n&sst.ude=0&_s=1&tag_exp=0~115938465~115938468~118128923&dl=https%3A%2F%2Fwww.technopolis.bg%2Fbg%2FEkrani%2FEkran-HAMA-TRIPOD-SCREEN-125--WH%2Fp%2F64200&dt=%D0%95%D0%BA%D1%80%D0%B0%D0%BD%20HAMA%20TRIPOD-SCREEN%20125%2C%20WH&sid=1779371117&sct=1&seg=0&_tu=LA&en=page_view&_fv=1&_nsi=1&_ss=1&evnid=1779372035742_177937177930430&tfd=4774&richsstsse",
+          "method": "GET",
+          "status": 200,
+          "content_type": "text/plain",
+          "resource_type": "fetch",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "event: message\ndata: {\"response\":{\"status_code\":200,\"body\":\"\"}}\n\n",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        },
+        {
+          "url": "https://webchannel-content.eservice.emarsys.net/customer/881886836/campaigns?url=https:%2F%2Fwww.technopolis.bg%2Fbg%2FEkrani%2FEkran-HAMA-TRIPOD-SCREEN-125--WH%2Fp%2F64200&prev_url=&lang=bg&ca=&v=i:64200&uli=false",
+          "method": "GET",
+          "status": 200,
+          "content_type": "application/json",
+          "resource_type": "xhr",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "response_sample": "{\"ads\":[]}",
+          "request_headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "accept": "application/json, text/plain, */*",
+            "accept-language": "bg-BG",
+            "referer": "https://www.technopolis.bg/"
+          },
+          "set_cookie": "",
+          "post_data_preview": null
+        }
+      ]
+    }
+  ],
+  "top_endpoints": [
+    {
+      "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/14251/references",
+      "method": "GET",
+      "score": 3,
+      "signals": {
+        "price": false,
+        "availability": true,
+        "ean": true,
+        "product_code": false,
+        "stock": true,
+        "variants": false
+      },
+      "sample": "{\n   \"references\" : [ {\n      \"referenceType\" : \"ACCESSORIES\",\n      \"target\" : {\n         \"baseOptions\" : [ ],\n         \"brand\" : \"ETC\",\n         \"code\" : \"872031\",\n         \"configurable\" : false,\n         \"description\" : \"\",\n         \"ean\" : \"3800809740513\",\n         \"estimatedDeliveryTime\" : true,\n         \"estimatedDeliveryTimeMessage\" : \"Очаквано време за доставка от 1 до 4 дни.\",\n         \"expressDelivery\" : true,\n         \"hideSticker\" : true,\n         \"images\" : [ {\n            \"altText\" : \"Разкл. 4 гн. 5м ИМП бял ETC 74051\",\n            \"format\" : \"videoluxZoom\",\n            \"imageType\" : \"PRIMARY\",\n            \"url\" : \"/medias/872031.jpg-Product-zoom?context=bWFzdGVyfHJvb3R8ODk4ODJ8aW1hZ2UvanBlZ3xhR00zTDJoaU9DOHhNVFEwTXpVMU16WTJOVEExTkM1cWNHY3w1MGM2ZmQ3MGI5NGRmZTIxZjE5ODU0NjQwNGU5NWI3NTdiYTA4YmZkNzUyYTBlYzIyZjIxYmIzOWU4NDdhNzg3\"\n         }, {\n            \"altText\" : \"Разкл. 4 гн. 5м ИМП бял ETC 74051\",\n            \"format\" : \"videoluxProduct\",\n            \"imageType\" : \"PRIM",
+      "status": 200,
+      "content_type": "application/json",
+      "headers": {
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "accept": "application/json, text/plain, */*",
+        "accept-language": "bg-BG",
+        "referer": "https://www.technopolis.bg/"
+      }
+    },
+    {
+      "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/16307/references",
+      "method": "GET",
+      "score": 3,
+      "signals": {
+        "price": false,
+        "availability": true,
+        "ean": true,
+        "product_code": false,
+        "stock": true,
+        "variants": false
+      },
+      "sample": "{\n   \"references\" : [ {\n      \"referenceType\" : \"SIMILAR\",\n      \"target\" : {\n         \"baseOptions\" : [ ],\n         \"brand\" : \"DIVA\",\n         \"code\" : \"314624\",\n         \"configurable\" : false,\n         \"description\" : \"\",\n         \"ean\" : \"3146248\",\n         \"estimatedDeliveryTime\" : true,\n         \"estimatedDeliveryTimeMessage\" : \"Очаквано време за доставка от 1 до 4 дни.\",\n         \"expressDelivery\" : false,\n         \"hideSticker\" : true,\n         \"images\" : [ {\n            \"altText\" : \"ЦИФРОВ DVB-T ДЕКОДЕР DIVA HD/RF 1306-B\",\n            \"format\" : \"videoluxZoom\",\n            \"imageType\" : \"PRIMARY\",\n            \"url\" : \"/medias/314624.jpg-Product-zoom?context=bWFzdGVyfHJvb3R8Mzc0ODB8aW1hZ2UvanBlZ3xhRFk0TDJneU55OHhNVFExTmpVd05ERTJPRFEzT0M1cWNHY3xiZDViYzdkMTlhMzljNTQ0NGFjOTEyY2IzZTQ0NDQ3ZmJmNDE1ZjNlNGQ3NGJiNzBjNjliZGIzZDNhMDYzM2I1\"\n         }, {\n            \"altText\" : \"ЦИФРОВ DVB-T ДЕКОДЕР DIVA HD/RF 1306-B\",\n            \"format\" : \"videoluxProduct\",\n            \"imageType\" : \"PR",
+      "status": 200,
+      "content_type": "application/json",
+      "headers": {
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "accept": "application/json, text/plain, */*",
+        "accept-language": "bg-BG",
+        "referer": "https://www.technopolis.bg/"
+      }
+    },
+    {
+      "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/33033",
+      "method": "GET",
+      "score": 1,
+      "signals": {
+        "price": false,
+        "availability": false,
+        "ean": true,
+        "product_code": false,
+        "stock": false,
+        "variants": false
+      },
+      "sample": "{\n   \"a360videos\" : [ ],\n   \"allFromBrandButton\" : true,\n   \"allFromBrandUrl\" : \"/brand-sony-shop-in-shop\",\n   \"availableForPickup\" : true,\n   \"baseOptions\" : [ ],\n   \"bfStockAndPrice\" : false,\n   \"brand\" : \"SONY\",\n   \"breadcrumbDatas\" : [ {\n      \"name\" : \"TV, Аудио и Gaming\",\n      \"url\" : \"TV--Audio-i-Gaming/c/P1109\"\n   }, {\n      \"name\" : \"Blu-Ray и DVD плеъри\",\n      \"url\" : \"TV--Audio-i-Gaming/Blu-Ray-i-DVD-pleari/c/P11090301\"\n   }, {\n      \"name\" : \"DVD ПЛЕЪР SONY DVP-SR760\",\n      \"url\" : \"/Blu-Ray-i-DVD-pleari/DVD-PLEAR-SONY-DVP-SR760/p/33033\"\n   } ],\n   \"bundlePromotions\" : [ ],\n   \"categories\" : [ {\n      \"code\" : \"P11090301\",\n      \"image\" : {\n         \"url\" : \"/medias/?context=bWFzdGVyfGltYWdlc3wyNTQ3NXxpbWFnZS9qcGVnfGFXMWhaMlZ6TDJnNE1DOW9OamN2T0RnMU5EZzVOakkzT1RVNE1pNXFjR2N8ZTUxNzc3ODI2YzI3NzUxYTYzMTA1Y2RmOTM1MGQyZGJiYWMwMTA4NzhiMzMxZTExYWJhNjhhYzZlMjMwMWRiZQ\"\n      },\n      \"url\" : \"TV--Audio-i-Gaming/Blu-Ray-i-DVD-pleari/c/P11090301\"\n   } ],\n   \"classifications\" : [ {\n ",
+      "status": 200,
+      "content_type": "application/json",
+      "headers": {
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "accept": "application/json, text/plain, */*",
+        "accept-language": "bg-BG",
+        "referer": "https://www.technopolis.bg/"
+      }
+    },
+    {
+      "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/156468",
+      "method": "GET",
+      "score": 1,
+      "signals": {
+        "price": false,
+        "availability": false,
+        "ean": true,
+        "product_code": false,
+        "stock": false,
+        "variants": false
+      },
+      "sample": "{\n   \"a360videos\" : [ ],\n   \"allFromBrandButton\" : true,\n   \"allFromBrandUrl\" : \"/brand/YAMAHA\",\n   \"availableForPickup\" : true,\n   \"averageRating\" : 5.0,\n   \"baseOptions\" : [ ],\n   \"bfStockAndPrice\" : false,\n   \"brand\" : \"YAMAHA\",\n   \"breadcrumbDatas\" : [ {\n      \"name\" : \"TV, Аудио и Gaming\",\n      \"url\" : \"TV--Audio-i-Gaming/c/P1109\"\n   }, {\n      \"name\" : \"Музикални инструменти\",\n      \"url\" : \"TV--Audio-i-Gaming/Muzikalni-instrumenti/c/P11070901\"\n   }, {\n      \"name\" : \"КЛАСИЧЕСКА КИТАРА YAMAHA C30\",\n      \"url\" : \"/Muzikalni-instrumenti/KLASIChESKA-KITARA-YAMAHA-C30/p/156468\"\n   } ],\n   \"bundlePromotions\" : [ ],\n   \"categories\" : [ {\n      \"code\" : \"P11070901\",\n      \"image\" : {\n         \"url\" : \"/medias/?context=bWFzdGVyfGltYWdlc3wxMjgyMHxpbWFnZS9qcGVnfGFXMWhaMlZ6TDJnNU9DOW9Oamt2T0RnMU5EZzVPREkwTlRZMk1pNXFjR2N8NmZjZTc4YTYzNWJmOGNkY2MyNmFlMDBiMWI0MzU0ZDFiMDVhYTljNWExZTA4MTA3Zjk2ZjBiOGVjYTFkYzJmNw\"\n      },\n      \"url\" : \"TV--Audio-i-Gaming/Muzikalni-instrumenti/c/P11070901\"\n   },",
+      "status": 200,
+      "content_type": "application/json",
+      "headers": {
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "accept": "application/json, text/plain, */*",
+        "accept-language": "bg-BG",
+        "referer": "https://www.technopolis.bg/"
+      }
+    },
+    {
+      "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/64200/references",
+      "method": "GET",
+      "score": 1,
+      "signals": {
+        "price": false,
+        "availability": false,
+        "ean": true,
+        "product_code": false,
+        "stock": false,
+        "variants": false
+      },
+      "sample": "{\n   \"references\" : [ {\n      \"referenceType\" : \"SIMILAR\",\n      \"target\" : {\n         \"baseOptions\" : [ ],\n         \"brand\" : \"HAMA\",\n         \"code\" : \"11030\",\n         \"configurable\" : false,\n         \"description\" : \"\",\n         \"ean\" : \"4007249215758\",\n         \"estimatedDeliveryTime\" : true,\n         \"estimatedDeliveryTimeMessage\" : \"Очаквано време за доставка от 1 до 4 дни.\",\n         \"expressDelivery\" : true,\n         \"hideSticker\" : true,\n         \"images\" : [ {\n            \"altText\" : \"ЕКРАН HAMA 21575 125X125\",\n            \"format\" : \"videoluxZoom\",\n            \"imageType\" : \"PRIMARY\",\n            \"url\" : \"/medias/Product-zoom-11030.jpg?context=bWFzdGVyfHJvb3R8NTI1ODB8aW1hZ2UvanBlZ3xhRGN6TDJoaE55OHpNell3TXpFM01ERXdOelF5TWk5UWNtOWtkV04wTFhwdmIyMWZNVEV3TXpBdWFuQm58ZTUwMTMxODM0YTRhNDI4YmI2M2ViMzlmNDcwNmI0OTlhYTUwMzQ0OWYyOGFhN2U4OGQ0YjViMzE5MmM1MmY3MA\"\n         }, {\n            \"altText\" : \"ЕКРАН HAMA 21575 125X125\",\n            \"format\" : \"videoluxProduct\",\n            \"imageTy",
+      "status": 200,
+      "content_type": "application/json",
+      "headers": {
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "accept": "application/json, text/plain, */*",
+        "accept-language": "bg-BG",
+        "referer": "https://www.technopolis.bg/"
+      }
+    },
+    {
+      "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/64200",
+      "method": "GET",
+      "score": 1,
+      "signals": {
+        "price": false,
+        "availability": false,
+        "ean": true,
+        "product_code": false,
+        "stock": false,
+        "variants": false
+      },
+      "sample": "{\n   \"a360videos\" : [ ],\n   \"allFromBrandButton\" : true,\n   \"allFromBrandUrl\" : \"/brand/HAMA\",\n   \"availableForPickup\" : true,\n   \"baseOptions\" : [ ],\n   \"bfStockAndPrice\" : false,\n   \"brand\" : \"HAMA\",\n   \"breadcrumbDatas\" : [ {\n      \"name\" : \"TV, Аудио и Gaming\",\n      \"url\" : \"TV--Audio-i-Gaming/c/P1109\"\n   }, {\n      \"name\" : \"Мултимедийни проектори и екрани\",\n      \"url\" : \"TV--Audio-i-Gaming/Multimedijni-proektori-i-ekrani/c/P110906\"\n   }, {\n      \"name\" : \"Екрани\",\n      \"url\" : \"TV--Audio-i-Gaming/Multimedijni-proektori-i-ekrani/Ekrani/c/P11090602\"\n   }, {\n      \"name\" : \"Екран HAMA TRIPOD-SCREEN 125, WH\",\n      \"url\" : \"/Ekrani/Ekran-HAMA-TRIPOD-SCREEN-125--WH/p/64200\"\n   } ],\n   \"bundlePromotions\" : [ ],\n   \"categories\" : [ {\n      \"code\" : \"P11090602\",\n      \"image\" : {\n         \"url\" : \"/medias/?context=bWFzdGVyfGltYWdlc3wzNjg4fGltYWdlL2pwZWd8YVcxaFoyVnpMMmcwWmk5b00ySXZPRGcxTkRnNU5qWXdOekkyTWk1cWNHY3wzMDU0NGI1YTBiM2UwZjYyMmFlY2MwZjdhZGU5ZGExMWE0NjBjMWQ5ODJlOGI5ZDgwODBiZGQwY",
+      "status": 200,
+      "content_type": "application/json",
+      "headers": {
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "accept": "application/json, text/plain, */*",
+        "accept-language": "bg-BG",
+        "referer": "https://www.technopolis.bg/"
+      }
+    }
+  ],
+  "httpx_replay": [
+    {
+      "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/14251/references",
+      "attempts": [
+        {
+          "variant": 0,
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": true,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "sample": "{\n   \"references\" : [ {\n      \"description\" : \"\",\n      \"quantity\" : 1,\n      \"referenceType\" : \"NEW\",\n      \"target\" : {\n         \"baseOptions\" : [ ],\n         \"brand\" : \"HAMA\",\n         \"code\" : \"15071\",\n         \"configurable\" : false,\n         \"description\" : \"\",\n         \"ean\" : \"4047443547231\",\n         \"estimatedDeliveryTime\" : true,\n         \"estimatedDeliveryTimeMessage\" : \"Очаквано време за доставка от 1 до 4 дни.\",\n         \"expressDelivery\" : false,\n         \"hideSticker\" : true,\n   "
+        },
+        {
+          "variant": 1,
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": true,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "sample": "{\n   \"references\" : [ {\n      \"description\" : \"\",\n      \"quantity\" : 1,\n      \"referenceType\" : \"NEW\",\n      \"target\" : {\n         \"baseOptions\" : [ ],\n         \"brand\" : \"HAMA\",\n         \"code\" : \"15071\",\n         \"configurable\" : false,\n         \"description\" : \"\",\n         \"ean\" : \"4047443547231\",\n         \"estimatedDeliveryTime\" : true,\n         \"estimatedDeliveryTimeMessage\" : \"Очаквано време за доставка от 1 до 4 дни.\",\n         \"expressDelivery\" : false,\n         \"hideSticker\" : true,\n   "
+        }
+      ]
+    },
+    {
+      "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/16307/references",
+      "attempts": [
+        {
+          "variant": 0,
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "sample": "{\n   \"references\" : [ ]\n}"
+        },
+        {
+          "variant": 1,
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "sample": "{\n   \"references\" : [ ]\n}"
+        }
+      ]
+    },
+    {
+      "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/33033",
+      "attempts": [
+        {
+          "variant": 0,
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "sample": "{\n   \"a360videos\" : [ ],\n   \"allFromBrandButton\" : true,\n   \"allFromBrandUrl\" : \"/brand-sony-shop-in-shop\",\n   \"availableForPickup\" : true,\n   \"baseOptions\" : [ ],\n   \"bfStockAndPrice\" : false,\n   \"brand\" : \"SONY\",\n   \"breadcrumbDatas\" : [ {\n      \"name\" : \"TV, Аудио и Gaming\",\n      \"url\" : \"TV--Audio-i-Gaming/c/P1109\"\n   }, {\n      \"name\" : \"Blu-Ray и DVD плеъри\",\n      \"url\" : \"TV--Audio-i-Gaming/Blu-Ray-i-DVD-pleari/c/P11090301\"\n   }, {\n      \"name\" : \"DVD ПЛЕЪР SONY DVP-SR760\",\n      \"url\" "
+        },
+        {
+          "variant": 1,
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "sample": "{\n   \"a360videos\" : [ ],\n   \"allFromBrandButton\" : true,\n   \"allFromBrandUrl\" : \"/brand-sony-shop-in-shop\",\n   \"availableForPickup\" : true,\n   \"baseOptions\" : [ ],\n   \"bfStockAndPrice\" : false,\n   \"brand\" : \"SONY\",\n   \"breadcrumbDatas\" : [ {\n      \"name\" : \"TV, Аудио и Gaming\",\n      \"url\" : \"TV--Audio-i-Gaming/c/P1109\"\n   }, {\n      \"name\" : \"Blu-Ray и DVD плеъри\",\n      \"url\" : \"TV--Audio-i-Gaming/Blu-Ray-i-DVD-pleari/c/P11090301\"\n   }, {\n      \"name\" : \"DVD ПЛЕЪР SONY DVP-SR760\",\n      \"url\" "
+        }
+      ]
+    },
+    {
+      "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/156468",
+      "attempts": [
+        {
+          "variant": 0,
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": true,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "sample": "{\n   \"a360videos\" : [ ],\n   \"allFromBrandButton\" : true,\n   \"allFromBrandUrl\" : \"/brand/YAMAHA\",\n   \"availableForPickup\" : true,\n   \"averageRating\" : 5.0,\n   \"baseOptions\" : [ ],\n   \"bfStockAndPrice\" : false,\n   \"brand\" : \"YAMAHA\",\n   \"breadcrumbDatas\" : [ {\n      \"name\" : \"TV, Аудио и Gaming\",\n      \"url\" : \"TV--Audio-i-Gaming/c/P1109\"\n   }, {\n      \"name\" : \"Музикални инструменти\",\n      \"url\" : \"TV--Audio-i-Gaming/Muzikalni-instrumenti/c/P11070901\"\n   }, {\n      \"name\" : \"КЛАСИЧЕСКА КИТАРА YA"
+        },
+        {
+          "variant": 1,
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": true,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "sample": "{\n   \"a360videos\" : [ ],\n   \"allFromBrandButton\" : true,\n   \"allFromBrandUrl\" : \"/brand/YAMAHA\",\n   \"availableForPickup\" : true,\n   \"averageRating\" : 5.0,\n   \"baseOptions\" : [ ],\n   \"bfStockAndPrice\" : false,\n   \"brand\" : \"YAMAHA\",\n   \"breadcrumbDatas\" : [ {\n      \"name\" : \"TV, Аудио и Gaming\",\n      \"url\" : \"TV--Audio-i-Gaming/c/P1109\"\n   }, {\n      \"name\" : \"Музикални инструменти\",\n      \"url\" : \"TV--Audio-i-Gaming/Muzikalni-instrumenti/c/P11070901\"\n   }, {\n      \"name\" : \"КЛАСИЧЕСКА КИТАРА YA"
+        }
+      ]
+    },
+    {
+      "url": "https://api.technopolis.bg/videoluxcommercewebservices/v2/technopolis-bg/products/64200/references",
+      "attempts": [
+        {
+          "variant": 0,
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "sample": "{\n   \"references\" : [ ]\n}"
+        },
+        {
+          "variant": 1,
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "signals": {
+            "price": false,
+            "availability": false,
+            "ean": false,
+            "product_code": false,
+            "stock": false,
+            "variants": false
+          },
+          "sample": "{\n   \"references\" : [ ]\n}"
+        }
+      ]
+    }
+  ]
+}
