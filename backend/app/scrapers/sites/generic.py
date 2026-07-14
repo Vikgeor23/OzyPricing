@@ -628,6 +628,29 @@ def _variant_size(node: dict[str, Any]) -> str | None:
     return _first_size_from_text(str(node.get("additionalInfo") or ""))
 
 
+# "additionalInfo" packs both shade and size, e.g. "цвят F2 23 мл." — strip the
+# size token and the leading "цвят/color/shade" word to leave just the shade.
+_COLOR_LABEL_PREFIX_RE = re.compile(
+    r"^\s*(?:цвят|цвета|нюанс|оттенък|colou?r|shade|nuance|tone|tint)\b[\s:]*",
+    re.I,
+)
+
+
+def _variant_color(node: dict[str, Any]) -> str | None:
+    info = str(node.get("additionalInfo") or "").replace("\xa0", " ")
+    remainder = SIZE_RE.sub(" ", info)
+    remainder = _COLOR_LABEL_PREFIX_RE.sub("", remainder)
+    remainder = re.sub(r"\s+", " ", remainder).strip(" ,.-–—")
+    if remainder:
+        return remainder[:120]
+    colors = node.get("colors")
+    if isinstance(colors, list) and colors:
+        first = str(colors[0]).strip()
+        if first:
+            return first[:120]
+    return None
+
+
 def _notino_variants(html: str, base_url: str) -> list[dict[str, Any]]:
     """Extract one descriptor per size variant from a Notino product page."""
     origin = normalize_url(base_url)
@@ -664,6 +687,7 @@ def _notino_variants(html: str, base_url: str) -> list[dict[str, Any]]:
             {
                 "url": abs_url,
                 "size": _variant_size(node),
+                "color": _variant_color(node),
                 "price": price,
                 "regular": regular if regular and regular > 0 else None,
                 "currency": currency,
@@ -731,12 +755,17 @@ def _apply_variant_identity(raw_data: dict[str, Any], variant: dict[str, Any]) -
         ids["shop_code"] = variant["shop_code"]
         ids["sku"] = variant["shop_code"]
     raw_data["product_identifiers"] = ids
-    if variant.get("size"):
-        raw_data["specs_json"] = {"size": variant["size"]}
-        raw_ident = dict(raw_data.get("raw_identifiers") or {})
-        raw_ident["size"] = variant["size"]
-        attributes = dict(raw_ident.get("attributes") or {})
-        attributes["size"] = variant["size"]
+    specs: dict[str, Any] = {}
+    raw_ident = dict(raw_data.get("raw_identifiers") or {})
+    attributes = dict(raw_ident.get("attributes") or {})
+    for key in ("size", "color"):
+        value = variant.get(key)
+        if value:
+            specs[key] = value
+            raw_ident[key] = value
+            attributes[key] = value
+    if specs:
+        raw_data["specs_json"] = specs
         raw_ident["attributes"] = attributes
         raw_data["raw_identifiers"] = raw_ident
 
@@ -1825,6 +1854,7 @@ class GenericProductScraper(BaseScraper):
             captured_at=result.captured_at,
             image_url=result.image_url,
             raw_data=raw,
+            variants=result.variants,
         )
 
     def _failure(

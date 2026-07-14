@@ -319,6 +319,7 @@ export type CategoryWorkspaceProduct = {
   listing_brand: string | null;
   listing_sku: string | null;
   listing_size: string | null;
+  listing_color: string | null;
   listing_description: string | null;
   listing_attributes: Record<string, unknown>;
   latest_price: string | null;

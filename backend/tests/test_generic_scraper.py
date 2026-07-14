@@ -1,5 +1,6 @@
 """Tests for the generic product scraper fallback."""
 
+import time
 import unittest
 from datetime import datetime, timezone
 from decimal import Decimal
@@ -18,7 +19,7 @@ class GenericProductScraperTests(unittest.TestCase):
             "@type": "Product",
             "name": "ACME Kettle 2000",
             "image": "https://example.com/kettle.jpg",
-            "gtin13": "3800000000000",
+            "gtin13": "3800000000003",
             "mpn": "KTL-2000",
             "brand": {"@type": "Brand", "name": "ACME"},
             "offers": {
@@ -43,7 +44,7 @@ class GenericProductScraperTests(unittest.TestCase):
         self.assertEqual(result.availability, "in_stock")
         self.assertEqual(result.image_url, "https://example.com/kettle.jpg")
         self.assertEqual(result.raw_data["confidence"], "high")
-        self.assertEqual(result.raw_data["product_identifiers"]["ean"], "3800000000000")
+        self.assertEqual(result.raw_data["product_identifiers"]["ean"], "3800000000003")
         self.assertEqual(result.raw_data["product_identifiers"]["manufacturer_code"], "KTL-2000")
         self.assertEqual(result.raw_data["product_identifiers"]["brand"], "ACME")
 
@@ -97,7 +98,10 @@ class GenericProductScraperTests(unittest.TestCase):
         self.assertEqual(result.price, Decimal("25.51"))
         self.assertEqual(result.currency, "EUR")
 
-    def test_extracts_code_description_and_attributes(self) -> None:
+    def test_extracts_product_code_but_not_description_or_attributes(self) -> None:
+        # The product code (SKU) is still extracted, but descriptions and
+        # free-form attributes are intentionally no longer collected — only the
+        # variant size/color drive matching.
         html = """
         <html>
           <head><meta name="description" content="Brick-built family toy set."></head>
@@ -105,11 +109,8 @@ class GenericProductScraperTests(unittest.TestCase):
             <h1>LEGO Bluey 11217</h1>
             <div>№ 0011217</div>
             <div class="product-meta">
-              <span>Категория: Детски играчки</span>
-              <span>Вид: Конструктори</span>
               <span>Марка: LEGO</span>
               <span>Серия: Bluey</span>
-              <span>Тема: Блуи</span>
             </div>
             <span class="price">49.99 лв.</span>
           </body>
@@ -122,30 +123,8 @@ class GenericProductScraperTests(unittest.TestCase):
         )
 
         self.assertEqual(result.raw_data["product_identifiers"]["sku"], "0011217")
-        self.assertEqual(result.raw_data["raw_identifiers"]["description"], "Brick-built family toy set.")
-        self.assertEqual(result.raw_data["specs_json"]["марка"], "LEGO")
-        self.assertEqual(result.raw_data["specs_json"]["серия"], "Bluey")
-        self.assertEqual(result.raw_data["specs_json"]["тема"], "Блуи")
-
-    def test_unescapes_html_description(self) -> None:
-        html = """
-        <html>
-          <head>
-            <meta name="description" content="&lt;p&gt;Fresh cream &lt;strong&gt;for face&lt;/strong&gt;.&lt;/p&gt;">
-          </head>
-          <body>
-            <h1>Face Cream</h1>
-            <span class="price">19.99 лв.</span>
-          </body>
-        </html>
-        """
-        result = GenericProductScraper("https://shop.example/face-cream")._parse_html_to_result(
-            html,
-            extra_raw={"fetch_layer": "http"},
-            captured_at=datetime.now(timezone.utc),
-        )
-
-        self.assertEqual(result.raw_data["raw_identifiers"]["description"], "Fresh cream for face.")
+        self.assertNotIn("description", result.raw_data.get("raw_identifiers") or {})
+        self.assertNotIn("марка", result.raw_data.get("specs_json") or {})
 
     def test_registry_unknown_domain_uses_generic_scraper(self) -> None:
         scraper = get_scraper_for_domain("example.com", "https://example.com/p/1")
@@ -198,6 +177,19 @@ class NotinoVariantExpansionTests(unittest.TestCase):
         self.assertEqual(v500["manufacturer_code"], "MFR-0500")
         self.assertTrue(v500["url"].endswith("/p-222/"))
 
+    def test_variant_color_extracted_from_additional_info(self) -> None:
+        # Foundations pack shade + size in one field, e.g. "цвят F2 23 мл." —
+        # the color must come out as "F2" and the size as "23ML".
+        from app.scrapers.sites.generic import _variant_color, _variant_size
+
+        node = {"additionalInfo": "цвят F2 23\xa0мл.", "colors": ["#E0C09F"]}
+        self.assertEqual(_variant_color(node), "F2")
+        self.assertEqual(_variant_size(node), "23ML")
+        # A size-only variant (e.g. a shower gel) has no color.
+        self.assertIsNone(_variant_color({"additionalInfo": "1000 мл."}))
+        # No label at all falls back to the swatch hex.
+        self.assertEqual(_variant_color({"additionalInfo": "", "colors": ["#ABCDEF"]}), "#ABCDEF")
+
     def test_non_notino_url_yields_no_variants(self) -> None:
         from app.scrapers.sites.generic import extract_variants
 
@@ -220,6 +212,23 @@ class NotinoVariantExpansionTests(unittest.TestCase):
         self.assertEqual(result.raw_data["specs_json"]["size"], "500ML")
         # The two other sizes are carried for sibling materialisation.
         self.assertEqual(len(result.variants or []), 2)
+
+    def test_with_status_preserves_variants(self) -> None:
+        # Regression: the real scrape path returns via _with_status, which must
+        # carry the variants through — otherwise siblings never reach persist.
+        scraper = GenericProductScraper(
+            "https://www.notino.bg/bioderma/atoderm/p-222/",
+            preferred_currency="EUR",
+        )
+        parsed = scraper._parse_html_to_result(
+            _NOTINO_VARIANTS_HTML,
+            extra_raw={"fetch_layer": "http"},
+            captured_at=datetime.now(timezone.utc),
+        )
+        self.assertEqual(len(parsed.variants or []), 2)
+        finished = scraper._with_status(parsed, "success", time.perf_counter())
+        self.assertEqual(len(finished.variants or []), 2)
+        self.assertEqual(finished.raw_data["scraper_status"], "success")
 
 
 if __name__ == "__main__":

@@ -213,18 +213,32 @@ def _listing_description(cp: CompetitorProduct) -> str | None:
 
 
 def _listing_attributes(cp: CompetitorProduct) -> dict:
-    # Free-form attributes are no longer exposed; only the variant size.
+    # Free-form attributes are no longer exposed; only the variant size/color.
+    out: dict[str, str] = {}
     size = _listing_size(cp)
-    return {"size": size} if size else {}
+    if size:
+        out["size"] = size
+    color = _listing_color(cp)
+    if color:
+        out["color"] = color
+    return out
 
 
 def _listing_size(cp: CompetitorProduct) -> str | None:
+    return _listing_spec(cp, ("size", "разфасовка", "вместимост", "volume", "capacity"))
+
+
+def _listing_color(cp: CompetitorProduct) -> str | None:
+    return _listing_spec(cp, ("color", "colour", "цвят", "нюанс", "оттенък", "shade"))
+
+
+def _listing_spec(cp: CompetitorProduct, keys: tuple[str, ...]) -> str | None:
     raw = cp.raw_identifiers if isinstance(cp.raw_identifiers, dict) else {}
     specs = cp.specs_json if isinstance(cp.specs_json, dict) else {}
     for source in (raw, raw.get("attributes"), specs):
         if not isinstance(source, dict):
             continue
-        for key in ("size", "разфасовка", "вместимост", "volume", "capacity"):
+        for key in keys:
             value = source.get(key)
             if value:
                 return str(value)
@@ -267,6 +281,7 @@ def _row_to_schema(
         listing_shop_code=cp.shop_code,
         listing_extra_code=cp.extra_code,
         listing_size=_listing_size(cp),
+        listing_color=_listing_color(cp),
         listing_description=_listing_description(cp),
         listing_attributes=_listing_attributes(cp),
         category_path=cat_path,

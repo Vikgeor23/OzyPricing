@@ -26,6 +26,7 @@ class CategoryWorkspaceProduct(BaseModel):
     listing_shop_code: str | None = None
     listing_extra_code: str | None = None
     listing_size: str | None = None
+    listing_color: str | None = None
     listing_description: str | None = None
     listing_attributes: dict[str, Any] = Field(default_factory=dict)
     latest_price: Decimal | None = None

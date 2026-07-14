@@ -263,11 +263,12 @@ def _apply_variant_to_sibling(
     if variant.get("shop_code"):
         cp.shop_code = variant["shop_code"]
         cp.sku = variant["shop_code"]
-    if variant.get("size"):
-        cp.specs_json = {"size": variant["size"]}
+    specs = {k: variant[k] for k in ("size", "color") if variant.get(k)}
+    if specs:
+        cp.specs_json = specs
         cp.raw_identifiers = {
-            "size": variant["size"],
-            "attributes": {"size": variant["size"]},
+            **specs,
+            "attributes": dict(specs),
             "product_code": variant.get("shop_code"),
         }
     if not cp.image_url and parent_cp.image_url:
@@ -289,6 +290,7 @@ def _apply_variant_to_sibling(
                     "parse_mode": "variant_expansion",
                     "parent_competitor_product_id": str(parent_cp.id),
                     "size": variant.get("size"),
+                    "color": variant.get("color"),
                     "product_identifiers": {
                         "ean": variant.get("ean"),
                         "manufacturer_code": variant.get("manufacturer_code"),

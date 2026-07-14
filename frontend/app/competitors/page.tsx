@@ -52,6 +52,7 @@ type WorkspaceColumnKey =
   | "ean"
   | "mfr_model"
   | "size"
+  | "color"
   | "product_price"
   | "final_eur"
   | "regular_eur"
@@ -80,6 +81,7 @@ const WORKSPACE_COLUMNS: { key: WorkspaceColumnKey; label: string; pinWidth: num
   { key: "ean", label: "EAN", pinWidth: 130 },
   { key: "mfr_model", label: "Mfr / model", pinWidth: 150 },
   { key: "size", label: "Size", pinWidth: 90 },
+  { key: "color", label: "Color", pinWidth: 100 },
   { key: "product_price", label: "Product price", pinWidth: 120 },
   { key: "final_eur", label: "Final EUR", pinWidth: 100 },
   { key: "regular_eur", label: "Regular EUR", pinWidth: 110 },
@@ -3077,6 +3079,7 @@ export default function CompetitorsPage() {
 	                          {[row.listing_manufacturer_code, row.listing_model].filter(Boolean).join(" / ") || "—"}
 	                        </td>
 	                        <td className={workspacePinClass("size")} style={workspacePinStyle("size", { fontSize: "0.78rem" })}>{row.listing_size ?? "—"}</td>
+	                        <td className={workspacePinClass("color")} style={workspacePinStyle("color", { fontSize: "0.78rem" })}>{row.listing_color ?? "—"}</td>
 	                        <td className={workspacePinClass("product_price")} style={workspacePinStyle("product_price", { fontWeight: 600 })}>{fmtMoney(row.matched_own_price)}</td>
 	                        <td className={workspacePinClass("final_eur")} style={workspacePinStyle("final_eur")}>{fmtMoney(row.latest_price)}</td>
 	                        <td className={workspacePinClass("regular_eur")} style={workspacePinStyle("regular_eur")}>{fmtMoney(row.regular_price)}</td>
