@@ -182,6 +182,53 @@ class FullDiscoveryBatchTests(unittest.TestCase):
         ).all()
         self.assertEqual(len(rows), 1)
 
+    def test_auto_mode_stops_at_first_successful_method(self) -> None:
+        # Auto should use the probe's best path and stop once a method finds a
+        # real batch — not run every method one after another.
+        comp = Competitor(name="Shop", domain="shop.example", currency="EUR")
+        self.db.add(comp)
+        self.db.flush()
+
+        reach = {"reachable": True, "via": "http", "errors": []}
+        probe = {
+            "platform": None,
+            "blocked": False,
+            "best_method": "sitemap",
+            "recommended_methods": ["sitemap", "category_pagination"],
+            "method_reasons": {},
+            "duration_ms": 1,
+        }
+        sitemap_urls = [f"https://shop.example/product/{i}" for i in range(6)]
+        fdb = "app.services.full_discovery_batch"
+        with patch(f"{fdb}.check_site_reachability", return_value=reach), patch(
+            f"{fdb}.probe_site", return_value=probe
+        ), patch(
+            f"{fdb}.collect_generic_product_urls_from_sitemaps",
+            return_value=(sitemap_urls, {"errors": []}),
+        ), patch(
+            f"{fdb}.collect_generic_product_urls_from_category_pagination",
+            return_value=([], {"errors": []}),
+        ) as m_cat, patch(
+            f"{fdb}.collect_generic_product_urls_from_merchant_feeds",
+            return_value=([], {"errors": []}),
+        ), patch(
+            f"{fdb}.collect_generic_product_urls_from_dynamic_endpoints",
+            return_value=([], {"errors": []}),
+        ):
+            result = run_incremental_full_discovery(
+                self.db,
+                comp.id,
+                only_new=True,
+                force_rescan=False,
+                source="auto",
+            )
+
+        # sitemap (rank 1) found >= 5 URLs -> early stop, lower methods skipped.
+        m_cat.assert_not_called()
+        methods_run = [m["method"] for m in result["discovery_methods"]]
+        self.assertEqual(methods_run, ["sitemap"])
+        self.assertEqual(result["product_urls_found"], 6)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -61,9 +61,10 @@ ALL_DISCOVERY_METHODS = {
     DISCOVERY_METHOD_MERCHANT_FEEDS,
     DISCOVERY_METHOD_AUTOCOMPLETE,
 }
-# Auto mode runs every method (probe rank orders them, best first) and merges
-# the deduplicated union — one method finding "enough" is not a reason to skip
-# the rest, since different methods surface different catalog subsets.
+# Auto mode tries methods in the probe's rank order (best first) and STOPS at
+# the first one that discovers a real batch of products — the best working path.
+# The remaining methods are fallbacks, run only if the higher-ranked ones came
+# up short (blocked/empty). This avoids running every method one-after-another.
 _AUTO_METHOD_TAIL_ORDER = [
     DISCOVERY_METHOD_SITEMAP,
     DISCOVERY_METHOD_MERCHANT_FEEDS,
@@ -73,6 +74,9 @@ _AUTO_METHOD_TAIL_ORDER = [
     DISCOVERY_METHOD_EXTERNAL_SEARCH,
     DISCOVERY_METHOD_SITE_SEARCH,
 ]
+# In auto mode, a method that adds at least this many new product URLs counts as
+# the winning path — later (lower-ranked) methods are then skipped.
+_AUTO_EARLY_STOP_MIN_URLS = 5
 
 ProgressCallback = Callable[[dict[str, Any]], None]
 
@@ -625,6 +629,7 @@ def run_incremental_full_discovery(
         stats.duration_ms = int((time.perf_counter() - started) * 1000)
         sitemap_diag = _merge_discovery_diag(sitemap_diag, method, diag)
         _report(progress, stats)
+        return len(added_urls)
 
     if is_technopolis(domain):
         tech_urls, tech_diag = asyncio.run(
@@ -747,7 +752,11 @@ def run_incremental_full_discovery(
                     )
                 else:
                     continue
-                add_method_result(method, method_urls, method_diag)
+                added = add_method_result(method, method_urls, method_diag)
+                # Auto mode: the first ranked method to find a real batch of
+                # products is the best path — stop instead of running the rest.
+                if auto_mode and added >= _AUTO_EARLY_STOP_MIN_URLS:
+                    break
         except _DiscoveryCancelled:
             stats.cancelled = True
             stats.errors.append(f"run_stopped:cancel_requested_during:{method}")
