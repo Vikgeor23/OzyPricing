@@ -183,13 +183,16 @@ in-container port 5432). Also run the frontend on a free port
 
 ---
 
-## 9. Known TODO (brand assets still old)
+## 9. Brand assets
 
-- `frontend/public/logo.png` and `frontend/public/favicon.png` are **raster images**
-  that still show the old purple **"Pricemancer"** wordmark. They could not be
-  recolored/renamed programmatically. **Regenerate them** as an orange "Ozypricing"
-  logo and drop the same filenames in `frontend/public/`.
-- `favicon.svg` **was** recolored to orange and is correct.
+- The old raster logo (`logo.png`) and PNG favicon (`favicon.png`) were **removed**.
+  The header and login now render an **orange text wordmark "Ozypricing"**
+  (`.brand-wordmark` in `globals.css`). No broken images.
+- `favicon.svg` is the only icon, recolored to orange — wired in `app/layout.tsx`.
+- **Optional:** to use a graphical logo instead of the text wordmark, drop an orange
+  `logo.png` into `frontend/public/` and swap the `<span class="brand-wordmark">`
+  back to `<Image src="/logo.png" .../>` in `components/SidebarLayout.tsx` and
+  `app/login/page.tsx` (re-add `import Image from "next/image"`).
 - Backend CORS still lists `pricemancer.com` domains in `docker-compose.yml` — update
   to your real domain(s).
 

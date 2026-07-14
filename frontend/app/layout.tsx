@@ -6,13 +6,9 @@ export const metadata: Metadata = {
   title: "Ozypricing",
   description: "Competitor price monitoring and matching",
   icons: {
-    icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon.png", type: "image/png" },
-      { url: "/icon.png", type: "image/png" },
-    ],
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
     shortcut: "/favicon.svg",
-    apple: "/favicon.png",
+    apple: "/favicon.svg",
   },
 };
 

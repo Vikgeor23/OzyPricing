@@ -3323,3 +3323,20 @@ button.primary:hover:not(:disabled) {
 .section-collapse-toggle:hover {
   color: #4b5163;
 }
+
+/* ---------- Text wordmark (replaces logo.png brand image) ---------- */
+.brand-wordmark {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--pm-purple); /* orange accent */
+}
+.topbar-wordmark {
+  font-size: 1.5rem;
+}
+.login-wordmark {
+  font-size: 2.1rem;
+  display: block;
+  text-align: center;
+}

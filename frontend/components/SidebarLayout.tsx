@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -90,7 +89,7 @@ export function SidebarLayout({ children }: { children: React.ReactNode }) {
       <div className="app-shell">
         <header className="topbar">
           <div className="topbar-brand">
-            <Image className="brand-logo topbar-logo" src="/logo.png" alt="Ozypricing" width={260} height={110} priority />
+            <span className="brand-wordmark topbar-wordmark">Ozypricing</span>
           </div>
           <nav className="topbar-nav" aria-label="Primary navigation">
             {NAV.map((item) => {

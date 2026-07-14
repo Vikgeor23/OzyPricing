@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { api, getAuthToken, isApiError, setAuthSession } from "@/lib/api";
@@ -40,7 +39,7 @@ export default function LoginPage() {
     <div className="login-screen">
       <form className="login-card" onSubmit={submit}>
         <div className="login-brand">
-          <Image className="brand-logo brand-logo-login" src="/logo.png" alt="Ozypricing" width={360} height={240} priority />
+          <span className="brand-wordmark login-wordmark">Ozypricing</span>
         </div>
 
         <div className="login-tabs">
