@@ -75,6 +75,24 @@ _shared_http_client: httpx.AsyncClient | None = None
 _shared_http_loop: asyncio.AbstractEventLoop | None = None
 
 
+def _site_from_domain(domain: str) -> str:
+    host = domain.lower().removeprefix("www.")
+    return host.split(".", 1)[0] if host else "unknown"
+
+
+def _log_kv(level: int, event: str, **fields: Any) -> None:
+    parts = [f"event={event}"]
+    for key, value in fields.items():
+        if value is None:
+            rendered = "null"
+        elif isinstance(value, bool):
+            rendered = str(value).lower()
+        else:
+            rendered = str(value).replace("\n", "\\n")
+        parts.append(f"{key}={rendered}")
+    logger.log(level, " ".join(parts))
+
+
 def _get_shared_http_client() -> httpx.AsyncClient:
     global _shared_http_client, _shared_http_loop
     loop = asyncio.get_running_loop()
@@ -976,6 +994,70 @@ class GenericProductScraper(BaseScraper):
         super().__init__(listing_url)
         self.preferred_currency = _normalize_currency(preferred_currency)
         self._playwright_pool = playwright_pool
+        self._traffic: dict[str, Any] = {}
+        self._traffic_logged = False
+
+    def _reset_traffic(self, normalized_url: str) -> None:
+        domain = urlparse(normalized_url).netloc.lower().removeprefix("www.")
+        self._traffic = {
+            "site": _site_from_domain(domain),
+            "domain": domain,
+            "url": normalized_url,
+            "scraper": "generic",
+            "http_attempts": 0,
+            "http_status": None,
+            "http_response_bytes": 0,
+            "playwright_used": False,
+            "playwright_request_count": 0,
+            "playwright_response_bytes": 0,
+            "retry_count": 0,
+            "blocked_detected": False,
+            "challenge_detected": False,
+        }
+        self._traffic_logged = False
+
+    def _traffic_fetch_method(self, *, success: bool) -> str:
+        http_attempts = int(self._traffic.get("http_attempts") or 0)
+        playwright_used = bool(self._traffic.get("playwright_used"))
+        if http_attempts and playwright_used:
+            return "http_then_playwright"
+        if playwright_used:
+            return "playwright"
+        if http_attempts:
+            return "http"
+        return "failed" if not success else "http"
+
+    def _records_produced(self, result: ScrapeResult, *, success: bool) -> int:
+        if not success:
+            return 0
+        return 1 + len(result.variants or [])
+
+    def _attach_and_log_traffic(
+        self,
+        result: ScrapeResult,
+        *,
+        success: bool,
+        t0: float,
+        error_type: str | None = None,
+    ) -> ScrapeResult:
+        duration_ms = int((time.perf_counter() - t0) * 1000)
+        http_bytes = int(self._traffic.get("http_response_bytes") or 0)
+        playwright_bytes = int(self._traffic.get("playwright_response_bytes") or 0)
+        metrics = {
+            **self._traffic,
+            "fetch_method": self._traffic_fetch_method(success=success),
+            "retry_count": max(int(self._traffic.get("http_attempts") or 0) - 1, 0),
+            "total_network_bytes": http_bytes + playwright_bytes,
+            "success": success,
+            "records_produced": self._records_produced(result, success=success),
+            "duration_ms": duration_ms,
+            "error_type": error_type,
+        }
+        result.traffic_metrics = metrics
+        if not self._traffic_logged:
+            _log_kv(logging.INFO, "scrape_traffic", **metrics)
+            self._traffic_logged = True
+        return result
 
     async def fetch(self) -> str:
         html, _, _, _ = await self._fetch_http()
@@ -1020,6 +1102,7 @@ class GenericProductScraper(BaseScraper):
         started = datetime.now(timezone.utc)
         t0 = time.perf_counter()
         normalized_url = normalize_url(self.listing_url)
+        self._reset_traffic(normalized_url)
 
         if _is_douglas_url(normalized_url):
             douglas_result = await self._run_douglas_graphql(started=started, t0=t0)
@@ -1042,6 +1125,7 @@ class GenericProductScraper(BaseScraper):
         if status_code == 429:
             diagnostics["http_blocked"] = True
             diagnostics["scrape_error_code"] = "rate_limited"
+            self._traffic["blocked_detected"] = True
             return self._failure(started, t0, "status_429_rate_limited", diagnostics)
         if status_code == 404:
             diagnostics["http_fetch_failed"] = "status_404"
@@ -1067,6 +1151,11 @@ class GenericProductScraper(BaseScraper):
                 }
             if self._is_usable(result) and self._should_try_playwright_after_http(result):
                 diagnostics["http_price_selector_too_broad"] = result.raw_data.get("selectors", {}).get("price")
+        elif html and status_code:
+            self._traffic["blocked_detected"] = True
+            low = html[:5000].lower()
+            if any(marker in low for marker in _CHALLENGE_PAGE_MARKERS):
+                self._traffic["challenge_detected"] = True
 
         html, pw_diag, pw_error = await self._fetch_playwright()
         diagnostics.update(pw_diag)
@@ -1087,6 +1176,9 @@ class GenericProductScraper(BaseScraper):
         if pw_status in (401, 403, 429, 511) or diagnostics.get("blocked_challenge"):
             diagnostics["blocked_signal"] = True
             diagnostics["scrape_error_code"] = "rate_limited" if pw_status == 429 else "http_blocked"
+            self._traffic["blocked_detected"] = True
+            if diagnostics.get("blocked_challenge"):
+                self._traffic["challenge_detected"] = True
             return self._failure(
                 started,
                 t0,
@@ -1125,6 +1217,8 @@ class GenericProductScraper(BaseScraper):
 
                     await context.route("**/*", block_heavy_assets)
                     page = await context.new_page()
+                    self._traffic["playwright_used"] = True
+                    finish_traffic = self._install_playwright_traffic_measurement(page)
                     home = await page.goto("https://douglas.bg/", wait_until="domcontentloaded", timeout=30_000)
                     diagnostics["douglas_home_status"] = home.status if home is not None else None
                     await page.wait_for_timeout(1_000)
@@ -1143,7 +1237,10 @@ class GenericProductScraper(BaseScraper):
                         }""",
                         payload,
                     )
+                    await finish_traffic()
                 finally:
+                    if "finish_traffic" in locals():
+                        await finish_traffic()
                     await browser.close()
         except Exception as exc:  # noqa: BLE001
             diagnostics["douglas_graphql_error"] = str(exc)
@@ -1213,8 +1310,13 @@ class GenericProductScraper(BaseScraper):
             client = _get_shared_http_client()
             last_response: httpx.Response | None = None
             for attempt in range(1, 4):
+                self._traffic["http_attempts"] = int(self._traffic.get("http_attempts") or 0) + 1
                 response = await client.get(normalize_url(self.listing_url))
                 last_response = response
+                self._traffic["http_status"] = response.status_code
+                self._traffic["http_response_bytes"] = int(self._traffic.get("http_response_bytes") or 0) + len(
+                    response.content or b"",
+                )
                 if response.status_code != 429:
                     return response.text, response.status_code, None, attempt
                 retry_after = response.headers.get("retry-after")
@@ -1268,8 +1370,52 @@ class GenericProductScraper(BaseScraper):
                 continue
         return await page.content()
 
+    def _install_playwright_traffic_measurement(self, page: Any):
+        pending: list[asyncio.Task] = []
+        warning_count = 0
+
+        def on_request(_request: Any) -> None:
+            self._traffic["playwright_request_count"] = int(
+                self._traffic.get("playwright_request_count") or 0,
+            ) + 1
+
+        def on_response(response: Any) -> None:
+            async def measure_body() -> None:
+                nonlocal warning_count
+                try:
+                    body = await asyncio.wait_for(response.body(), timeout=2.0)
+                    self._traffic["playwright_response_bytes"] = int(
+                        self._traffic.get("playwright_response_bytes") or 0,
+                    ) + len(body or b"")
+                except Exception as exc:  # noqa: BLE001
+                    warning_count += 1
+                    if warning_count <= 3:
+                        _log_kv(
+                            logging.WARNING,
+                            "scrape_traffic_measurement_warning",
+                            site=self._traffic.get("site"),
+                            domain=self._traffic.get("domain"),
+                            url=self._traffic.get("url") or normalize_url(self.listing_url),
+                            scraper="generic",
+                            layer="playwright",
+                            error_type=type(exc).__name__,
+                            error=str(exc),
+                        )
+
+            pending.append(asyncio.create_task(measure_body()))
+
+        page.on("request", on_request)
+        page.on("response", on_response)
+
+        async def finish() -> None:
+            if pending:
+                await asyncio.gather(*pending, return_exceptions=True)
+
+        return finish
+
     async def _fetch_playwright(self) -> tuple[str, dict[str, Any], str | None]:
         t0 = time.perf_counter()
+        self._traffic["playwright_used"] = True
         diagnostics: dict[str, Any] = {
             "playwright_enabled": True,
             "user_agent": _USER_AGENT,
@@ -1280,11 +1426,17 @@ class GenericProductScraper(BaseScraper):
         if self._playwright_pool is not None:
             diagnostics["playwright_pooled"] = True
             page = await self._playwright_pool.new_page()
+            finish_traffic = self._install_playwright_traffic_measurement(page)
             try:
                 html = await self._load_page_html(page, diagnostics)
+                await finish_traffic()
+                if diagnostics.get("blocked_challenge"):
+                    self._traffic["blocked_detected"] = True
+                    self._traffic["challenge_detected"] = True
                 diagnostics["playwright_duration_ms"] = int((time.perf_counter() - t0) * 1000)
                 return html, diagnostics, None
             except Exception as exc:  # noqa: BLE001
+                await finish_traffic()
                 diagnostics["playwright_error_type"] = type(exc).__name__
                 diagnostics["playwright_duration_ms"] = int((time.perf_counter() - t0) * 1000)
                 return "", diagnostics, str(exc)
@@ -1307,6 +1459,7 @@ class GenericProductScraper(BaseScraper):
                     ],
                 )
                 try:
+                    finish_traffic = None
                     context = await browser.new_context(
                         locale="bg-BG",
                         user_agent=_USER_AGENT,
@@ -1321,10 +1474,17 @@ class GenericProductScraper(BaseScraper):
                             await route.continue_()
 
                     await page.route("**/*", block_heavy_assets)
+                    finish_traffic = self._install_playwright_traffic_measurement(page)
                     html = await self._load_page_html(page, diagnostics)
+                    await finish_traffic()
+                    if diagnostics.get("blocked_challenge"):
+                        self._traffic["blocked_detected"] = True
+                        self._traffic["challenge_detected"] = True
                     diagnostics["playwright_duration_ms"] = int((time.perf_counter() - t0) * 1000)
                     return html, diagnostics, None
                 finally:
+                    if finish_traffic is not None:
+                        await finish_traffic()
                     await browser.close()
         except Exception as exc:  # noqa: BLE001
             diagnostics["playwright_error_type"] = type(exc).__name__
@@ -1844,7 +2004,7 @@ class GenericProductScraper(BaseScraper):
         raw = dict(result.raw_data)
         raw["scraper_status"] = status
         raw["duration_ms"] = int((time.perf_counter() - t0) * 1000)
-        return ScrapeResult(
+        wrapped = ScrapeResult(
             title=result.title,
             price=result.price,
             old_price=result.old_price,
@@ -1856,6 +2016,7 @@ class GenericProductScraper(BaseScraper):
             raw_data=raw,
             variants=result.variants,
         )
+        return self._attach_and_log_traffic(wrapped, success=status != "failure", t0=t0)
 
     def _failure(
         self,
@@ -1864,7 +2025,7 @@ class GenericProductScraper(BaseScraper):
         error: str,
         raw_data: dict[str, Any],
     ) -> ScrapeResult:
-        return ScrapeResult(
+        result = ScrapeResult(
             title=None,
             price=None,
             old_price=None,
@@ -1880,3 +2041,4 @@ class GenericProductScraper(BaseScraper):
                 "duration_ms": int((time.perf_counter() - t0) * 1000),
             },
         )
+        return self._attach_and_log_traffic(result, success=False, t0=t0, error_type=error)

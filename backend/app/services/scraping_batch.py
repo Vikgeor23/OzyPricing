@@ -60,6 +60,15 @@ class ScrapeBatchMetrics:
     playwright_ms_total: int = 0
     playwright_ms_count: int = 0
     failed_by_reason: dict[str, int] = field(default_factory=dict)
+    traffic_unique_urls: int = 0
+    traffic_successful_urls: int = 0
+    traffic_failed_urls: int = 0
+    traffic_http_only_urls: int = 0
+    traffic_playwright_fallback_urls: int = 0
+    traffic_http_response_bytes: int = 0
+    traffic_playwright_response_bytes: int = 0
+    traffic_total_network_bytes: int = 0
+    traffic_records_produced: int = 0
 
     def record(self, result: ScrapeResult, duration_ms: int) -> None:
         self.scrape_count += 1
@@ -111,6 +120,22 @@ class ScrapeBatchMetrics:
                 self.playwright_fallback += 1
                 self.adaptive_playwright_success += 1
 
+        traffic = result.traffic_metrics or {}
+        if traffic:
+            self.traffic_unique_urls += 1
+            if traffic.get("success"):
+                self.traffic_successful_urls += 1
+            else:
+                self.traffic_failed_urls += 1
+            if traffic.get("fetch_method") == "http":
+                self.traffic_http_only_urls += 1
+            if traffic.get("playwright_used"):
+                self.traffic_playwright_fallback_urls += 1
+            self.traffic_http_response_bytes += int(traffic.get("http_response_bytes") or 0)
+            self.traffic_playwright_response_bytes += int(traffic.get("playwright_response_bytes") or 0)
+            self.traffic_total_network_bytes += int(traffic.get("total_network_bytes") or 0)
+            self.traffic_records_produced += int(traffic.get("records_produced") or 0)
+
     def success_rate_pct(self) -> float:
         if not self.attempt_count:
             return 0.0
@@ -155,6 +180,41 @@ class ScrapeBatchMetrics:
             "success_pct": self.success_rate_pct(),
             "dead_urls_skipped": dead_urls_skipped,
         }
+
+    def log_traffic_summary(
+        self,
+        *,
+        site: str,
+        job_id: str | None,
+        wall_duration_ms: int,
+    ) -> None:
+        if not self.traffic_unique_urls:
+            return
+        unique_urls = self.traffic_unique_urls
+        successful_urls = self.traffic_successful_urls
+        records = self.traffic_records_produced
+        logger.info(
+            "event=scrape_traffic_summary site=%s job_id=%s unique_urls=%s successful_urls=%s "
+            "failed_urls=%s http_only_urls=%s playwright_fallback_urls=%s playwright_fallback_rate=%s "
+            "http_response_bytes=%s playwright_response_bytes=%s total_network_bytes=%s records_produced=%s "
+            "avg_bytes_per_url=%s avg_bytes_per_successful_url=%s avg_bytes_per_record=%s duration_ms=%s",
+            site,
+            job_id or "null",
+            unique_urls,
+            successful_urls,
+            self.traffic_failed_urls,
+            self.traffic_http_only_urls,
+            self.traffic_playwright_fallback_urls,
+            round(self.traffic_playwright_fallback_urls / unique_urls, 4),
+            self.traffic_http_response_bytes,
+            self.traffic_playwright_response_bytes,
+            self.traffic_total_network_bytes,
+            records,
+            int(self.traffic_total_network_bytes / unique_urls),
+            int(self.traffic_total_network_bytes / successful_urls) if successful_urls else 0,
+            int(self.traffic_total_network_bytes / records) if records else 0,
+            wall_duration_ms,
+        )
 
 
 def _scrape_ids_stmt(
@@ -372,6 +432,7 @@ async def _run_batch_scrape_async(
     db: Session,
     *,
     competitor_id: uuid.UUID,
+    job_id: str | None,
     category_id: uuid.UUID | None,
     only_missing: bool,
     only_stale: bool,
@@ -636,6 +697,12 @@ async def _run_batch_scrape_async(
 
     wall_ms = int((time.perf_counter() - wall_t0) * 1000)
     _report("blocked" if blocked_stop else "cancelled" if cancelled else "done", force=True)
+    site = normalize_domain(competitor.domain if competitor is not None else "").removeprefix("www.")
+    metrics.log_traffic_summary(
+        site=site.split(".", 1)[0] if site else "unknown",
+        job_id=job_id,
+        wall_duration_ms=wall_ms,
+    )
 
     return {
         "competitor_id": str(competitor_id),
@@ -871,6 +938,7 @@ def run_batch_scrape_competitor_products(
     db: Session,
     *,
     competitor_id: uuid.UUID,
+    job_id: str | None = None,
     category_id: uuid.UUID | None = None,
     only_missing: bool = False,
     only_stale: bool = False,
@@ -918,6 +986,7 @@ def run_batch_scrape_competitor_products(
             _run_batch_scrape_async(
                 db,
                 competitor_id=competitor_id,
+                job_id=job_id,
                 category_id=None,
                 only_missing=True,
                 only_stale=False,
@@ -948,6 +1017,7 @@ def run_batch_scrape_competitor_products(
         _run_batch_scrape_async(
             db,
             competitor_id=competitor_id,
+            job_id=job_id,
             category_id=category_id,
             only_missing=only_missing,
             only_stale=only_stale,

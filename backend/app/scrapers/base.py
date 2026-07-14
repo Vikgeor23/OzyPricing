@@ -26,6 +26,9 @@ class ScrapeResult:
     # descriptor dict with its own url/price/ean/size; expanded into their own
     # listing rows at persist time. None/empty for ordinary single-SKU pages.
     variants: list[dict[str, Any]] | None = None
+    # Transient observability payload for backend logs/metrics. It is not part
+    # of the parsed product data and persistence paths intentionally ignore it.
+    traffic_metrics: dict[str, Any] | None = None
 
 
 class BaseScraper(ABC):

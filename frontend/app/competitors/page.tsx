@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import type { CSSProperties } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import {
   api,
   downloadApiFile,
@@ -41,6 +41,23 @@ type WorkspaceMatchFilter =
   | "no_candidate"
   | "confirmed"
   | "rejected";
+type WorkspacePopoverMenu = "scrape" | "match" | "pin" | "hide";
+
+const WORKSPACE_SCRAPE_FILTER_OPTIONS: { value: WorkspaceScrapeFilter; label: string }[] = [
+  { value: "all", label: "All" },
+  { value: "scraped", label: "Scraped" },
+  { value: "not_scraped", label: "Not scraped" },
+];
+
+const WORKSPACE_MATCH_FILTER_OPTIONS: { value: WorkspaceMatchFilter; label: string }[] = [
+  { value: "all", label: "All" },
+  { value: "auto_matched", label: "Auto matched" },
+  { value: "needs_review", label: "Needs review" },
+  { value: "low_confidence", label: "Low confidence" },
+  { value: "no_candidate", label: "No candidate" },
+  { value: "confirmed", label: "Confirmed" },
+  { value: "rejected", label: "Rejected" },
+];
 
 type WorkspaceColumnKey =
   | "image"
@@ -1069,6 +1086,8 @@ export default function CompetitorsPage() {
   const [workspaceScrapeFilter, setWorkspaceScrapeFilter] = useState<WorkspaceScrapeFilter>("all");
   const [workspaceMatchFilter, setWorkspaceMatchFilter] = useState<WorkspaceMatchFilter>("all");
   const [workspacePinnedColumns, setWorkspacePinnedColumns] = useState<WorkspaceColumnKey[]>([]);
+  const [workspaceHiddenColumns, setWorkspaceHiddenColumns] = useState<WorkspaceColumnKey[]>([]);
+  const [openWorkspaceMenu, setOpenWorkspaceMenu] = useState<WorkspacePopoverMenu | null>(null);
   const [workspaceSearch, setWorkspaceSearch] = useState("");
   const [retailerSearch, setRetailerSearch] = useState("");
   const [chooseCandidates, setChooseCandidates] = useState<MatchCandidate[]>([]);
@@ -1358,16 +1377,24 @@ export default function CompetitorsPage() {
     () => new Set<WorkspaceColumnKey>(workspacePinnedColumns),
     [workspacePinnedColumns],
   );
+  const workspaceHiddenColumnSet = useMemo(
+    () => new Set<WorkspaceColumnKey>(workspaceHiddenColumns),
+    [workspaceHiddenColumns],
+  );
+  const visibleWorkspaceColumns = useMemo(
+    () => WORKSPACE_COLUMNS.filter((column) => !workspaceHiddenColumnSet.has(column.key)),
+    [workspaceHiddenColumnSet],
+  );
   const workspacePinnedColumnLeft = useMemo(() => {
     const left = new Map<WorkspaceColumnKey, number>();
     let offset = 0;
-    for (const column of WORKSPACE_COLUMNS) {
+    for (const column of visibleWorkspaceColumns) {
       if (!workspacePinnedColumnSet.has(column.key)) continue;
       left.set(column.key, offset);
       offset += column.pinWidth;
     }
     return left;
-  }, [workspacePinnedColumnSet]);
+  }, [visibleWorkspaceColumns, workspacePinnedColumnSet]);
 
   function toggleWorkspacePinnedColumn(column: WorkspaceColumnKey) {
     setWorkspacePinnedColumns((current) =>
@@ -1375,6 +1402,18 @@ export default function CompetitorsPage() {
         ? current.filter((item) => item !== column)
         : [...current, column],
     );
+  }
+
+  function toggleWorkspaceHiddenColumn(column: WorkspaceColumnKey) {
+    setWorkspaceHiddenColumns((current) => {
+      const next = current.includes(column)
+        ? current.filter((item) => item !== column)
+        : [...current, column];
+      if (!current.includes(column)) {
+        setWorkspacePinnedColumns((pinned) => pinned.filter((item) => item !== column));
+      }
+      return next;
+    });
   }
 
   function workspacePinClass(column: WorkspaceColumnKey, className?: string): string | undefined {
@@ -1399,6 +1438,148 @@ export default function CompetitorsPage() {
     };
   }
 
+  function renderWorkspaceCell(row: CategoryWorkspaceProduct, column: WorkspaceColumnKey): ReactNode {
+    switch (column) {
+      case "image":
+        return row.image_url ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={row.image_url} alt="" className="thumb-48" loading="lazy" decoding="async" />
+        ) : (
+          <div className="thumb-48 thumb-placeholder" />
+        );
+      case "title":
+        return row.title ?? "—";
+      case "category_path":
+        return row.category_path?.length ? row.category_path.join(" › ") : "—";
+      case "url":
+        return (
+          <a
+            href={row.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="table-link"
+            title={row.url}
+            style={{ maxWidth: 190 }}
+          >
+            {row.url.replace(/^https?:\/\/(www\.)?/, "")}
+          </a>
+        );
+      case "brand":
+        return row.listing_brand ?? "—";
+      case "code":
+        return row.listing_sku ?? "—";
+      case "ean":
+        return row.listing_ean ?? "—";
+      case "mfr_model":
+        return [row.listing_manufacturer_code, row.listing_model].filter(Boolean).join(" / ") || "—";
+      case "size":
+        return row.listing_size ?? "—";
+      case "color":
+        return row.listing_color ?? "—";
+      case "product_price":
+        return fmtMoney(row.matched_own_price);
+      case "final_eur":
+        return fmtMoney(row.latest_price);
+      case "regular_eur":
+        return fmtMoney(row.regular_price);
+      case "promo_eur":
+        return fmtMoney(row.promo_price);
+      case "old_list_eur":
+        return fmtMoney(row.old_price);
+      case "currency":
+        return row.currency || "—";
+      case "availability":
+        return <span className="badge badge-neutral">{row.availability ?? "—"}</span>;
+      case "offered_by":
+        return row.offered_by ?? "—";
+      case "delivered_by":
+        return row.delivered_by ?? "—";
+      case "last_checked":
+        return scrapingId === row.competitor_product_id ? (
+          <span className="muted">Scraping…</span>
+        ) : (
+          fmtLastChecked(row.last_checked_at ?? row.last_seen_at)
+        );
+      case "matched_sku":
+        return row.matched_sku ?? "—";
+      case "matched_name":
+        return row.matched_product_name ?? "—";
+      case "score":
+        return row.match_score ?? "—";
+      case "match":
+        return row.match_method ? (
+          <span className="workspace-match-method" title={row.match_method}>
+            {row.match_method}
+          </span>
+        ) : (
+          "—"
+        );
+      case "status":
+        return <span className={statusBadgeClass(row.match_status)}>{matchStatusLabel(row.match_status)}</span>;
+      case "reason":
+        return matchReasonDisplay(row);
+      case "actions":
+        return (
+          <div className="workspace-row-actions">
+            <button
+              type="button"
+              disabled={busy === row.competitor_product_id || scrapingId === row.competitor_product_id}
+              onClick={() => scrapeListing(row.competitor_product_id)}
+            >
+              Scrape
+            </button>
+            <button
+              type="button"
+              disabled={busy === row.competitor_product_id || scrapingId === row.competitor_product_id}
+              onClick={() => runFindMatches(row.competitor_product_id)}
+            >
+              Find match
+            </button>
+            <button
+              type="button"
+              disabled={busy === row.competitor_product_id}
+              onClick={() => openReviewChooser(row.competitor_product_id)}
+            >
+              {isReviewableMatchStatus(row.match_status) ? "Review match" : "Choose product"}
+            </button>
+          </div>
+        );
+    }
+  }
+
+  function workspaceCellStyle(column: WorkspaceColumnKey): CSSProperties | undefined {
+    switch (column) {
+      case "image":
+        return { width: 64 };
+      case "title":
+        return { maxWidth: 200 };
+      case "category_path":
+        return { maxWidth: 220, fontSize: "0.82rem" };
+      case "url":
+        return { maxWidth: 200 };
+      case "brand":
+      case "code":
+      case "ean":
+      case "mfr_model":
+      case "size":
+      case "color":
+        return { fontSize: "0.78rem" };
+      case "product_price":
+        return { fontWeight: 600 };
+      case "offered_by":
+      case "delivered_by":
+        return { fontSize: "0.78rem", maxWidth: 130 };
+      case "matched_name":
+        return { maxWidth: 160 };
+      case "match":
+        return { fontSize: "0.75rem", maxWidth: 120 };
+      case "reason":
+        return { fontSize: "0.78rem", maxWidth: 200 };
+      default:
+        return undefined;
+    }
+  }
+
   function changeWorkspacePageSize(nextSize: number) {
     setWorkspacePageSize(nextSize);
     setWorkspaceOffset(0);
@@ -1414,6 +1595,30 @@ export default function CompetitorsPage() {
     if (!canGoNext || workspaceLoading) return;
     void fetchWorkspacePage({ offset: workspaceOffset + workspacePageSize });
   }
+
+  function toggleWorkspaceMenu(menu: WorkspacePopoverMenu) {
+    setOpenWorkspaceMenu((current) => (current === menu ? null : menu));
+  }
+
+  useEffect(() => {
+    if (!openWorkspaceMenu) return undefined;
+
+    const closeOnOutsidePointer = (event: PointerEvent) => {
+      const target = event.target;
+      if (target instanceof Element && target.closest("[data-workspace-popover]")) return;
+      setOpenWorkspaceMenu(null);
+    };
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpenWorkspaceMenu(null);
+    };
+
+    document.addEventListener("pointerdown", closeOnOutsidePointer);
+    document.addEventListener("keydown", closeOnEscape);
+    return () => {
+      document.removeEventListener("pointerdown", closeOnOutsidePointer);
+      document.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [openWorkspaceMenu]);
 
   useEffect(() => {
     if (!selectedCategoryId && !selectedCompetitorId) return;
@@ -2433,36 +2638,6 @@ export default function CompetitorsPage() {
         >
           {discoveryAllRunning ? "Finding…" : "Find URLs"}
         </button>
-        {workspaceTotal > 0 ? (
-          <>
-            <button type="button" disabled={workspaceLoading} onClick={() => void exportWorkspaceExcel()}>
-              Export
-            </button>
-            <button
-              type="button"
-              className="primary"
-              disabled={
-                scrapeAllRunning ||
-                discoveryAllRunning ||
-                busy === "batch" ||
-                busy === "discover-products" ||
-                busy === "full-discovery" ||
-                busy === "scrape-all"
-              }
-              onClick={() => void scrapeAllProducts()}
-            >
-              {scrapeAllRunning || busy === "scrape-all" ? "Scraping…" : "Scrape"}
-            </button>
-            <button
-              type="button"
-              className="primary"
-              disabled={matchAllRunning || scrapeAllRunning || discoveryAllRunning || busy === "match-all"}
-              onClick={() => void matchAllProducts()}
-            >
-              {matchAllRunning || busy === "match-all" ? "Matching…" : "Match"}
-            </button>
-          </>
-        ) : null}
       </div>
       <details className="sidebar-discovery-settings">
         <summary>Discovery settings</summary>
@@ -2538,15 +2713,6 @@ export default function CompetitorsPage() {
           {siteSearchOnlyNeedsTerm ? (
             <span className="muted discovery-method-hint">Site search needs a term.</span>
           ) : null}
-          <label className="inline-checkbox muted">
-            <input
-              type="checkbox"
-              checked={scrapeOnlyMissing}
-              onChange={(e) => setScrapeOnlyMissing(e.target.checked)}
-              disabled={scrapeAllRunning || busy === "scrape-all"}
-            />
-            Only unscraped URLs
-          </label>
         </div>
       </details>
     </div>
@@ -2901,7 +3067,73 @@ export default function CompetitorsPage() {
                   <p className="panel-kicker">Tracked catalog</p>
                   <h3>{selectedCompetitorName || "Retailer"} products</h3>
                 </div>
-                <span className="badge badge-info">{workspaceTotal.toLocaleString()} URLs</span>
+                <div className="workspace-header-actions">
+                  <span className="badge badge-info">{workspaceTotal.toLocaleString()} URLs</span>
+                  <button type="button" disabled={workspaceLoading} onClick={() => void exportWorkspaceExcel()}>
+                    Export
+                  </button>
+                  <div className="workspace-popover workspace-action-menu" data-workspace-popover>
+                    <button
+                      type="button"
+                      className={openWorkspaceMenu === "scrape" ? "workspace-popover-trigger-active" : undefined}
+                      aria-expanded={openWorkspaceMenu === "scrape"}
+                      onClick={() => toggleWorkspaceMenu("scrape")}
+                    >
+                      {scrapeAllRunning || busy === "scrape-all" ? "Scraping…" : "Scrape"}
+                    </button>
+                    {openWorkspaceMenu === "scrape" ? (
+                      <div className="workspace-popover-panel workspace-action-menu-panel">
+                        <label className="inline-checkbox">
+                          <input
+                            type="checkbox"
+                            checked={scrapeOnlyMissing}
+                            onChange={(e) => setScrapeOnlyMissing(e.target.checked)}
+                            disabled={scrapeAllRunning || busy === "scrape-all"}
+                          />
+                          Only unscraped URLs
+                        </label>
+                        <button
+                          type="button"
+                          className="primary"
+                          disabled={
+                            scrapeAllRunning ||
+                            discoveryAllRunning ||
+                            busy === "batch" ||
+                            busy === "discover-products" ||
+                            busy === "full-discovery" ||
+                            busy === "scrape-all"
+                          }
+                          onClick={() => void scrapeAllProducts()}
+                        >
+                          {scrapeAllRunning || busy === "scrape-all" ? "Scraping…" : "Run scrape"}
+                        </button>
+                      </div>
+                    ) : null}
+                  </div>
+                  <div className="workspace-popover workspace-action-menu" data-workspace-popover>
+                    <button
+                      type="button"
+                      className={openWorkspaceMenu === "match" ? "workspace-popover-trigger-active" : undefined}
+                      aria-expanded={openWorkspaceMenu === "match"}
+                      onClick={() => toggleWorkspaceMenu("match")}
+                    >
+                      {matchAllRunning || busy === "match-all" ? "Matching…" : "Match"}
+                    </button>
+                    {openWorkspaceMenu === "match" ? (
+                      <div className="workspace-popover-panel workspace-action-menu-panel">
+                        <span className="muted">Find best catalog matches for the current retailer.</span>
+                        <button
+                          type="button"
+                          className="primary"
+                          disabled={matchAllRunning || scrapeAllRunning || discoveryAllRunning || busy === "match-all"}
+                          onClick={() => void matchAllProducts()}
+                        >
+                          {matchAllRunning || busy === "match-all" ? "Matching…" : "Run match"}
+                        </button>
+                      </div>
+                    ) : null}
+                  </div>
+                </div>
               </div>
               <div className="workspace-table-filters workspace-table-filters-wrap">
                 <input
@@ -2920,108 +3152,139 @@ export default function CompetitorsPage() {
                     Clear
                   </button>
                 ) : null}
-                <span className="muted">Scrape:</span>
-                {(["all", "scraped", "not_scraped"] as const).map((f) => (
-                  <button
-                    key={f}
-                    type="button"
-                    className={workspaceScrapeFilter === f ? "primary" : undefined}
+                <label className="workspace-filter-select">
+                  <span className="muted">Scrape:</span>
+                  <select
+                    value={workspaceScrapeFilter}
                     disabled={workspaceLoading}
-                    onClick={() => {
-                      setWorkspaceScrapeFilter(f);
+                    onChange={(e) => {
+                      const filter = e.target.value as WorkspaceScrapeFilter;
+                      setWorkspaceScrapeFilter(filter);
                       setWorkspaceOffset(0);
                       void fetchWorkspacePage({
                         offset: 0,
                         limit: workspacePageSize,
-                        scrapedFilter: f,
+                        scrapedFilter: filter,
                       });
                     }}
                   >
-                    {f === "all" ? "All" : f === "scraped" ? "Scraped" : "Not scraped"}
-                  </button>
-                ))}
-                <span className="muted">Match:</span>
-                {(
-                  [
-                    "all",
-                    "auto_matched",
-                    "needs_review",
-                    "low_confidence",
-                    "no_candidate",
-                    "confirmed",
-                    "rejected",
-                  ] as const
-                ).map((f) => (
-                  <button
-                    key={f}
-                    type="button"
-                    className={workspaceMatchFilter === f ? "primary" : undefined}
-                    disabled={workspaceLoading}
-                    onClick={() => {
-                      setWorkspaceMatchFilter(f);
-                      setWorkspaceOffset(0);
-                      void fetchWorkspacePage({
-                        offset: 0,
-                        limit: workspacePageSize,
-                        matchStatus: f,
-                      });
-                    }}
-                  >
-                    {f === "all"
-                      ? "All"
-                      : f === "auto_matched"
-                        ? "Auto matched"
-                        : f === "needs_review"
-                          ? "Needs review"
-                          : f === "low_confidence"
-                            ? "Low confidence"
-                            : f === "no_candidate"
-                              ? "No candidate"
-                              : f === "rejected"
-                                ? "Rejected"
-                                : "Confirmed"}
-                  </button>
-                ))}
-                <details className="workspace-pin-menu">
-                  <summary>Pin columns</summary>
-                  <div className="workspace-pin-options">
-                    {WORKSPACE_COLUMNS.map((column) => (
-                      <label key={column.key} className="workspace-pin-option">
-                        <input
-                          type="checkbox"
-                          checked={workspacePinnedColumnSet.has(column.key)}
-                          onChange={() => toggleWorkspacePinnedColumn(column.key)}
-                        />
-                        <span>{column.label}</span>
-                      </label>
+                    {WORKSPACE_SCRAPE_FILTER_OPTIONS.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.label}
+                      </option>
                     ))}
-                  </div>
-                  {workspacePinnedColumns.length > 0 ? (
-                    <button type="button" onClick={() => setWorkspacePinnedColumns([])}>
-                      Clear pinned
-                    </button>
+                  </select>
+                </label>
+                <label className="workspace-filter-select">
+                  <span className="muted">Match:</span>
+                  <select
+                    value={workspaceMatchFilter}
+                    disabled={workspaceLoading}
+                    onChange={(e) => {
+                      const filter = e.target.value as WorkspaceMatchFilter;
+                      setWorkspaceMatchFilter(filter);
+                      setWorkspaceOffset(0);
+                      void fetchWorkspacePage({
+                        offset: 0,
+                        limit: workspacePageSize,
+                        matchStatus: filter,
+                      });
+                    }}
+                  >
+                    {WORKSPACE_MATCH_FILTER_OPTIONS.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+                <div className="workspace-popover workspace-pin-menu" data-workspace-popover>
+                  <button
+                    type="button"
+                    className={openWorkspaceMenu === "pin" ? "workspace-popover-trigger-active" : undefined}
+                    aria-expanded={openWorkspaceMenu === "pin"}
+                    onClick={() => toggleWorkspaceMenu("pin")}
+                  >
+                    Pin columns
+                  </button>
+                  {openWorkspaceMenu === "pin" ? (
+                    <div className="workspace-popover-panel workspace-column-menu-panel">
+                      <div className="workspace-pin-options">
+                        {WORKSPACE_COLUMNS.map((column) => (
+                          <label key={column.key} className="workspace-pin-option">
+                            <input
+                              type="checkbox"
+                              checked={workspacePinnedColumnSet.has(column.key)}
+                              onChange={() => toggleWorkspacePinnedColumn(column.key)}
+                            />
+                            <span>{column.label}</span>
+                          </label>
+                        ))}
+                      </div>
+                      {workspacePinnedColumns.length > 0 ? (
+                        <button type="button" onClick={() => setWorkspacePinnedColumns([])}>
+                          Clear pinned
+                        </button>
+                      ) : null}
+                    </div>
                   ) : null}
-                </details>
+                </div>
+                <div className="workspace-popover workspace-pin-menu" data-workspace-popover>
+                  <button
+                    type="button"
+                    className={openWorkspaceMenu === "hide" ? "workspace-popover-trigger-active" : undefined}
+                    aria-expanded={openWorkspaceMenu === "hide"}
+                    onClick={() => toggleWorkspaceMenu("hide")}
+                  >
+                    Hide columns
+                  </button>
+                  {openWorkspaceMenu === "hide" ? (
+                    <div className="workspace-popover-panel workspace-column-menu-panel">
+                      <div className="workspace-pin-options">
+                        {WORKSPACE_COLUMNS.map((column) => (
+                          <label key={column.key} className="workspace-pin-option">
+                            <input
+                              type="checkbox"
+                              checked={workspaceHiddenColumnSet.has(column.key)}
+                              disabled={visibleWorkspaceColumns.length === 1 && !workspaceHiddenColumnSet.has(column.key)}
+                              onChange={() => toggleWorkspaceHiddenColumn(column.key)}
+                            />
+                            <span>{column.label}</span>
+                          </label>
+                        ))}
+                      </div>
+                      {workspaceHiddenColumns.length > 0 ? (
+                        <button type="button" onClick={() => setWorkspaceHiddenColumns([])}>
+                          Show all columns
+                        </button>
+                      ) : null}
+                    </div>
+                  ) : null}
+                </div>
               </div>
               <div className={`table-scroll workspace-table-wrap${workspaceLoading ? " workspace-table-busy" : ""}`}>
                 <table className="compact-table workspace-table">
-	                  <thead>
-	                    <tr>
-	                      {WORKSPACE_COLUMNS.map((column) => (
-	                        <th
-	                          key={column.key}
-	                          className={workspacePinClass(column.key)}
-	                          style={workspacePinStyle(column.key, undefined, "header")}
-	                        >
-	                          {column.label}
-	                        </th>
-	                      ))}
-	                    </tr>
-	                  </thead>
+                  <thead>
+                    <tr>
+                      {visibleWorkspaceColumns.map((column) => (
+                        <th
+                          key={column.key}
+                          className={workspacePinClass(column.key)}
+                          style={workspacePinStyle(column.key, undefined, "header")}
+                        >
+                          {column.label}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
                   <tbody>
                     {workspace.length === 0 ? (
                       <tr>
-                        <td colSpan={24} className="muted" style={{ textAlign: "center", padding: "1.25rem" }}>
+                        <td
+                          colSpan={visibleWorkspaceColumns.length}
+                          className="muted"
+                          style={{ textAlign: "center", padding: "1.25rem" }}
+                        >
                           {workspaceEmptyFilterMessage}{" "}
                           {hasWorkspaceFilters ? (
                             <button
@@ -3048,103 +3311,22 @@ export default function CompetitorsPage() {
                       </tr>
                     ) : workspace.map((row) => (
                       <tr key={row.competitor_product_id}>
-	                        <td className={workspacePinClass("image")} style={workspacePinStyle("image", { width: 64 })}>
-	                          {row.image_url ? (
-                            // eslint-disable-next-line @next/next/no-img-element
-                            <img src={row.image_url} alt="" className="thumb-48" loading="lazy" decoding="async" />
-                          ) : (
-                            <div className="thumb-48 thumb-placeholder" />
-                          )}
-                        </td>
-	                        <td className={workspacePinClass("title")} style={workspacePinStyle("title", { maxWidth: 200 })}>{row.title ?? "—"}</td>
-	                        <td className={workspacePinClass("category_path")} style={workspacePinStyle("category_path", { maxWidth: 220, fontSize: "0.82rem" })}>
-	                          {row.category_path?.length ? row.category_path.join(" › ") : "—"}
-	                        </td>
-	                        <td className={workspacePinClass("url")} style={workspacePinStyle("url", { maxWidth: 200 })}>
-	                          <a
-                            href={row.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="table-link"
-                            title={row.url}
-                            style={{ maxWidth: 190 }}
+                        {visibleWorkspaceColumns.map((column) => (
+                          <td
+                            key={column.key}
+                            className={workspacePinClass(column.key)}
+                            style={workspacePinStyle(column.key, workspaceCellStyle(column.key))}
+                            title={
+                              column.key === "offered_by"
+                                ? row.offered_by ?? undefined
+                                : column.key === "delivered_by"
+                                  ? row.delivered_by ?? undefined
+                                  : undefined
+                            }
                           >
-                            {row.url.replace(/^https?:\/\/(www\.)?/, "")}
-                          </a>
-                        </td>
-	                        <td className={workspacePinClass("brand")} style={workspacePinStyle("brand", { fontSize: "0.78rem" })}>{row.listing_brand ?? "—"}</td>
-	                        <td className={workspacePinClass("code")} style={workspacePinStyle("code", { fontSize: "0.78rem" })}>{row.listing_sku ?? "—"}</td>
-	                        <td className={workspacePinClass("ean")} style={workspacePinStyle("ean", { fontSize: "0.78rem" })}>{row.listing_ean ?? "—"}</td>
-	                        <td className={workspacePinClass("mfr_model")} style={workspacePinStyle("mfr_model", { fontSize: "0.78rem" })}>
-	                          {[row.listing_manufacturer_code, row.listing_model].filter(Boolean).join(" / ") || "—"}
-	                        </td>
-	                        <td className={workspacePinClass("size")} style={workspacePinStyle("size", { fontSize: "0.78rem" })}>{row.listing_size ?? "—"}</td>
-	                        <td className={workspacePinClass("color")} style={workspacePinStyle("color", { fontSize: "0.78rem" })}>{row.listing_color ?? "—"}</td>
-	                        <td className={workspacePinClass("product_price")} style={workspacePinStyle("product_price", { fontWeight: 600 })}>{fmtMoney(row.matched_own_price)}</td>
-	                        <td className={workspacePinClass("final_eur")} style={workspacePinStyle("final_eur")}>{fmtMoney(row.latest_price)}</td>
-	                        <td className={workspacePinClass("regular_eur")} style={workspacePinStyle("regular_eur")}>{fmtMoney(row.regular_price)}</td>
-	                        <td className={workspacePinClass("promo_eur")} style={workspacePinStyle("promo_eur")}>{fmtMoney(row.promo_price)}</td>
-	                        <td className={workspacePinClass("old_list_eur")} style={workspacePinStyle("old_list_eur")}>{fmtMoney(row.old_price)}</td>
-	                        <td className={workspacePinClass("currency")} style={workspacePinStyle("currency")}>{row.currency || "—"}</td>
-	                        <td className={workspacePinClass("availability")} style={workspacePinStyle("availability")}>
-	                          <span className="badge badge-neutral">{row.availability ?? "—"}</span>
-	                        </td>
-	                        <td className={workspacePinClass("offered_by")} style={workspacePinStyle("offered_by", { fontSize: "0.78rem", maxWidth: 130 })} title={row.offered_by ?? undefined}>
-	                          {row.offered_by ?? "—"}
-	                        </td>
-	                        <td className={workspacePinClass("delivered_by")} style={workspacePinStyle("delivered_by", { fontSize: "0.78rem", maxWidth: 130 })} title={row.delivered_by ?? undefined}>
-	                          {row.delivered_by ?? "—"}
-	                        </td>
-	                        <td className={workspacePinClass("last_checked")} style={workspacePinStyle("last_checked")}>
-	                          {scrapingId === row.competitor_product_id ? (
-                            <span className="muted">Scraping…</span>
-                          ) : (
-                            fmtLastChecked(row.last_checked_at ?? row.last_seen_at)
-                          )}
-                        </td>
-	                        <td className={workspacePinClass("matched_sku")} style={workspacePinStyle("matched_sku")}>{row.matched_sku ?? "—"}</td>
-	                        <td className={workspacePinClass("matched_name")} style={workspacePinStyle("matched_name", { maxWidth: 160 })}>{row.matched_product_name ?? "—"}</td>
-	                        <td className={workspacePinClass("score")} style={workspacePinStyle("score")}>{row.match_score ?? "—"}</td>
-	                        <td className={workspacePinClass("match")} style={workspacePinStyle("match", { fontSize: "0.75rem", maxWidth: 120 })}>
-	                          {row.match_method ? (
-                            <span className="workspace-match-method" title={row.match_method}>
-                              {row.match_method}
-                            </span>
-                          ) : (
-                            "—"
-                          )}
-                        </td>
-	                        <td className={workspacePinClass("status")} style={workspacePinStyle("status")}>
-	                          <span className={statusBadgeClass(row.match_status)}>
-                            {matchStatusLabel(row.match_status)}
-                          </span>
-                        </td>
-	                        <td className={workspacePinClass("reason")} style={workspacePinStyle("reason", { fontSize: "0.78rem", maxWidth: 200 })}>{matchReasonDisplay(row)}</td>
-	                        <td className={workspacePinClass("actions")} style={workspacePinStyle("actions")}>
-                          <button
-                            type="button"
-                            disabled={busy === row.competitor_product_id || scrapingId === row.competitor_product_id}
-                            onClick={() => scrapeListing(row.competitor_product_id)}
-                          >
-                            Scrape
-                          </button>{" "}
-                          <button
-                            type="button"
-                            disabled={busy === row.competitor_product_id || scrapingId === row.competitor_product_id}
-                            onClick={() => runFindMatches(row.competitor_product_id)}
-                          >
-                            Find match
-                          </button>{" "}
-                          <button
-                            type="button"
-                            disabled={busy === row.competitor_product_id}
-                            onClick={() => openReviewChooser(row.competitor_product_id)}
-                          >
-                            {isReviewableMatchStatus(row.match_status)
-                              ? "Review match"
-                              : "Choose product"}
-                          </button>
-                        </td>
+                            {renderWorkspaceCell(row, column.key)}
+                          </td>
+                        ))}
                       </tr>
                     ))}
                   </tbody>
