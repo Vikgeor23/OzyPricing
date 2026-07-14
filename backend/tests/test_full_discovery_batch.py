@@ -230,5 +230,30 @@ class FullDiscoveryBatchTests(unittest.TestCase):
         self.assertEqual(result["product_urls_found"], 6)
 
 
+class SubdomainScopingTests(unittest.TestCase):
+    """Discovery accepts subdomains of the competitor domain (multi-subdomain shops)."""
+
+    def test_subdomains_are_same_site(self) -> None:
+        from app.scrapers.sites.generic_discovery import _same_domain
+
+        # Subdomains of store.bg belong to the same retailer.
+        self.assertTrue(_same_domain("https://www.store.bg/p1/x.html", "store.bg"))
+        self.assertTrue(_same_domain("https://book.store.bg/p2/x.html", "store.bg"))
+        self.assertTrue(_same_domain("https://www.beauty.store.bg/p3/x.html", "store.bg"))
+        # Look-alike suffixes and unrelated domains must be rejected.
+        self.assertFalse(_same_domain("https://store.bg.evil.com/p4", "store.bg"))
+        self.assertFalse(_same_domain("https://otherstore.bg/p5", "store.bg"))
+        # Scoping a competitor to a subdomain stays narrow.
+        self.assertFalse(_same_domain("https://store.bg/p6", "beauty.store.bg"))
+        self.assertTrue(_same_domain("https://beauty.store.bg/p7/x.html", "beauty.store.bg"))
+
+    def test_subdomain_product_url_normalizes(self) -> None:
+        from app.scrapers.sites.generic_discovery import normalize_generic_product_url
+
+        got = normalize_generic_product_url("https://www.book.store.bg/p123/x.html", domain="store.bg")
+        self.assertEqual(got, "https://www.book.store.bg/p123/x.html")
+        self.assertIsNone(normalize_generic_product_url("https://evil.com/p1", domain="store.bg"))
+
+
 if __name__ == "__main__":
     unittest.main()
