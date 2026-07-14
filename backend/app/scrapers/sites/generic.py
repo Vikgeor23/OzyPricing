@@ -1040,23 +1040,11 @@ class GenericProductScraper(BaseScraper):
         t0: float,
         error_type: str | None = None,
     ) -> ScrapeResult:
-        duration_ms = int((time.perf_counter() - t0) * 1000)
-        http_bytes = int(self._traffic.get("http_response_bytes") or 0)
-        playwright_bytes = int(self._traffic.get("playwright_response_bytes") or 0)
-        metrics = {
-            **self._traffic,
-            "fetch_method": self._traffic_fetch_method(success=success),
-            "retry_count": max(int(self._traffic.get("http_attempts") or 0) - 1, 0),
-            "total_network_bytes": http_bytes + playwright_bytes,
-            "success": success,
-            "records_produced": self._records_produced(result, success=success),
-            "duration_ms": duration_ms,
-            "error_type": error_type,
-        }
-        result.traffic_metrics = metrics
-        if not self._traffic_logged:
-            _log_kv(logging.INFO, "scrape_traffic", **metrics)
-            self._traffic_logged = True
+        # Traffic metrics collection + logging disabled (byte measurement was the
+        # scrape bottleneck — see _install_playwright_traffic_measurement). Left
+        # as a pass-through so the return flow and call sites stay unchanged;
+        # traffic_metrics stays None so the batch skips its (now-empty) summary.
+        return result
         return result
 
     async def fetch(self) -> str:
@@ -1371,45 +1359,13 @@ class GenericProductScraper(BaseScraper):
         return await page.content()
 
     def _install_playwright_traffic_measurement(self, page: Any):
-        pending: list[asyncio.Task] = []
-        warning_count = 0
-
-        def on_request(_request: Any) -> None:
-            self._traffic["playwright_request_count"] = int(
-                self._traffic.get("playwright_request_count") or 0,
-            ) + 1
-
-        def on_response(response: Any) -> None:
-            async def measure_body() -> None:
-                nonlocal warning_count
-                try:
-                    body = await asyncio.wait_for(response.body(), timeout=2.0)
-                    self._traffic["playwright_response_bytes"] = int(
-                        self._traffic.get("playwright_response_bytes") or 0,
-                    ) + len(body or b"")
-                except Exception as exc:  # noqa: BLE001
-                    warning_count += 1
-                    if warning_count <= 3:
-                        _log_kv(
-                            logging.WARNING,
-                            "scrape_traffic_measurement_warning",
-                            site=self._traffic.get("site"),
-                            domain=self._traffic.get("domain"),
-                            url=self._traffic.get("url") or normalize_url(self.listing_url),
-                            scraper="generic",
-                            layer="playwright",
-                            error_type=type(exc).__name__,
-                            error=str(exc),
-                        )
-
-            pending.append(asyncio.create_task(measure_body()))
-
-        page.on("request", on_request)
-        page.on("response", on_response)
-
+        # Byte-level traffic measurement removed: it attached page.on("response")
+        # and called response.body() (2s timeout) on EVERY network response,
+        # buffering ~5.8 MB/page and blocking each scrape until all reads
+        # finished — measured ~47% slower on heavy sites (e.g. Notino). Kept as a
+        # no-op so the call sites remain unchanged.
         async def finish() -> None:
-            if pending:
-                await asyncio.gather(*pending, return_exceptions=True)
+            return None
 
         return finish
 
