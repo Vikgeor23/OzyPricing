@@ -20,6 +20,7 @@ import type {
   CategoryWorkspaceProduct,
   Competitor,
   CompetitorTreeItem,
+  DetectedSubdomain,
   DiscoveryTaskStatus,
   FullDiscoveryResult,
   MatchCandidate,
@@ -1080,6 +1081,10 @@ export default function CompetitorsPage() {
     "category_pagination",
   ]);
   const [discoverySeedTerms, setDiscoverySeedTerms] = useState("");
+  // Shop subdomains the probe found (e.g. book.store.bg). Crawling them is
+  // opt-in — a site can have many subdomains that are not worth digging into.
+  const [detectedSubdomains, setDetectedSubdomains] = useState<DetectedSubdomain[]>([]);
+  const [selectedSubdomains, setSelectedSubdomains] = useState<string[]>([]);
   const [concurrencyDraft, setConcurrencyDraft] = useState("");
   // Scrape all: skip listings that already have a price (only_missing).
   const [scrapeOnlyMissing, setScrapeOnlyMissing] = useState(false);
@@ -1648,6 +1653,12 @@ export default function CompetitorsPage() {
     }
   }, [healthy, tree.length]);
 
+  // Detected subdomains belong to the selected retailer — drop them when it changes.
+  useEffect(() => {
+    setDetectedSubdomains([]);
+    setSelectedSubdomains([]);
+  }, [selectedCompetitorId]);
+
   useEffect(() => {
     if (!discoveryAllTaskId) return;
     let cancelled = false;
@@ -1659,6 +1670,10 @@ export default function CompetitorsPage() {
         );
         if (cancelled) return;
         setDiscoveryAllProgress(status);
+        // The probe reports sibling shop subdomains; surface them so the user can
+        // opt any of them into the next run (they are not crawled by default).
+        const found = status.probe?.detected_subdomains;
+        if (found?.length) setDetectedSubdomains(found);
         if (status.ready) {
           const result = (status.result ?? status) as FullDiscoveryResult;
           if (result.error) {
@@ -2151,6 +2166,7 @@ export default function CompetitorsPage() {
               : autoDiscovery
                 ? []
                 : selectedDiscoveryMethods,
+            subdomains: selectedSubdomains,
             seed_terms: discoverySeedTerms
               .split(/[\n,]/)
               .map((s) => s.trim())
@@ -2651,6 +2667,31 @@ export default function CompetitorsPage() {
             />
             Auto probe
           </label>
+          {detectedSubdomains.length ? (
+            <div className="sidebar-subdomains">
+              <span className="muted" style={{ fontSize: "0.78rem" }}>
+                Found {detectedSubdomains.length} subdomain
+                {detectedSubdomains.length > 1 ? "s" : ""} — pick which to search:
+              </span>
+              {detectedSubdomains.map((sub) => (
+                <label className="inline-checkbox" key={sub.host}>
+                  <input
+                    type="checkbox"
+                    checked={selectedSubdomains.includes(sub.host)}
+                    onChange={(e) =>
+                      setSelectedSubdomains((current) =>
+                        e.target.checked
+                          ? [...current, sub.host]
+                          : current.filter((h) => h !== sub.host),
+                      )
+                    }
+                    disabled={discoveryAllRunning}
+                  />
+                  {sub.host} <span className="muted">({sub.links})</span>
+                </label>
+              ))}
+            </div>
+          ) : null}
           <label className="inline-checkbox">
             <input
               type="checkbox"

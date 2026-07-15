@@ -389,6 +389,7 @@ def enqueue_discover_all_product_urls(
         opts.seed_terms,
         opts.max_search_queries,
         opts.discovery_methods,
+        opts.subdomains,
     )
     scrape_run_lock.mark_run("discovery", str(competitor_id), str(async_result.id))
     owner = _requester_email(request, db)

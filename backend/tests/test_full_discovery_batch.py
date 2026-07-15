@@ -230,29 +230,92 @@ class FullDiscoveryBatchTests(unittest.TestCase):
         self.assertEqual(result["product_urls_found"], 6)
 
 
-class SubdomainScopingTests(unittest.TestCase):
-    """Discovery accepts subdomains of the competitor domain (multi-subdomain shops)."""
+class SubdomainDiscoveryScopeTests(FullDiscoveryBatchTests):
+    """Only the main host is crawled unless subdomains are explicitly selected."""
 
-    def test_subdomains_are_same_site(self) -> None:
+    def _run_auto(self, subdomains: list[str]):
+        comp = Competitor(name="Shop", domain="shop.example", currency="EUR")
+        self.db.add(comp)
+        self.db.flush()
+        probe = {
+            "platform": None,
+            "blocked": False,
+            "best_method": "sitemap",
+            "recommended_methods": ["sitemap"],
+            "method_reasons": {},
+            "detected_subdomains": [{"host": "book.shop.example", "links": 9}],
+            "duration_ms": 1,
+        }
+        fdb = "app.services.full_discovery_batch"
+
+        def sitemap_for(site, **_kw):
+            host = site.split("//")[-1].strip("/")
+            return ([f"https://{host}/product/{i}" for i in range(6)], {"errors": []})
+
+        with patch(f"{fdb}.check_site_reachability", return_value={"reachable": True, "via": "http", "errors": []}), patch(
+            f"{fdb}.probe_site", return_value=probe
+        ), patch(f"{fdb}.collect_generic_product_urls_from_sitemaps", side_effect=sitemap_for) as m_sitemap:
+            result = run_incremental_full_discovery(
+                self.db,
+                comp.id,
+                only_new=True,
+                source="auto",
+                subdomains=subdomains,
+            )
+        crawled_hosts = [call.args[0] for call in m_sitemap.call_args_list]
+        return result, crawled_hosts
+
+    def test_default_crawls_main_host_only(self) -> None:
+        result, hosts = self._run_auto([])
+        self.assertEqual(hosts, ["shop.example"])
+        self.assertEqual(result["selected_subdomains"], [])
+
+    def test_selected_subdomain_is_crawled_too(self) -> None:
+        result, hosts = self._run_auto(["book.shop.example"])
+        self.assertEqual(hosts, ["shop.example", "book.shop.example"])
+        self.assertEqual(result["selected_subdomains"], ["book.shop.example"])
+        # Both hosts' products land in the union.
+        self.assertEqual(result["product_urls_found"], 12)
+
+
+class SubdomainScopingTests(unittest.TestCase):
+    """Discovery is scoped to the exact host; subdomains are opt-in per host."""
+
+    def test_same_domain_is_exact_host_match(self) -> None:
         from app.scrapers.sites.generic_discovery import _same_domain
 
-        # Subdomains of store.bg belong to the same retailer.
+        # www is stripped, so the bare host matches itself.
         self.assertTrue(_same_domain("https://www.store.bg/p1/x.html", "store.bg"))
-        self.assertTrue(_same_domain("https://book.store.bg/p2/x.html", "store.bg"))
-        self.assertTrue(_same_domain("https://www.beauty.store.bg/p3/x.html", "store.bg"))
-        # Look-alike suffixes and unrelated domains must be rejected.
-        self.assertFalse(_same_domain("https://store.bg.evil.com/p4", "store.bg"))
-        self.assertFalse(_same_domain("https://otherstore.bg/p5", "store.bg"))
-        # Scoping a competitor to a subdomain stays narrow.
-        self.assertFalse(_same_domain("https://store.bg/p6", "beauty.store.bg"))
-        self.assertTrue(_same_domain("https://beauty.store.bg/p7/x.html", "beauty.store.bg"))
+        # A subdomain is NOT the same host — it is only crawled when selected and
+        # passed to the collectors as its own scope host.
+        self.assertFalse(_same_domain("https://book.store.bg/p2/x.html", "store.bg"))
+        # Scoped to a subdomain, only that subdomain matches.
+        self.assertTrue(_same_domain("https://beauty.store.bg/p3/x.html", "beauty.store.bg"))
+        self.assertFalse(_same_domain("https://store.bg/p4", "beauty.store.bg"))
+        # Unrelated / look-alike domains are rejected.
+        self.assertFalse(_same_domain("https://store.bg.evil.com/p5", "store.bg"))
+        self.assertFalse(_same_domain("https://otherstore.bg/p6", "store.bg"))
 
-    def test_subdomain_product_url_normalizes(self) -> None:
-        from app.scrapers.sites.generic_discovery import normalize_generic_product_url
+    def test_detect_subdomains_from_homepage(self) -> None:
+        from app.scrapers.sites.site_probe import _detect_subdomains
 
-        got = normalize_generic_product_url("https://www.book.store.bg/p123/x.html", domain="store.bg")
-        self.assertEqual(got, "https://www.book.store.bg/p123/x.html")
-        self.assertIsNone(normalize_generic_product_url("https://evil.com/p1", domain="store.bg"))
+        html = """
+        <a href="https://www.store.bg/p1/main.html">m</a>
+        <a href="https://book.store.bg/p2/book.html">b</a>
+        <a href="https://www.book.store.bg/p3/book2.html">b2</a>
+        <a href="https://beauty.store.bg/p4/x.html">be</a>
+        <a href="https://otherstore.bg/p9/x.html">other</a>
+        <a href="https://help.store.bg/faq">help</a>
+        """
+        subs = _detect_subdomains(html, domain="store.bg")
+        hosts = {s["host"] for s in subs}
+        # book (2 links) + beauty (1); main domain, non-shop subdomains (help)
+        # and foreign domains excluded.
+        self.assertEqual(hosts, {"book.store.bg", "beauty.store.bg"})
+        by_host = {s["host"]: s["links"] for s in subs}
+        self.assertEqual(by_host["book.store.bg"], 2)
+        # Sorted by count, most first.
+        self.assertEqual(subs[0]["host"], "book.store.bg")
 
 
 if __name__ == "__main__":

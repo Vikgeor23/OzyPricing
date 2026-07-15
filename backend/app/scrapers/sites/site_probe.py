@@ -8,7 +8,9 @@ returns an ordered list of discovery methods, best first, for the auto mode.
 from __future__ import annotations
 
 import json
+import re
 import time
+from collections import Counter
 from typing import Any
 from urllib.parse import urljoin, urlparse
 
@@ -157,6 +159,41 @@ async def _probe_autocomplete(client: httpx.AsyncClient, origin: str) -> dict[st
     return {"found": False, "endpoint": None}
 
 
+# Subdomain labels that are infrastructure/support, never a product catalogue —
+# excluded from the "found subdomains" the user can opt into.
+_NON_SHOP_SUBDOMAINS = {
+    "www", "m", "help", "support", "blog", "mail", "webmail", "smtp", "cdn",
+    "static", "img", "images", "assets", "api", "account", "accounts", "login",
+    "admin", "status", "docs", "kb", "forum", "news", "careers", "jobs", "press",
+    "media", "ads", "track", "analytics", "affiliate",
+}
+
+
+def _detect_subdomains(home_html: str, *, domain: str) -> list[dict[str, Any]]:
+    """Find sibling subdomains linked from the homepage (multi-subdomain shops).
+
+    Returns ``[{"host": ..., "links": N}, ...]`` sorted by link count, excluding
+    the bare domain, ``www.``, non-shop infrastructure subdomains and foreign
+    domains. Detection only — the user chooses which to actually crawl.
+    """
+    base = normalize_domain(domain)
+    if not base or not home_html:
+        return []
+    counts: Counter[str] = Counter()
+    suffix = "." + base
+    for match in re.finditer(r"""href=["']([^"'>\s]+)""", home_html):
+        host = urlparse(match.group(1)).netloc.lower().split(":")[0]
+        if not host or not host.endswith(suffix):
+            continue
+        labels = host[: -len(suffix)].split(".")
+        if labels and labels[0] == "www":
+            labels = labels[1:]
+        if not labels or labels[0] in _NON_SHOP_SUBDOMAINS:
+            continue
+        counts[".".join(labels) + suffix] += 1
+    return [{"host": host, "links": links} for host, links in counts.most_common()]
+
+
 async def probe_site(site_url_or_domain: str) -> dict[str, Any]:
     """Inspect the shop and return ranked discovery methods with reasons."""
     t0 = time.perf_counter()
@@ -221,5 +258,6 @@ async def probe_site(site_url_or_domain: str) -> dict[str, Any]:
         "method_reasons": {method: reason for method, (_, reason) in ranked},
         "method_scores": {method: score for method, (score, _) in ranked},
         "best_method": ranked[0][0],
+        "detected_subdomains": _detect_subdomains(home_html, domain=domain),
         "duration_ms": int((time.perf_counter() - t0) * 1000),
     }

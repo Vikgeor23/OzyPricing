@@ -192,12 +192,16 @@ export type DiscoveryTaskStatus = {
   result: Record<string, unknown> | null;
 };
 
+export type DetectedSubdomain = { host: string; links: number };
+
 export type DiscoveryProbeInfo = {
   platform?: string | null;
   blocked?: boolean;
   best_method?: string | null;
   recommended_methods?: string[];
   method_reasons?: Record<string, string>;
+  /** Sibling shop subdomains found on the homepage — opt-in, not crawled by default. */
+  detected_subdomains?: DetectedSubdomain[];
   duration_ms?: number;
 };
 

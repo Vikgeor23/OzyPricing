@@ -3340,3 +3340,14 @@ button.primary:hover:not(:disabled) {
   display: block;
   text-align: center;
 }
+
+/* ---------- Discovery: detected subdomains (opt-in) ---------- */
+.sidebar-subdomains {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.4rem 0 0.2rem 0.15rem;
+  border-left: 2px solid var(--border);
+  margin-left: 0.1rem;
+  padding-left: 0.5rem;
+}

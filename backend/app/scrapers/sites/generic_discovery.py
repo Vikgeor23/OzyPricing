@@ -315,16 +315,11 @@ def _local_tag(tag: str) -> str:
 
 
 def _same_domain(url: str, domain: str) -> bool:
-    # Accept the domain itself and any subdomain of it, so multi-subdomain shops
-    # (e.g. store.bg + book.store.bg + beauty.store.bg …) are discovered as one
-    # retailer instead of only the bare domain. Scoping a competitor to a
-    # subdomain (e.g. "beauty.store.bg") still stays narrow — a parent/sibling
-    # host does not end with ".beauty.store.bg".
-    host = normalize_domain(url)
-    base = normalize_domain(domain)
-    if not host or not base:
-        return False
-    return host == base or host.endswith("." + base)
+    # Exact host match. Multi-subdomain shops (store.bg + book./beauty.store.bg …)
+    # are covered by discovering each selected host separately (the discovery
+    # orchestrator loops over the chosen subdomains) — not by widening this check,
+    # so unwanted subdomains are never crawled.
+    return normalize_domain(url) == normalize_domain(domain)
 
 
 def _strip_tracking_query(query: str) -> str:

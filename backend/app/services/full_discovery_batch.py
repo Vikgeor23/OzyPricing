@@ -149,18 +149,33 @@ class FullDiscoveryStats:
         }
 
 
-def _dedupe_discovered_urls(raw_urls: list[str], *, domain: str = "technopolis.bg") -> list[DiscoveredListing]:
-    """Normalize URLs and keep one listing per product URL/code."""
+def _dedupe_discovered_urls(
+    raw_urls: list[str],
+    *,
+    domain: str = "technopolis.bg",
+    hosts: list[str] | None = None,
+) -> list[DiscoveredListing]:
+    """Normalize URLs and keep one listing per product URL/code.
+
+    ``hosts`` are the hosts that were actually crawled (the domain plus any
+    opted-in subdomains); a URL is kept when it belongs to any of them.
+    """
     code_to_listing: dict[str, DiscoveredListing] = {}
     no_code: list[DiscoveredListing] = []
     is_tech = is_technopolis(domain)
+    scope_hosts = hosts or [domain]
+
+    def _normalize(raw: str) -> str | None:
+        if is_tech:
+            return normalize_technopolis_product_url(raw)
+        for host in scope_hosts:
+            normalized = normalize_generic_product_url(raw, domain=host)
+            if normalized:
+                return normalized
+        return None
 
     for raw in raw_urls:
-        normalized = (
-            normalize_technopolis_product_url(raw)
-            if is_tech
-            else normalize_generic_product_url(raw, domain=domain)
-        )
+        normalized = _normalize(raw)
         if not normalized:
             continue
         code = technopolis_product_code(normalized) if is_tech else None
@@ -466,6 +481,7 @@ def run_incremental_full_discovery(
     seed_terms: list[str] | None = None,
     max_search_queries: int | None = None,
     discovery_methods: list[str] | None = None,
+    subdomains: list[str] | None = None,
     progress: ProgressCallback | None = None,
     cancel_check: Callable[[], bool] | None = None,
 ) -> dict[str, Any]:
@@ -568,6 +584,7 @@ def run_incremental_full_discovery(
             "best_method": probe_result.get("best_method"),
             "recommended_methods": probe_result.get("recommended_methods"),
             "method_reasons": probe_result.get("method_reasons"),
+            "detected_subdomains": probe_result.get("detected_subdomains") or [],
             "duration_ms": probe_result.get("duration_ms"),
         }
         selected_methods = list(probe_result.get("recommended_methods") or DEFAULT_DISCOVERY_METHODS)
@@ -589,15 +606,22 @@ def run_incremental_full_discovery(
         "sample_product_urls": [],
     }
 
-    def add_method_result(method: str, method_urls: list[str], diag: dict[str, Any]) -> None:
+    def add_method_result(
+        method: str,
+        method_urls: list[str],
+        diag: dict[str, Any],
+        *,
+        scope_domain: str | None = None,
+    ) -> None:
         nonlocal sitemap_diag
+        scope = scope_domain or domain
         added_urls: list[str] = []
         duplicate_count = 0
         for raw_url in method_urls:
             normalized = (
                 normalize_technopolis_product_url(raw_url)
                 if is_technopolis(domain)
-                else normalize_generic_product_url(raw_url, domain=domain)
+                else normalize_generic_product_url(raw_url, domain=scope)
             )
             if normalized is None:
                 continue
@@ -614,6 +638,7 @@ def run_incremental_full_discovery(
         block_reason = _blocked_public_discovery_reason(errors)
         result = {
             "method": method,
+            "host": scope,
             "label": _method_label(method),
             "status": "blocked" if block_reason and not method_urls else "completed",
             "found": len(method_urls),
@@ -631,6 +656,11 @@ def run_incremental_full_discovery(
         _report(progress, stats)
         return len(added_urls)
 
+    # The competitor's own domain, plus any subdomains the user opted into. Each
+    # host is crawled scoped to itself (see _same_domain), so unselected
+    # subdomains are never touched; the union is deduped across hosts.
+    hosts = [competitor.domain, *(subdomains or [])]
+
     if is_technopolis(domain):
         tech_urls, tech_diag = asyncio.run(
             collect_product_urls_from_sitemaps(
@@ -645,118 +675,122 @@ def run_incremental_full_discovery(
         })
     elif source in ("sitemap", "auto"):
         try:
-            for method in selected_methods:
+            for scope_host in hosts:
+                scope_domain = normalize_domain(scope_host)
                 if max_products is not None and len(flow_seen_urls) >= max_products:
                     break
-                if cancel_check is not None and cancel_check():
-                    raise _DiscoveryCancelled()
-                if method == DISCOVERY_METHOD_SITEMAP:
-                    stats.current_phase = "reading_sitemap_index"
-                    _report(progress, stats)
-                    method_urls, method_diag = asyncio.run(
-                        collect_generic_product_urls_from_sitemaps(
-                            competitor.domain,
-                            max_products=max_products,
-                            progress_callback=sitemap_progress,
-                        ),
-                    )
-                elif method == DISCOVERY_METHOD_CATEGORY_PAGINATION:
-                    stats.current_phase = "category_pagination"
-                    _report(progress, stats)
-                    method_urls, method_diag = asyncio.run(
-                        collect_generic_product_urls_from_category_pagination(
-                            competitor.domain,
-                            max_products=max_products,
-                            progress_callback=sitemap_progress,
-                        ),
-                    )
-                elif method == DISCOVERY_METHOD_EXTERNAL_SEARCH:
-                    stats.current_phase = "searching_external_indexes"
-                    _report(progress, stats)
-                    catalog_terms = _catalog_search_terms(db, limit=200 if deep_discovery else MAX_CATALOG_SEARCH_TERMS)
-                    extra_terms = [*normalized_seed_terms, *catalog_terms]
-                    stats.seed_terms_used = len(extra_terms)
-                    search_query_budget = max_search_queries or (160 if deep_discovery else 48)
-                    search_urls, search_diag = asyncio.run(
-                        collect_generic_product_urls_from_search_index(
-                            competitor.domain,
-                            max_products=max_products,
-                            max_queries=search_query_budget,
-                            extra_terms=extra_terms,
-                            patient_mode=deep_discovery,
-                            progress_callback=sitemap_progress,
-                        ),
-                    )
-                    common_crawl_urls, common_crawl_diag = asyncio.run(
-                        collect_generic_product_urls_from_common_crawl(
-                            competitor.domain,
-                            max_products=max_products,
-                            progress_callback=sitemap_progress,
-                        ),
-                    )
-                    wayback_urls, wayback_diag = asyncio.run(
-                        collect_generic_product_urls_from_wayback(
-                            competitor.domain,
-                            max_products=max_products,
-                            progress_callback=sitemap_progress,
-                        ),
-                    )
-                    method_urls = [*search_urls, *common_crawl_urls, *wayback_urls]
-                    method_diag = _merge_discovery_diag(
-                        _merge_discovery_diag(search_diag, "common_crawl", common_crawl_diag),
-                        "wayback",
-                        wayback_diag,
-                    )
-                elif method == DISCOVERY_METHOD_DYNAMIC_ENDPOINTS:
-                    stats.current_phase = "sniffing_dynamic_endpoints"
-                    _report(progress, stats)
-                    method_urls, method_diag = asyncio.run(
-                        collect_generic_product_urls_from_dynamic_endpoints(
-                            competitor.domain,
-                            max_products=max_products,
-                            progress_callback=sitemap_progress,
-                        ),
-                    )
-                elif method == DISCOVERY_METHOD_MERCHANT_FEEDS:
-                    stats.current_phase = "reading_merchant_feeds"
-                    _report(progress, stats)
-                    method_urls, method_diag = asyncio.run(
-                        collect_generic_product_urls_from_merchant_feeds(
-                            competitor.domain,
-                            max_products=max_products,
-                            progress_callback=sitemap_progress,
-                        ),
-                    )
-                elif method == DISCOVERY_METHOD_AUTOCOMPLETE:
-                    stats.current_phase = "probing_autocomplete"
-                    _report(progress, stats)
-                    method_urls, method_diag = asyncio.run(
-                        collect_generic_product_urls_from_autocomplete(
-                            competitor.domain,
-                            max_products=max_products,
-                            progress_callback=sitemap_progress,
-                        ),
-                    )
-                elif method == DISCOVERY_METHOD_SITE_SEARCH:
-                    stats.current_phase = "site_search"
-                    _report(progress, stats)
-                    site_terms = [*normalized_seed_terms]
-                    stats.seed_terms_used = max(stats.seed_terms_used, len(site_terms))
-                    method_urls, method_diag = asyncio.run(
-                        collect_generic_product_urls_from_site_search(
-                            competitor.domain,
-                            search_terms=site_terms,
-                            max_products=max_products,
-                            progress_callback=sitemap_progress,
-                        ),
-                    )
-                else:
-                    continue
-                added = add_method_result(method, method_urls, method_diag)
-                # Auto mode: the first ranked method to find a real batch of
-                # products is the best path — stop instead of running the rest.
-                if auto_mode and added >= _AUTO_EARLY_STOP_MIN_URLS:
-                    break
+                for method in selected_methods:
+                    if max_products is not None and len(flow_seen_urls) >= max_products:
+                        break
+                    if cancel_check is not None and cancel_check():
+                        raise _DiscoveryCancelled()
+                    if method == DISCOVERY_METHOD_SITEMAP:
+                        stats.current_phase = "reading_sitemap_index"
+                        _report(progress, stats)
+                        method_urls, method_diag = asyncio.run(
+                            collect_generic_product_urls_from_sitemaps(
+                                scope_host,
+                                max_products=max_products,
+                                progress_callback=sitemap_progress,
+                            ),
+                        )
+                    elif method == DISCOVERY_METHOD_CATEGORY_PAGINATION:
+                        stats.current_phase = "category_pagination"
+                        _report(progress, stats)
+                        method_urls, method_diag = asyncio.run(
+                            collect_generic_product_urls_from_category_pagination(
+                                scope_host,
+                                max_products=max_products,
+                                progress_callback=sitemap_progress,
+                            ),
+                        )
+                    elif method == DISCOVERY_METHOD_EXTERNAL_SEARCH:
+                        stats.current_phase = "searching_external_indexes"
+                        _report(progress, stats)
+                        catalog_terms = _catalog_search_terms(db, limit=200 if deep_discovery else MAX_CATALOG_SEARCH_TERMS)
+                        extra_terms = [*normalized_seed_terms, *catalog_terms]
+                        stats.seed_terms_used = len(extra_terms)
+                        search_query_budget = max_search_queries or (160 if deep_discovery else 48)
+                        search_urls, search_diag = asyncio.run(
+                            collect_generic_product_urls_from_search_index(
+                                scope_host,
+                                max_products=max_products,
+                                max_queries=search_query_budget,
+                                extra_terms=extra_terms,
+                                patient_mode=deep_discovery,
+                                progress_callback=sitemap_progress,
+                            ),
+                        )
+                        common_crawl_urls, common_crawl_diag = asyncio.run(
+                            collect_generic_product_urls_from_common_crawl(
+                                scope_host,
+                                max_products=max_products,
+                                progress_callback=sitemap_progress,
+                            ),
+                        )
+                        wayback_urls, wayback_diag = asyncio.run(
+                            collect_generic_product_urls_from_wayback(
+                                scope_host,
+                                max_products=max_products,
+                                progress_callback=sitemap_progress,
+                            ),
+                        )
+                        method_urls = [*search_urls, *common_crawl_urls, *wayback_urls]
+                        method_diag = _merge_discovery_diag(
+                            _merge_discovery_diag(search_diag, "common_crawl", common_crawl_diag),
+                            "wayback",
+                            wayback_diag,
+                        )
+                    elif method == DISCOVERY_METHOD_DYNAMIC_ENDPOINTS:
+                        stats.current_phase = "sniffing_dynamic_endpoints"
+                        _report(progress, stats)
+                        method_urls, method_diag = asyncio.run(
+                            collect_generic_product_urls_from_dynamic_endpoints(
+                                scope_host,
+                                max_products=max_products,
+                                progress_callback=sitemap_progress,
+                            ),
+                        )
+                    elif method == DISCOVERY_METHOD_MERCHANT_FEEDS:
+                        stats.current_phase = "reading_merchant_feeds"
+                        _report(progress, stats)
+                        method_urls, method_diag = asyncio.run(
+                            collect_generic_product_urls_from_merchant_feeds(
+                                scope_host,
+                                max_products=max_products,
+                                progress_callback=sitemap_progress,
+                            ),
+                        )
+                    elif method == DISCOVERY_METHOD_AUTOCOMPLETE:
+                        stats.current_phase = "probing_autocomplete"
+                        _report(progress, stats)
+                        method_urls, method_diag = asyncio.run(
+                            collect_generic_product_urls_from_autocomplete(
+                                scope_host,
+                                max_products=max_products,
+                                progress_callback=sitemap_progress,
+                            ),
+                        )
+                    elif method == DISCOVERY_METHOD_SITE_SEARCH:
+                        stats.current_phase = "site_search"
+                        _report(progress, stats)
+                        site_terms = [*normalized_seed_terms]
+                        stats.seed_terms_used = max(stats.seed_terms_used, len(site_terms))
+                        method_urls, method_diag = asyncio.run(
+                            collect_generic_product_urls_from_site_search(
+                                scope_host,
+                                search_terms=site_terms,
+                                max_products=max_products,
+                                progress_callback=sitemap_progress,
+                            ),
+                        )
+                    else:
+                        continue
+                    added = add_method_result(method, method_urls, method_diag, scope_domain=scope_domain)
+                    # Auto mode: the first ranked method to find a real batch of
+                    # products is the best path for this host — move to the next.
+                    if auto_mode and added >= _AUTO_EARLY_STOP_MIN_URLS:
+                        break
         except _DiscoveryCancelled:
             stats.cancelled = True
             stats.errors.append(f"run_stopped:cancel_requested_during:{method}")
@@ -775,7 +809,7 @@ def run_incremental_full_discovery(
     stats.sample_product_urls = list(sitemap_diag.get("sample_product_urls") or raw_urls[:10])
 
     stats.current_phase = "deduplicating"
-    listings = _dedupe_discovered_urls(raw_urls, domain=domain)
+    listings = _dedupe_discovered_urls(raw_urls, domain=domain, hosts=hosts)
     stats.product_urls_found = len(listings)
     stats.total = len(listings)
     if not listings:
@@ -883,6 +917,7 @@ def run_incremental_full_discovery(
     result["competitor_id"] = str(competitor_id)
     result["deep_discovery"] = deep_discovery
     result["selected_discovery_methods"] = selected_methods
+    result["selected_subdomains"] = list(subdomains or [])
     result["seed_terms_used"] = stats.seed_terms_used
     result["external_queries_checked"] = stats.external_queries_checked
     result["rate_limit_pauses"] = stats.rate_limit_pauses

@@ -174,6 +174,7 @@ def discover_all_product_urls_for_competitor(
     seed_terms: list[str] | None = None,
     max_search_queries: int | None = None,
     discovery_methods: list[str] | None = None,
+    subdomains: list[str] | None = None,
 ) -> dict:
     """Discover product URLs incrementally (no price scraping or matching)."""
     t0 = time.perf_counter()
@@ -204,6 +205,7 @@ def discover_all_product_urls_for_competitor(
             seed_terms=seed_terms or [],
             max_search_queries=max_search_queries,
             discovery_methods=discovery_methods or [],
+            subdomains=subdomains or [],
             progress=progress,
             cancel_check=lambda: cancel_requested(str(self.request.id)),
         )

@@ -16,6 +16,9 @@ class DiscoverAllBody(BaseModel):
     )
     deep_discovery: bool = False
     discovery_methods: list[str] = Field(default_factory=list)
+    # Subdomains of the competitor domain to crawl as well (opt-in). Empty means
+    # the bare domain only — probe reports what it found under detected_subdomains.
+    subdomains: list[str] = Field(default_factory=list)
     seed_terms: list[str] = Field(default_factory=list)
     max_search_queries: int | None = Field(default=None, ge=1, le=500)
 
